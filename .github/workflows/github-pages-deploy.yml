@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Új rész: explicit jogosultságok hozzáadása
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest

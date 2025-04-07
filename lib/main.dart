@@ -49,18 +49,18 @@ class HomePage extends StatelessWidget {
             ),
 
             // Szolgáltatások
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'Szolgáltatásaink',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       ServiceCard(
                         icon: Icons.phone_android,
                         title: 'Flutter Fejlesztés',

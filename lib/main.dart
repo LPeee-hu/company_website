@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'Referencia Projektek',
+                    'Futó Projektek',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),

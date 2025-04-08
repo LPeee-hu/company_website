@@ -32,9 +32,9 @@ jobs:
         
       - name: Build web
         run: |
-          flutter build web --web-renderer html --base-href="/company_website/" --dart-define=FLUTTER_WEB_USE_SKIA=false
-          cp ./build/web/index.html ./build/web/404.html
-          touch ./build/web/.nojekyll
+            flutter build web --web-renderer html --base-href="/company_website/"
+            cp ./build/web/index.html ./build/web/404.html
+            touch ./build/web/.nojekyll
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script>
-    var baseHref = '/company_website/';
-    document.write('<base href="' + baseHref + '">');
-  </script>
-
+  <base href="$FLUTTER_BASE_HREF">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -24,12 +20,6 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script>
-    // Dinamikusan hozzáadjuk a script tag-et a helyes útvonallal
-    var scriptTag = document.createElement('script');
-    scriptTag.src = baseHref + 'flutter_bootstrap.js';
-    scriptTag.async = true;
-    document.body.appendChild(scriptTag);
-  </script>
+  <script src="flutter.js" defer></script>
 </body>
 </html>

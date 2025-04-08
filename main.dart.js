@@ -34325,7 +34325,7 @@ A.xN.prototype={
 O(a){return new A.qx(B.za,"Mobil Fejleszt\u0151 C\xe9g",A.a8D(null,B.cA,null,A.a8S(A.ih())),null)}}
 A.za.prototype={
 O(a){var s=null,r=t.E
-return new A.rI(new A.ox(B.JX,new A.Gz(s,s,1/0,56),s),new A.C6(A.Ld(A.a([A.oY(s,B.xa,B.cA,s,300,s,s,1/0),B.DF,new A.fK(B.dp,A.Ld(A.a([B.JY,B.uL,new A.B_("Family Task Manager","Csal\xe1di feladatkezel\u0151 alkalmaz\xe1s",new A.Ow(),s)],r),B.bF,B.bM),s)],r),B.bF,B.bM),s),s)}}
+return new A.rI(new A.ox(B.JX,new A.Gz(s,s,1/0,56),s),new A.C6(A.Ld(A.a([A.oY(s,B.xa,B.cA,s,300,s,s,1/0),B.DF,new A.fK(B.dp,A.Ld(A.a([B.JZ,B.uL,new A.B_("Family Task Manager","Csal\xe1di feladatkezel\u0151 alkalmaz\xe1s",new A.Ow(),s)],r),B.bF,B.bM),s)],r),B.bF,B.bM),s),s)}}
 A.Ow.prototype={
 $0(){var s=0,r=A.S(t.H),q
 var $async$$0=A.T(function(a,b){if(a===1)return A.P(b,r)
@@ -60414,8 +60414,8 @@ B.x5=new A.IF()
 B.x9=new A.lP(null,null,null,null,null,null,null)
 B.bI=new A.ej(6)
 B.Ht=new A.l(!0,B.i,null,null,null,null,30,B.bI,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.JZ=new A.fV("Cross-Platform Mobil Alkalmaz\xe1sok Fejleszt\xe9se",null,B.Ht,null,null)
-B.xa=new A.oN(B.ae,null,null,B.JZ,null)
+B.JY=new A.fV("Cross-Platform Mobil Alkalmaz\xe1sok Fejleszt\xe9se",null,B.Ht,null,null)
+B.xa=new A.oN(B.ae,null,null,B.JY,null)
 B.xb=new A.oO(null,null,null,null,null,null,null,null,null)
 B.xc=new A.oQ(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.xd=new A.cA(0,B.q)
@@ -62267,7 +62267,7 @@ B.J7=new A.l(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,n
 B.IL=new A.l(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"whiteMountainView labelSmall",null,null,null,null)
 B.JW=new A.cn(B.Iu,B.JF,B.Jq,B.Hk,B.Ji,B.Is,B.JH,B.HJ,B.Ib,B.Jb,B.Hc,B.Jr,B.Jf,B.J7,B.IL)
 B.JX=new A.fV("Mobil Fejleszt\u0151 C\xe9g",null,null,null,null)
-B.JY=new A.fV("Referencia Projektek",null,B.uW,null,null)
+B.JZ=new A.fV("Fut\xf3 Projektek",null,B.uW,null,null)
 B.IV=new A.l(!0,B.cA,null,null,null,null,null,B.bI,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.K0=new A.fV("Kattints a megtekint\xe9shez",null,B.IV,null,null)
 B.Mt=new A.W6(0,"system")

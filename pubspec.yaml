@@ -12,8 +12,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.1.6
+  url_launcher: ^6.1.10
   cupertino_icons: ^1.0.8
+  animated_text_kit: ^4.2.2
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -26,4 +28,6 @@ flutter:
  
   uses-material-design: true
 
-  
+  assets:
+    - assets/images/
+    - assets/images/team/

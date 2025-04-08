@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="company_website">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -18,8 +18,36 @@
 
   <title>company_website</title>
   <link rel="manifest" href="manifest.json">
+
+  <script>
+    // A service worker leállítása, ha van ilyen
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2581814353');
+      });
+    }
+    
+    window.addEventListener('load', function(ev) {
+      // Flutter inicializálása
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+
 </head>
 <body>
+  <script>
+    // Flutter alapváltozók
+    const serviceWorkerVersion = "2581814353";
+  </script>
   <script src="flutter.js" defer></script>
 </body>
 </html>

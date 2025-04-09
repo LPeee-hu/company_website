@@ -1,3 +1,4 @@
+// lib/widgets/project_card.dart
 import 'package:flutter/material.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -84,8 +85,12 @@ class _ProjectCardState extends State<ProjectCard>
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color:
-                          Colors.black.withValues(alpha: _isHovered ? 38 : 20),
+                      color: Color.fromARGB(
+                        _isHovered ? 38 : 20,
+                        0,
+                        0,
+                        0,
+                      ),
                       blurRadius: _isHovered ? 15 : 10,
                       offset: const Offset(0, 4),
                     ),
@@ -100,8 +105,15 @@ class _ProjectCardState extends State<ProjectCard>
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
-                            color:
-                                theme.colorScheme.primary.withValues(alpha: 77),
+                            color: Color.fromARGB(
+                              77,
+                              // ignore: deprecated_member_use
+                              theme.colorScheme.primary.red,
+                              // ignore: deprecated_member_use
+                              theme.colorScheme.primary.green,
+                              // ignore: deprecated_member_use
+                              theme.colorScheme.primary.blue,
+                            ),
                             child: const Center(
                               child: Icon(
                                 Icons.image_not_supported,
@@ -117,14 +129,14 @@ class _ProjectCardState extends State<ProjectCard>
                     // Gradient overlay
                     Positioned.fill(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
                               Colors.transparent,
-                              Colors.black.withValues(alpha: 179),
-                              Colors.black.withValues(alpha: 230),
+                              Color.fromARGB(179, 0, 0, 0),
+                              Color.fromARGB(230, 0, 0, 0),
                             ],
                           ),
                         ),

@@ -1,3 +1,4 @@
+// lib/pages/home_page.dart
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import '../widgets/animated_logo.dart';
@@ -27,8 +28,15 @@ class HomePage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   colors: [
                     colorScheme.primary,
-                    colorScheme.primary
-                        .withValues(alpha: 179), // 0.7 * 255 = ~179
+                    Color.fromARGB(
+                      179,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.red,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.green,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.blue,
+                    ), // 0.7 * 255 = ~179
                     colorScheme.primaryContainer,
                   ],
                 ),
@@ -194,8 +202,15 @@ class HomePage extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 24),
-              color: colorScheme.primaryContainer
-                  .withValues(alpha: 77), // 0.3 * 255 = ~77
+              color: Color.fromARGB(
+                77,
+                // ignore: deprecated_member_use
+                colorScheme.primaryContainer.red,
+                // ignore: deprecated_member_use
+                colorScheme.primaryContainer.green,
+                // ignore: deprecated_member_use
+                colorScheme.primaryContainer.blue,
+              ), // 0.3 * 255 = ~77
               child: Column(
                 children: [
                   Text(

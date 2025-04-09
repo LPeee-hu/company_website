@@ -1,3 +1,4 @@
+// lib/widgets/page_header.dart
 import 'package:flutter/material.dart';
 
 class PageHeader extends StatelessWidget {
@@ -28,8 +29,15 @@ class PageHeader extends StatelessWidget {
                 image: AssetImage(backgroundImage!),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
-                  theme.colorScheme.primary
-                      .withValues(alpha: 179), // 0.7 * 255 = ~179
+                  Color.fromARGB(
+                    179,
+                    // ignore: deprecated_member_use
+                    theme.colorScheme.primary.red,
+                    // ignore: deprecated_member_use
+                    theme.colorScheme.primary.green,
+                    // ignore: deprecated_member_use
+                    theme.colorScheme.primary.blue,
+                  ), // 0.7 * 255 = ~179
                   BlendMode.srcOver,
                 ),
               )
@@ -38,22 +46,22 @@ class PageHeader extends StatelessWidget {
       child: Stack(
         children: [
           // Decorative elements
-          Positioned(
+          const Positioned(
             top: -20,
             right: -20,
             child: Icon(
               Icons.circle,
               size: 100,
-              color: Colors.white.withValues(alpha: 26), // 0.1 * 255 = ~26
+              color: Color.fromARGB(26, 255, 255, 255), // 0.1 * 255 = ~26
             ),
           ),
-          Positioned(
+          const Positioned(
             bottom: -30,
             left: 40,
             child: Icon(
               Icons.circle,
               size: 120,
-              color: Colors.white.withValues(alpha: 26), // 0.1 * 255 = ~26
+              color: Color.fromARGB(26, 255, 255, 255), // 0.1 * 255 = ~26
             ),
           ),
 
@@ -76,8 +84,8 @@ class PageHeader extends StatelessWidget {
                   Text(
                     subtitle,
                     style: theme.textTheme.titleMedium?.copyWith(
-                      color: Colors.white
-                          .withValues(alpha: 204), // 0.8 * 255 = ~204
+                      color: const Color.fromARGB(
+                          204, 255, 255, 255), // 0.8 * 255 = ~204
                     ),
                     textAlign: TextAlign.center,
                   ),

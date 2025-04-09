@@ -1,3 +1,4 @@
+// lib/pages/services_page.dart
 import 'package:flutter/material.dart';
 import '../widgets/page_header.dart';
 
@@ -108,8 +109,15 @@ class ServicesPage extends StatelessWidget {
                     padding: const EdgeInsets.all(32),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: colorScheme.primary
-                          .withValues(alpha: 51), // 0.2 * 255 = ~51
+                      color: Color.fromARGB(
+                        51,
+                        // ignore: deprecated_member_use
+                        colorScheme.primary.red,
+                        // ignore: deprecated_member_use
+                        colorScheme.primary.green,
+                        // ignore: deprecated_member_use
+                        colorScheme.primary.blue,
+                      ), // 0.2 * 255 = ~51
                     ),
                     child: Column(
                       children: [
@@ -293,8 +301,15 @@ class _ServiceItem extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: colorScheme.primary
-                        .withValues(alpha: 51), // 0.2 * 255 = ~51
+                    color: Color.fromARGB(
+                      51,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.red,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.green,
+                      // ignore: deprecated_member_use
+                      colorScheme.primary.blue,
+                    ), // 0.2 * 255 = ~51
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
@@ -366,15 +381,21 @@ class _ServiceItem extends StatelessWidget {
               width: 400,
               height: 300,
               decoration: BoxDecoration(
-                color: colorScheme.primary
-                    .withValues(alpha: 51), // 0.2 * 255 = ~51
+                color: Color.fromARGB(
+                  51,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.red,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.green,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.blue,
+                ), // 0.2 * 255 = ~51
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
-                    color:
-                        Colors.black.withValues(alpha: 20), // 0.08 * 255 = ~20
+                    color: Color.fromARGB(20, 0, 0, 0), // 0.08 * 255 = ~20
                     blurRadius: 15,
-                    offset: const Offset(0, 5),
+                    offset: Offset(0, 5),
                   ),
                 ],
               ),
@@ -392,15 +413,21 @@ class _ServiceItem extends StatelessWidget {
               width: 400,
               height: 300,
               decoration: BoxDecoration(
-                color: colorScheme.primary
-                    .withValues(alpha: 51), // 0.2 * 255 = ~51
+                color: Color.fromARGB(
+                  51,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.red,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.green,
+                  // ignore: deprecated_member_use
+                  colorScheme.primary.blue,
+                ), // 0.2 * 255 = ~51
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
-                    color:
-                        Colors.black.withValues(alpha: 20), // 0.08 * 255 = ~20
+                    color: Color.fromARGB(20, 0, 0, 0), // 0.08 * 255 = ~20
                     blurRadius: 15,
-                    offset: const Offset(0, 5),
+                    offset: Offset(0, 5),
                   ),
                 ],
               ),
@@ -504,7 +531,15 @@ class _ProcessStep extends StatelessWidget {
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: color.withValues(alpha: 51), // 0.2 * 255 = ~51
+                  // ignore: deprecated_member_use
+                  color: Color.fromARGB(
+                      51,
+                      // ignore: deprecated_member_use
+                      color.red,
+                      // ignore: deprecated_member_use
+                      color.green,
+                      // ignore: deprecated_member_use
+                      color.blue), // 0.2 * 255 = ~51
                   shape: BoxShape.circle,
                 ),
                 child: Icon(

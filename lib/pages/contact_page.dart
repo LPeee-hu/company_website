@@ -1,3 +1,4 @@
+// lib/pages/contact_page.dart
 import 'package:flutter/material.dart';
 import '../widgets/page_header.dart';
 
@@ -225,8 +226,15 @@ class _ContactPageState extends State<ContactPage> {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: colorScheme.primary,
                               foregroundColor: Colors.white,
-                              disabledBackgroundColor:
-                                  colorScheme.primary.withValues(alpha: 128),
+                              disabledBackgroundColor: Color.fromARGB(
+                                128,
+                                // ignore: deprecated_member_use
+                                colorScheme.primary.red,
+                                // ignore: deprecated_member_use
+                                colorScheme.primary.green,
+                                // ignore: deprecated_member_use
+                                colorScheme.primary.blue,
+                              ),
                             ),
                             child: _isSubmitting
                                 ? const CircularProgressIndicator(
@@ -405,7 +413,16 @@ class _ContactInfoCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: color.withValues(alpha: 38), // 0.15 * 255 = ~38
+                // ignore: deprecated_member_use
+                color: Color.fromARGB(
+                    // ignore: deprecated_member_use
+                    38,
+                    // ignore: deprecated_member_use
+                    color.red,
+                    // ignore: deprecated_member_use
+                    color.green,
+                    // ignore: deprecated_member_use
+                    color.blue), // 0.15 * 255 = ~38
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -470,7 +487,15 @@ class _SocialButtonState extends State<_SocialButton> {
         decoration: BoxDecoration(
           color: _isHovered
               ? widget.color
-              : widget.color.withValues(alpha: 38), // 0.15 * 255 = ~38
+              // ignore: deprecated_member_use
+              : Color.fromARGB(
+                  38,
+                  // ignore: deprecated_member_use
+                  widget.color.red,
+                  // ignore: deprecated_member_use
+                  widget.color.green,
+                  // ignore: deprecated_member_use
+                  widget.color.blue), // 0.15 * 255 = ~38
           shape: BoxShape.circle,
         ),
         child: IconButton(

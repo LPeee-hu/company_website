@@ -1,3 +1,4 @@
+// lib/widgets/animated_card.dart
 import 'package:flutter/material.dart';
 
 class AnimatedCard extends StatefulWidget {
@@ -39,7 +40,12 @@ class _AnimatedCardState extends State<AnimatedCard> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: _isHovered ? 38 : 20),
+              color: Color.fromARGB(
+                _isHovered ? 38 : 20,
+                0,
+                0,
+                0,
+              ),
               blurRadius: _isHovered ? 15 : 10,
               offset: Offset(0, _isHovered ? 8 : 4),
             ),
@@ -54,8 +60,15 @@ class _AnimatedCardState extends State<AnimatedCard> {
               decoration: BoxDecoration(
                 color: _isHovered
                     ? theme.colorScheme.primary
-                    : theme.colorScheme.primaryContainer
-                        .withValues(alpha: 102), // 0.4 * 255 = 102
+                    : Color.fromARGB(
+                        102,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.primaryContainer.red,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.primaryContainer.green,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.primaryContainer.blue,
+                      ), // 0.4 * 255 = 102
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Icon(
@@ -80,8 +93,15 @@ class _AnimatedCardState extends State<AnimatedCard> {
               widget.description,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: _isHovered
-                    ? theme.colorScheme.onPrimaryContainer
-                        .withValues(alpha: 204) // 0.8 * 255 = 204
+                    ? Color.fromARGB(
+                        204,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.onPrimaryContainer.red,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.onPrimaryContainer.green,
+                        // ignore: deprecated_member_use
+                        theme.colorScheme.onPrimaryContainer.blue,
+                      ) // 0.8 * 255 = 204
                     : theme.textTheme.bodyMedium?.color,
               ),
               textAlign: TextAlign.center,

@@ -5,6 +5,11 @@ import '../widgets/page_header.dart';
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
 
+  // Előre definiált konstans színek
+  static const Color primaryLight = Color(0x26007BFF); // 15% átlátszó kék
+  static const Color primaryMedium = Color(0x80007BFF); // 50% átlátszó kék
+  static const Color disabledButtonBg = Color(0x80007BFF); // 50% átlátszó kék
+
   @override
   State<ContactPage> createState() => _ContactPageState();
 }
@@ -226,15 +231,8 @@ class _ContactPageState extends State<ContactPage> {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: colorScheme.primary,
                               foregroundColor: Colors.white,
-                              disabledBackgroundColor: Color.fromARGB(
-                                128,
-                                // ignore: deprecated_member_use
-                                colorScheme.primary.red,
-                                // ignore: deprecated_member_use
-                                colorScheme.primary.green,
-                                // ignore: deprecated_member_use
-                                colorScheme.primary.blue,
-                              ),
+                              disabledBackgroundColor:
+                                  ContactPage.disabledButtonBg,
                             ),
                             child: _isSubmitting
                                 ? const CircularProgressIndicator(
@@ -412,17 +410,8 @@ class _ContactInfoCard extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                // ignore: deprecated_member_use
-                color: Color.fromARGB(
-                    // ignore: deprecated_member_use
-                    38,
-                    // ignore: deprecated_member_use
-                    color.red,
-                    // ignore: deprecated_member_use
-                    color.green,
-                    // ignore: deprecated_member_use
-                    color.blue), // 0.15 * 255 = ~38
+              decoration: const BoxDecoration(
+                color: ContactPage.primaryLight,
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -488,14 +477,7 @@ class _SocialButtonState extends State<_SocialButton> {
           color: _isHovered
               ? widget.color
               // ignore: deprecated_member_use
-              : Color.fromARGB(
-                  38,
-                  // ignore: deprecated_member_use
-                  widget.color.red,
-                  // ignore: deprecated_member_use
-                  widget.color.green,
-                  // ignore: deprecated_member_use
-                  widget.color.blue), // 0.15 * 255 = ~38
+              : ContactPage.primaryLight,
           shape: BoxShape.circle,
         ),
         child: IconButton(

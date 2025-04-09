@@ -1,3 +1,4 @@
+// lib/widgets/animated_logo.dart
 import 'package:flutter/material.dart';
 
 class AnimatedLogo extends StatefulWidget {
@@ -21,6 +22,7 @@ class _AnimatedLogoState extends State<AnimatedLogo>
   late AnimationController _controller;
   late Animation<double> _rotationAnimation;
   late Animation<double> _opacityAnimation;
+  bool _isDisposed = false;
 
   @override
   void initState() {
@@ -64,13 +66,22 @@ class _AnimatedLogoState extends State<AnimatedLogo>
       ),
     );
 
-    Future.delayed(widget.animationDelay, () {
+    // Késleltetett animáció indítása, biztonságosan
+    if (widget.animationDelay != Duration.zero) {
+      Future.delayed(widget.animationDelay, () {
+        // Ellenőrizzük, hogy a widget még létezik-e, mielőtt használjuk a kontrollert
+        if (!_isDisposed && mounted) {
+          _controller.repeat(reverse: true);
+        }
+      });
+    } else {
       _controller.repeat(reverse: true);
-    });
+    }
   }
 
   @override
   void dispose() {
+    _isDisposed = true;
     _controller.dispose();
     super.dispose();
   }

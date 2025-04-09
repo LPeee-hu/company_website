@@ -7,6 +7,11 @@ class PageHeader extends StatelessWidget {
   final String? backgroundImage;
   final double height;
 
+  // Előre definiált konstans színek
+  static const Color overlayColor = Color(0xB3007BFF); // 70% átlátszó kék
+  static const Color circleDecoration = Color(0x1AFFFFFF); // 10% átlátszó fehér
+  static const Color subtitleColor = Color(0xCCFFFFFF); // 80% átlátszó fehér
+
   const PageHeader({
     super.key,
     required this.title,
@@ -28,16 +33,8 @@ class PageHeader extends StatelessWidget {
             ? DecorationImage(
                 image: AssetImage(backgroundImage!),
                 fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  Color.fromARGB(
-                    179,
-                    // ignore: deprecated_member_use
-                    theme.colorScheme.primary.red,
-                    // ignore: deprecated_member_use
-                    theme.colorScheme.primary.green,
-                    // ignore: deprecated_member_use
-                    theme.colorScheme.primary.blue,
-                  ), // 0.7 * 255 = ~179
+                colorFilter: const ColorFilter.mode(
+                  overlayColor, // Használjuk az előre definiált színt
                   BlendMode.srcOver,
                 ),
               )
@@ -52,7 +49,7 @@ class PageHeader extends StatelessWidget {
             child: Icon(
               Icons.circle,
               size: 100,
-              color: Color.fromARGB(26, 255, 255, 255), // 0.1 * 255 = ~26
+              color: circleDecoration, // Használjuk az előre definiált színt
             ),
           ),
           const Positioned(
@@ -61,7 +58,7 @@ class PageHeader extends StatelessWidget {
             child: Icon(
               Icons.circle,
               size: 120,
-              color: Color.fromARGB(26, 255, 255, 255), // 0.1 * 255 = ~26
+              color: circleDecoration, // Használjuk az előre definiált színt
             ),
           ),
 
@@ -84,8 +81,8 @@ class PageHeader extends StatelessWidget {
                   Text(
                     subtitle,
                     style: theme.textTheme.titleMedium?.copyWith(
-                      color: const Color.fromARGB(
-                          204, 255, 255, 255), // 0.8 * 255 = ~204
+                      color:
+                          subtitleColor, // Használjuk az előre definiált színt
                     ),
                     textAlign: TextAlign.center,
                   ),

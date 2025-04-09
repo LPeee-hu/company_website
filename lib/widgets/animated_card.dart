@@ -15,6 +15,10 @@ class AnimatedCard extends StatefulWidget {
     required this.description,
   });
 
+  // Előre definiált, stabil színek
+  static const Color shadowLight = Color(0x14000000); // 8% átlátszó fekete
+  static const Color shadowMedium = Color(0x26000000); // 15% átlátszó fekete
+
   @override
   State<AnimatedCard> createState() => _AnimatedCardState();
 }
@@ -40,12 +44,9 @@ class _AnimatedCardState extends State<AnimatedCard> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Color.fromARGB(
-                _isHovered ? 38 : 20,
-                0,
-                0,
-                0,
-              ),
+              color: _isHovered
+                  ? AnimatedCard.shadowMedium
+                  : AnimatedCard.shadowLight,
               blurRadius: _isHovered ? 15 : 10,
               offset: Offset(0, _isHovered ? 8 : 4),
             ),
@@ -60,15 +61,7 @@ class _AnimatedCardState extends State<AnimatedCard> {
               decoration: BoxDecoration(
                 color: _isHovered
                     ? theme.colorScheme.primary
-                    : Color.fromARGB(
-                        102,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.primaryContainer.red,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.primaryContainer.green,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.primaryContainer.blue,
-                      ), // 0.4 * 255 = 102
+                    : const Color(0x66757575), // Átlátszó szürke háttér
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Icon(
@@ -93,15 +86,7 @@ class _AnimatedCardState extends State<AnimatedCard> {
               widget.description,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: _isHovered
-                    ? Color.fromARGB(
-                        204,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.onPrimaryContainer.red,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.onPrimaryContainer.green,
-                        // ignore: deprecated_member_use
-                        theme.colorScheme.onPrimaryContainer.blue,
-                      ) // 0.8 * 255 = 204
+                    ? const Color(0xCC000000) // 80% átlátszó fekete
                     : theme.textTheme.bodyMedium?.color,
               ),
               textAlign: TextAlign.center,

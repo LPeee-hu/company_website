@@ -8,6 +8,11 @@ import '../widgets/wavy_section_divider.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  // Előre definiált konstans színek
+  static const Color primaryTransparent = Color(0xB3007BFF); // 70% átlátszó kék
+  static const Color primaryContainerTransparent =
+      Color(0x4D8BBEE8); // 30% átlátszó világoskék
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -28,15 +33,7 @@ class HomePage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   colors: [
                     colorScheme.primary,
-                    Color.fromARGB(
-                      179,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.red,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.green,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.blue,
-                    ), // 0.7 * 255 = ~179
+                    primaryTransparent, // Használjuk a konstans színt
                     colorScheme.primaryContainer,
                   ],
                 ),
@@ -202,15 +199,7 @@ class HomePage extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 24),
-              color: Color.fromARGB(
-                77,
-                // ignore: deprecated_member_use
-                colorScheme.primaryContainer.red,
-                // ignore: deprecated_member_use
-                colorScheme.primaryContainer.green,
-                // ignore: deprecated_member_use
-                colorScheme.primaryContainer.blue,
-              ), // 0.3 * 255 = ~77
+              color: primaryContainerTransparent, // Használjuk a konstans színt
               child: Column(
                 children: [
                   Text(

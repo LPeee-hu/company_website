@@ -5,6 +5,13 @@ import '../widgets/page_header.dart';
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
+  // Előre definiált, stabil színek
+  static const Color primaryTransparent =
+      Color(0x33007BFF); // ~20% átlátszó kék
+  static const Color shadowColor = Color(0x14000000); // ~8% átlátszó fekete
+  static const Color darkShadowColor =
+      Color(0x26000000); // ~15% átlátszó fekete
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -50,17 +57,12 @@ class AboutPage extends StatelessWidget {
                               width: 400,
                               height: 300,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(
-                                  51,
-                                  colorScheme.primary.r as int,
-                                  colorScheme.primary.g as int,
-                                  colorScheme.primary.b as int,
-                                ), // 0.2 * 255 = ~51
+                                // Előre definiált, stabil színt használunk
+                                color: primaryTransparent,
                                 borderRadius: BorderRadius.circular(16),
                                 boxShadow: const [
                                   BoxShadow(
-                                    color: Color.fromARGB(
-                                        20, 0, 0, 0), // 0.08 * 255 = ~20
+                                    color: shadowColor,
                                     blurRadius: 15,
                                     offset: Offset(0, 5),
                                   ),
@@ -84,17 +86,11 @@ class AboutPage extends StatelessWidget {
                               width: double.infinity,
                               height: 200,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(
-                                  51,
-                                  colorScheme.primary.r as int,
-                                  colorScheme.primary.g as int,
-                                  colorScheme.primary.b as int,
-                                ), // 0.2 * 255 = ~51
+                                color: primaryTransparent,
                                 borderRadius: BorderRadius.circular(16),
                                 boxShadow: const [
                                   BoxShadow(
-                                    color: Color.fromARGB(
-                                        20, 0, 0, 0), // 0.08 * 255 = ~20
+                                    color: shadowColor,
                                     blurRadius: 15,
                                     offset: Offset(0, 5),
                                   ),
@@ -245,12 +241,7 @@ class AboutPage extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.all(32),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(
-                        51,
-                        colorScheme.primary.r as int,
-                        colorScheme.primary.g as int,
-                        colorScheme.primary.b as int,
-                      ), // 0.2 * 255 = ~51
+                      color: primaryTransparent,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Column(
@@ -424,8 +415,9 @@ class _TeamMemberCardState extends State<_TeamMemberCard> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Color.fromARGB(
-                  _isHovered ? 31 : 15, 0, 0, 0), // 0.12 / 0.06 * 255
+              color: _isHovered
+                  ? AboutPage.darkShadowColor
+                  : AboutPage.shadowColor,
               blurRadius: _isHovered ? 15 : 10,
               offset: Offset(0, _isHovered ? 8 : 4),
             ),
@@ -438,14 +430,9 @@ class _TeamMemberCardState extends State<_TeamMemberCard> {
             Container(
               height: 200,
               width: double.infinity,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(
-                  51,
-                  colorScheme.primary.r as int,
-                  colorScheme.primary.g as int,
-                  colorScheme.primary.b as int,
-                ), // 0.2 * 255 = ~51
-                borderRadius: const BorderRadius.only(
+              decoration: const BoxDecoration(
+                color: AboutPage.primaryTransparent,
+                borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16),
                 ),
@@ -537,6 +524,9 @@ class _ValueCardState extends State<_ValueCard> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    // Előre definiált színek a kártyához
+    const primaryLight = Color(0x33007BFF); // ~20% átlátszó kék
+    const primaryDark = Color(0xCC007BFF); // ~80% átlátszó kék
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
@@ -546,19 +536,13 @@ class _ValueCardState extends State<_ValueCard> {
         width: widget.width,
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
-          color: _isHovered
-              ? Color.fromARGB(
-                  51,
-                  widget.color.r as int,
-                  widget.color.g as int,
-                  widget.color.b as int,
-                ) // 0.2 * 255 = ~51
-              : theme.cardTheme.color,
+          color: _isHovered ? primaryLight : theme.cardTheme.color,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Color.fromARGB(
-                  _isHovered ? 31 : 15, 0, 0, 0), // 0.12 / 0.06 * 255
+              color: _isHovered
+                  ? AboutPage.darkShadowColor
+                  : AboutPage.shadowColor,
               blurRadius: _isHovered ? 15 : 10,
               offset: Offset(0, _isHovered ? 8 : 4),
             ),
@@ -570,14 +554,7 @@ class _ValueCardState extends State<_ValueCard> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: _isHovered
-                    ? widget.color
-                    : Color.fromARGB(
-                        51,
-                        widget.color.r as int,
-                        widget.color.g as int,
-                        widget.color.b as int,
-                      ), // 0.2 * 255 = ~51
+                color: _isHovered ? widget.color : primaryLight,
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -591,14 +568,7 @@ class _ValueCardState extends State<_ValueCard> {
               widget.title,
               style: theme.textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
-                color: _isHovered
-                    ? Color.fromARGB(
-                        204,
-                        widget.color.r as int,
-                        widget.color.g as int,
-                        widget.color.b as int,
-                      ) // 0.8 * 255 = ~204
-                    : null,
+                color: _isHovered ? primaryDark : null,
               ),
             ),
             const SizedBox(height: 12),

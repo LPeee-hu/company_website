@@ -5,6 +5,10 @@ import '../widgets/page_header.dart';
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
 
+  // Előre definiált konstans színek
+  static const Color primaryTransparent = Color(0x33007BFF); // 20% átlátszó kék
+  static const Color shadowColor = Color(0x14000000); // 8% átlátszó fekete
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -109,15 +113,8 @@ class ServicesPage extends StatelessWidget {
                     padding: const EdgeInsets.all(32),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: Color.fromARGB(
-                        51,
-                        // ignore: deprecated_member_use
-                        colorScheme.primary.red,
-                        // ignore: deprecated_member_use
-                        colorScheme.primary.green,
-                        // ignore: deprecated_member_use
-                        colorScheme.primary.blue,
-                      ), // 0.2 * 255 = ~51
+                      color:
+                          primaryTransparent, // Előre definiált konstans szín
                     ),
                     child: Column(
                       children: [
@@ -301,15 +298,8 @@ class _ServiceItem extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(
-                      51,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.red,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.green,
-                      // ignore: deprecated_member_use
-                      colorScheme.primary.blue,
-                    ), // 0.2 * 255 = ~51
+                    color: ServicesPage
+                        .primaryTransparent, // Használjuk az előre definiált színt
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
@@ -381,19 +371,13 @@ class _ServiceItem extends StatelessWidget {
               width: 400,
               height: 300,
               decoration: BoxDecoration(
-                color: Color.fromARGB(
-                  51,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.red,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.green,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.blue,
-                ), // 0.2 * 255 = ~51
+                color: ServicesPage
+                    .primaryTransparent, // Használjuk az előre definiált színt
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color.fromARGB(20, 0, 0, 0), // 0.08 * 255 = ~20
+                    color: ServicesPage
+                        .shadowColor, // Használjuk az előre definiált színt
                     blurRadius: 15,
                     offset: Offset(0, 5),
                   ),
@@ -413,19 +397,13 @@ class _ServiceItem extends StatelessWidget {
               width: 400,
               height: 300,
               decoration: BoxDecoration(
-                color: Color.fromARGB(
-                  51,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.red,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.green,
-                  // ignore: deprecated_member_use
-                  colorScheme.primary.blue,
-                ), // 0.2 * 255 = ~51
+                color: ServicesPage
+                    .primaryTransparent, // Használjuk az előre definiált színt
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color.fromARGB(20, 0, 0, 0), // 0.08 * 255 = ~20
+                    color: ServicesPage
+                        .shadowColor, // Használjuk az előre definiált színt
                     blurRadius: 15,
                     offset: Offset(0, 5),
                   ),
@@ -504,6 +482,9 @@ class _ProcessStep extends StatelessWidget {
   final bool isLast;
   final double width;
 
+  // Előre definiált konstans színek a ProcessStep osztályhoz
+  static const Color backgroundLight = Color(0x33007BFF); // 20% átlátszó kék
+
   const _ProcessStep({
     required this.title,
     required this.description,
@@ -530,16 +511,8 @@ class _ProcessStep extends StatelessWidget {
               Container(
                 width: 80,
                 height: 80,
-                decoration: BoxDecoration(
-                  // ignore: deprecated_member_use
-                  color: Color.fromARGB(
-                      51,
-                      // ignore: deprecated_member_use
-                      color.red,
-                      // ignore: deprecated_member_use
-                      color.green,
-                      // ignore: deprecated_member_use
-                      color.blue), // 0.2 * 255 = ~51
+                decoration: const BoxDecoration(
+                  color: backgroundLight,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(

@@ -8,6 +8,16 @@ class ProjectCard extends StatefulWidget {
   final List<String> tags;
   final VoidCallback onTap;
 
+  // Előre definiált konstans színek
+  static const Color shadowLight = Color(0x14000000); // 8% átlátszó fekete
+  static const Color shadowMedium = Color(0x26000000); // 15% átlátszó fekete
+  static const Color primaryTransparent = Color(0x4D007BFF); // 30% átlátszó kék
+  static const Color gradientOverlayMiddle =
+      Color(0xB3000000); // 70% átlátszó fekete
+  static const Color gradientOverlayBottom =
+      Color(0xE6000000); // 90% átlátszó fekete
+  static const Color descriptionColor = Color(0xB3FFFFFF); // 70% átlátszó fehér
+
   const ProjectCard({
     super.key,
     required this.title,
@@ -85,12 +95,9 @@ class _ProjectCardState extends State<ProjectCard>
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromARGB(
-                        _isHovered ? 38 : 20,
-                        0,
-                        0,
-                        0,
-                      ),
+                      color: _isHovered
+                          ? ProjectCard.shadowMedium
+                          : ProjectCard.shadowLight,
                       blurRadius: _isHovered ? 15 : 10,
                       offset: const Offset(0, 4),
                     ),
@@ -105,15 +112,7 @@ class _ProjectCardState extends State<ProjectCard>
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
-                            color: Color.fromARGB(
-                              77,
-                              // ignore: deprecated_member_use
-                              theme.colorScheme.primary.red,
-                              // ignore: deprecated_member_use
-                              theme.colorScheme.primary.green,
-                              // ignore: deprecated_member_use
-                              theme.colorScheme.primary.blue,
-                            ),
+                            color: ProjectCard.primaryTransparent,
                             child: const Center(
                               child: Icon(
                                 Icons.image_not_supported,
@@ -135,8 +134,8 @@ class _ProjectCardState extends State<ProjectCard>
                             end: Alignment.bottomCenter,
                             colors: [
                               Colors.transparent,
-                              Color.fromARGB(179, 0, 0, 0),
-                              Color.fromARGB(230, 0, 0, 0),
+                              ProjectCard.gradientOverlayMiddle,
+                              ProjectCard.gradientOverlayBottom,
                             ],
                           ),
                         ),
@@ -198,7 +197,7 @@ class _ProjectCardState extends State<ProjectCard>
                                   maxLines: 3,
                                   overflow: TextOverflow.ellipsis,
                                   style: theme.textTheme.bodyMedium?.copyWith(
-                                    color: Colors.white70,
+                                    color: ProjectCard.descriptionColor,
                                   ),
                                 ),
                               ),

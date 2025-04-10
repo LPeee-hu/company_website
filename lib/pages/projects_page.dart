@@ -18,7 +18,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
           'Családi feladatkezelő alkalmazás, amely segít a család tagjainak koordinálni a háztartási feladatokat.',
       'imageUrl': 'assets/images/family_task_manager.jpg',
       'tags': ['Flutter', 'Firebase', 'iOS', 'Android'],
-      'link': 'https://lpeee-hu.github.io/task_2',
+      'link': 'https://lpeee-hu.github.io/company_website/task/',
     },
     {
       'title': 'E-commerce Platform',

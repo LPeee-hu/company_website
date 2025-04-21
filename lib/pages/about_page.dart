@@ -24,7 +24,7 @@ class AboutPage extends StatelessWidget {
           children: [
             const PageHeader(
               title: 'Rólunk',
-              subtitle: 'Ismerje meg csapatunkat és történetünket',
+              subtitle: 'Ismerje meg történetünket és értékeinket',
               backgroundImage: 'assets/images/about_header.jpg',
             ),
             Padding(
@@ -70,7 +70,7 @@ class AboutPage extends StatelessWidget {
                               ),
                               child: Center(
                                 child: Icon(
-                                  Icons.corporate_fare,
+                                  Icons.family_restroom,
                                   size: 100,
                                   color: colorScheme.primary,
                                 ),
@@ -98,7 +98,7 @@ class AboutPage extends StatelessWidget {
                               ),
                               child: Center(
                                 child: Icon(
-                                  Icons.corporate_fare,
+                                  Icons.family_restroom,
                                   size: 80,
                                   color: colorScheme.primary,
                                 ),
@@ -126,7 +126,7 @@ class AboutPage extends StatelessWidget {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Tapasztalt szakemberek, akik segítenek az ötletét valósággá váltani',
+                          'A családi alkalmazás mögött álló alkotópáros',
                           style: theme.textTheme.bodyLarge,
                           textAlign: TextAlign.center,
                         ),
@@ -143,7 +143,7 @@ class AboutPage extends StatelessWidget {
                             } else if (isTablet) {
                               crossAxisCount = 2;
                             } else {
-                              crossAxisCount = 3;
+                              crossAxisCount = 2; // Csak 2 csapattag van
                             }
 
                             return Wrap(
@@ -190,40 +190,40 @@ class AboutPage extends StatelessWidget {
                         runSpacing: 20,
                         children: [
                           _ValueCard(
+                            icon: Icons.family_restroom,
+                            title: 'Családközpontúság',
+                            description:
+                                'Saját családi tapasztalataink alapján olyan megoldásokat fejlesztünk, amelyek valóban segítenek a mindennapokban.',
+                            width: isMobile
+                                ? constraints.maxWidth
+                                : (constraints.maxWidth / 2) - 20,
+                            color: colorScheme.primary,
+                          ),
+                          _ValueCard(
                             icon: Icons.lightbulb,
                             title: 'Innováció',
                             description:
-                                'Folyamatosan keressük az új technológiákat és módszereket, hogy a legjobb megoldásokat nyújthassuk.',
+                                'A legújabb technológiákat alkalmazzuk, hogy modern és felhasználóbarát alkalmazásokat hozzunk létre.',
                             width: isMobile
                                 ? constraints.maxWidth
                                 : (constraints.maxWidth / 2) - 20,
                             color: colorScheme.primary,
                           ),
                           _ValueCard(
-                            icon: Icons.handshake,
-                            title: 'Partnerség',
+                            icon: Icons.design_services,
+                            title: 'Kreatív Design',
                             description:
-                                'Szoros együttműködésben dolgozunk ügyfeleinkkel, hogy megértsük igényeiket és céljaikat.',
+                                'Hiszünk abban, hogy a jó dizájn nemcsak szép, hanem funkcionális is. Minden elemnek célja van.',
                             width: isMobile
                                 ? constraints.maxWidth
                                 : (constraints.maxWidth / 2) - 20,
                             color: colorScheme.primary,
                           ),
                           _ValueCard(
-                            icon: Icons.verified,
-                            title: 'Minőség',
+                            icon: Icons.balance,
+                            title: 'Üzleti Szemlélet',
                             description:
-                                'Elkötelezettek vagyunk a legmagasabb minőségű szoftverek fejlesztése mellett.',
-                            width: isMobile
-                                ? constraints.maxWidth
-                                : (constraints.maxWidth / 2) - 20,
-                            color: colorScheme.primary,
-                          ),
-                          _ValueCard(
-                            icon: Icons.timelapse,
-                            title: 'Határidők betartása',
-                            description:
-                                'Projektkivitelezésünk során a pontosság és a megbízhatóság alapvető érték számunkra.',
+                                'Ötvözzük a fejlesztői kreativitást az üzleti precizitással, így valódi értéket teremtünk.',
                             width: isMobile
                                 ? constraints.maxWidth
                                 : (constraints.maxWidth / 2) - 20,
@@ -247,7 +247,7 @@ class AboutPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'Dolgozzunk együtt a következő projektjén!',
+                          'Egyszerűsítse családi mindennapjait alkalmazásunkkal!',
                           style: theme.textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
@@ -255,30 +255,56 @@ class AboutPage extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          'Vegye fel velünk a kapcsolatot, és beszéljük meg, hogyan segíthetünk az ötletét valósággá váltani.',
+                          'Töltse le a családi feladatkezelő alkalmazásunkat, vagy vegye fel velünk a kapcsolatot egyedi igényeivel kapcsolatban.',
                           style: theme.textTheme.bodyLarge,
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 24),
-                        ElevatedButton(
-                          onPressed: () {
-                            // Navigate to contact page
-                          },
-                          style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 16,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
+                                // Navigate to download page
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 32,
+                                  vertical: 16,
+                                ),
+                                backgroundColor: colorScheme.primary,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: const Text(
+                                'Alkalmazás letöltése',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
-                            backgroundColor: colorScheme.primary,
-                            foregroundColor: Colors.white,
-                          ),
-                          child: const Text(
-                            'Kapcsolatfelvétel',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                            const SizedBox(width: 16),
+                            OutlinedButton(
+                              onPressed: () {
+                                // Navigate to contact page
+                              },
+                              style: OutlinedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 32,
+                                  vertical: 16,
+                                ),
+                                side: BorderSide(color: colorScheme.primary),
+                              ),
+                              child: Text(
+                                'Kapcsolatfelvétel',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: colorScheme.primary,
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
                       ],
                     ),
@@ -297,17 +323,17 @@ class AboutPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Cégünk 2018-ban alakult azzal a céllal, hogy modern, cross-platform mobil alkalmazásokat fejlesszen, amelyek segítik a vállalkozásokat a digitális átalakulásban.',
+          'Alkalmazásunk egy családi inspirációból született. Két gyermekünk nevelése és a háztartás irányítása közben szembesültünk azzal, milyen kihívást jelent a mindennapi feladatok hatékony szervezése.',
           style: theme.textTheme.bodyLarge,
         ),
         const SizedBox(height: 16),
         Text(
-          'Az elmúlt években számos sikeres projektet valósítottunk meg különböző iparágakban, az egészségügytől a kiskereskedelmen át a pénzügyekig. A Flutter technológiára specializálódva segítünk ügyfeleinknek csökkenteni a fejlesztési időt és költségeket, miközben kiváló minőségű alkalmazásokat biztosítunk.',
+          'Férj-feleség csapatként egyesítettük erősségeinket: Péter üzleti controller háttere és szoftverfejlesztési szenvedélye találkozott Daniella kreatív design szemléletével és gyártástervezési tapasztalatával. Így született meg a családi feladatkezelő alkalmazásunk, amely ötvözi a praktikus funkciókat és a felhasználóbarát dizájnt.',
           style: theme.textTheme.bodyLarge,
         ),
         const SizedBox(height: 16),
         Text(
-          'Tapasztalt fejlesztőkből, UI/UX tervezőkből és projektmenedzserekből álló csapatunk szorosan együttműködik ügyfeleinkkel, hogy megértse egyedi igényeiket és céljaikat, és egyedi megoldásokat nyújtson, amelyek valódi üzleti értéket teremtenek.',
+          'Amit saját családunknak fejlesztettünk, most szeretnénk megosztani másokkal is. Küldetésünk, hogy segítsünk a családoknak hatékonyabban szervezni mindennapjaikat, hogy több idő maradjon arra, ami igazán számít: a közösen töltött minőségi időre.',
           style: theme.textTheme.bodyLarge,
         ),
       ],
@@ -330,49 +356,21 @@ class TeamMember {
   });
 }
 
-// Sample team members data
+// Frissített csapattagok - csak ketten vannak
 final List<TeamMember> _teamMembers = [
   const TeamMember(
-    name: 'Kovács István',
-    position: 'Ügyvezető igazgató',
+    name: 'Péter',
+    position: 'Társalapító & Technológiai Vezető',
     bio:
-        'István több mint 15 éves tapasztalattal rendelkezik a szoftverfejlesztés területén. A Flutter korai bevezetőjeként segített számtalan vállalatnak a mobil stratégiájuk kialakításában.',
+        'Péter üzleti controllerként kezdte karrierjét, ahol erős elemzői szemléletet és üzleti gondolkodást sajátított el. A szoftverfejlesztés iránti szenvedélye Python programozással indult, majd a cross-platform fejlesztés területén találta meg hivatását. A Flutter technológiára specializálódva egyesíti az üzleti precizitást és a fejlesztői kreativitást.',
     imageUrl: 'assets/images/team/peti.jpg',
   ),
   const TeamMember(
-    name: 'Nagy Anna',
-    position: 'Vezető fejlesztő',
+    name: 'Daniella',
+    position: 'Társalapító & Kreatív Vezető',
     bio:
-        'Anna szakértő a Flutter és a cross-platform fejlesztés területén. Szenvedélye a tiszta, hatékony kód írása és az új technológiák feltárása.',
+        'Daniella gyártástervezési háttérrel rendelkezik, ahol a hatékony folyamatok kialakítása és optimalizálása volt a feladata. Saját vállalkozásában design ékszereket tervezett és készített, így gyakorlati tapasztalatot szerzett a kreatív tervezés és a felhasználói élmény terén. Az alkalmazás vizuális arculatáért és felhasználói élményéért felel.',
     imageUrl: 'assets/images/team/deni.jpg',
-  ),
-  const TeamMember(
-    name: 'Szabó Péter',
-    position: 'UI/UX tervező',
-    bio:
-        'Péter kreatív designer, aki gyönyörű és felhasználóbarát alkalmazásokat tervez. Munkája során ötvözi a felhasználói élményt a modern dizájn elvekkel.',
-    imageUrl: 'assets/images/team/peter.jpg',
-  ),
-  const TeamMember(
-    name: 'Varga Júlia',
-    position: 'Projektmenedzser',
-    bio:
-        'Júlia biztosítja, hogy a projektek időben és a költségvetésen belül készüljenek el. Kiváló kommunikációs készségekkel rendelkezik és remekül kezeli a kihívásokat.',
-    imageUrl: 'assets/images/team/julia.jpg',
-  ),
-  const TeamMember(
-    name: 'Tóth Gábor',
-    position: 'Backend fejlesztő',
-    bio:
-        'Gábor szakértő a skálázható backend rendszerek fejlesztésében. Szorosan együttműködik a Flutter csapattal a teljes stack megoldások kiépítésében.',
-    imageUrl: 'assets/images/team/gabor.jpg',
-  ),
-  const TeamMember(
-    name: 'Kiss Eszter',
-    position: 'Minőségbiztosítási mérnök',
-    bio:
-        'Eszter felel az alkalmazások minőségéért, átfogó tesztelési stratégiákat dolgoz ki, és automatizált teszteket ír a hibák korai felderítésére.',
-    imageUrl: 'assets/images/team/eszter.jpg',
   ),
 ];
 

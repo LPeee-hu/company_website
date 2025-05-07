@@ -1,0 +1,95 @@
+key,en,de,hu
+settings,Settings,Einstellungen,Beállítások
+darkMode,Dark Mode,Dunkles Thema,Sötét mód
+lightMode,Light Mode,Helles Thema,Világos mód
+systemTheme,System Theme,System-Thema,Rendszer téma
+appTitle,Task Manager,Aufgabenmanager,Feladatkezelő
+loginTitle,Login,Anmelden,Bejelentkezés
+registerTitle,Register,Registrieren,Regisztráció
+homeTitle,Home,Startseite,Főoldal
+tasksTitle,Tasks,Aufgaben,Feladatok
+categoriesTitle,Categories,Kategorien,Kategóriák
+newTaskTitle,New Task,Neue Aufgabe,Új feladat
+taskDetailsTitle,Task Details,Aufgabendetails,Feladat részletei
+user,User,Benutzer,Felhasználó
+registerSuccess,Registration successful! Please confirm your email.,Registrierung erfolgreich! Bitte bestätige deine E-Mail.,Sikeres regisztráció! Kérjük erősítsd meg az email címedet.
+creating,Creating,Erstelle,Létrehozás
+noUserLoggedIn,No user is logged in,Kein Benutzer ist angemeldet,Nincs bejelentkezett felhasználó
+refresh,Refresh,Aktualisieren,Frissítés
+createNewCategory,Create New Category,Neue Kategorie erstellen,Új kategória létrehozása
+editCategory,Edit Category,Kategorie bearbeiten,Kategória szerkesztése
+noCategories,No categories yet,Noch keine Kategorien,Nincsenek kategóriák
+email,Email,E-Mail,Email cím
+emailHint,Enter your email,Gib deine E-Mail-Adresse ein,Add meg az email címed
+emailRequired,Email is required,E-Mail ist erforderlich,Az email cím megadása kötelező
+emailInvalid,Invalid email format,Ungültiges E-Mail-Format,Érvénytelen email formátum
+password,Password,Passwort,Jelszó
+passwordHint,Enter your password,Gib dein Passwort ein,Add meg a jelszavad
+passwordRequired,Password is required,Passwort ist erforderlich,A jelszó megadása kötelező
+passwordTooShort,Password must be at least 6 characters,Passwort muss mindestens 6 Zeichen lang sein,A jelszó legalább 6 karakter hosszú legyen
+passwordNeedsDigit,Password must contain a digit,Passwort muss mindestens eine Ziffer enthalten,A jelszónak tartalmaznia kell számot
+confirmPassword,Confirm Password,Passwort bestätigen,Jelszó megerősítése
+passwordsDontMatch,Passwords don't match,Passwörter stimmen nicht überein,A jelszavak nem egyeznek
+fullName,Full Name,Vollständiger Name,Teljes név
+fullNameHint,Enter your full name,Gib deinen vollständigen Namen ein,Add meg a teljes neved
+fullNameRequired,Full name is required,Vollständiger Name ist erforderlich,A név megadása kötelező
+login,Login,Anmelden,Bejelentkezés
+register,Register,Registrieren,Regisztráció
+logout,Logout,Abmelden,Kijelentkezés
+save,Save,Speichern,Mentés
+cancel,Cancel,Abbrechen,Mégse
+delete,Delete,Löschen,Törlés
+edit,Edit,Bearbeiten,Szerkesztés
+create,Create,Erstellen,Létrehozás
+update,Update,Aktualisieren,Frissítés
+forgotPassword,Forgot Password?,Passwort vergessen?,Elfelejtett jelszó?
+noAccount,Don't have an account? Register!,Noch kein Konto? Registrieren!,Még nincs fiókod? Regisztrálj!
+hasAccount,Already have an account? Login!,Bereits ein Konto? Anmelden!,Már van fiókod? Jelentkezz be!
+selectOption,Select an option:,Wähle eine Option:,Válassz az alábbi lehetőségek közül:
+taskName,Task Name,Aufgabenname,Feladat neve
+taskNameHint,Enter task name,Aufgabenname eingeben,Add meg a feladat nevét
+taskNameRequired,Task name is required,Aufgabenname ist erforderlich,A feladat neve kötelező
+category,Category,Kategorie,Kategória
+selectCategory,Select category,Kategorie auswählen,Válassz kategóriát
+noCategory,No category,Keine Kategorie,Nincs kategória
+categoryName,Category Name,Kategoriename,Kategória neve
+categoryNameHint,Enter category name,Kategoriename eingeben,Add meg a kategória nevét
+categoryNameRequired,Category name is required,Kategoriename ist erforderlich,A kategória neve kötelező
+categoryDescription,Description (optional),Beschreibung (optional),Leírás (opcionális)
+privateTask,Private Task,Private Aufgabe,Privát feladat
+privateTaskDescription,If checked only you can see this task,Wenn aktiviert kannst nur du diese Aufgabe sehen,Ha be van jelölve csak te láthatod ezt a feladatot
+privateCategory,Private Category,Private Kategorie,Privát kategória
+privateCategoryDescription,Private categories are not visible to family members,Private Kategorien sind für Familienmitglieder nicht sichtbar,A privát kategória nem látható a családtagok számára
+taskCreated,Task created successfully,Aufgabe erfolgreich erstellt,Feladat sikeresen létrehozva
+taskUpdated,Task updated successfully,Aufgabe erfolgreich aktualisiert,Feladat sikeresen frissítve
+taskDeleted,Task deleted successfully,Aufgabe erfolgreich gelöscht,Feladat sikeresen törölve
+categoryCreated,Category created successfully,Kategorie erfolgreich erstellt,Kategória sikeresen létrehozva
+categoryUpdated,Category updated successfully,Kategorie erfolgreich aktualisiert,Kategória sikeresen módosítva
+categoryDeleted,Category deleted successfully,Kategorie erfolgreich gelöscht,Kategória sikeresen törölve
+error,Error,Fehler,Hiba
+generalError,An error occurred,Ein Fehler ist aufgetreten,Hiba történt
+connectionError,Connection error,Verbindungsfehler,Kapcsolódási hiba
+tryAgain,Try Again,Erneut versuchen,Újrapróbálkozás
+status,Status,Status,Státusz
+inProgress,In Progress,In Bearbeitung,Folyamatban
+completed,Completed,Abgeschlossen,Befejezve
+visibility,Visibility,Sichtbarkeit,Láthatóság
+private,Private,Privat,Privát
+public,Public,Öffentlich,Nyilvános
+creationDate,Creation Date,Erstellungsdatum,Létrehozás dátuma
+userId,User ID,Benutzer-ID,Felhasználói azonosító
+myTasks,My Tasks,Meine Aufgaben,Saját feladatok
+familyTasks,Family Tasks,Familienaufgaben,Családi feladatok
+noTasks,No tasks yet,Noch keine Aufgaben,Még nincsenek feladatok
+noMyTasks,You don't have any tasks yet,Du hast noch keine Aufgaben,Még nincsenek saját feladataid
+noFamilyTasks,There are no family tasks yet,Es gibt noch keine Familienaufgaben,Még nincsenek családi feladatok
+acceptTerms,I accept the terms and conditions,Ich akzeptiere die Geschäftsbedingungen,Elfogadom a feltételeket és az adatvédelmi irányelveket
+termsRequired,You must accept the terms and conditions,Du musst die Geschäftsbedingungen akzeptieren,A feltételek elfogadása kötelező a regisztrációhoz
+theme,Theme,Thema,Téma
+language,Language,Sprache,Nyelv
+changeLanguage,Change Language,Sprache ändern,Nyelv váltása
+english,English,Englisch,Angol
+german,German,Deutsch,Német
+hungarian,Hungarian,Ungarisch,Magyar
+deleteConfirmation,Confirm Delete,Löschen bestätigen,Törlés megerősítése
+deleteTaskConfirmation,Are you sure you want to delete this task?,Möchtest du diese Aufgabe wirklich löschen?,Biztosan törölni szeretnéd ezt a feladatot?

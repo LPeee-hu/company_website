@@ -93,3 +93,75 @@ german,German,Deutsch,Német
 hungarian,Hungarian,Ungarisch,Magyar
 deleteConfirmation,Confirm Delete,Löschen bestätigen,Törlés megerősítése
 deleteTaskConfirmation,Are you sure you want to delete this task?,Möchtest du diese Aufgabe wirklich löschen?,Biztosan törölni szeretnéd ezt a feladatot?
+editProfile,Edit Profile,Profil bearbeiten,Profil szerkesztése
+profileUpdated,Profile updated successfully,Profil erfolgreich aktualisiert,Profil sikeresen frissítve
+profileLoadError,Failed to load profile data.,Fehler beim Laden der Profildaten.,Nem sikerült betölteni a profil adatokat.
+personalData,Personal Data,Persönliche Daten,Személyes adatok
+displayName,Display Name,Anzeigename,Megjelenítési név
+displayNameRequired,Display name is required,Anzeigename ist erforderlich,A megjelenítési név megadása kötelező
+birthDate,Birth Date,Geburtsdatum,Születési dátum
+gender,Gender,Geschlecht,Nem
+selectGender,Select gender,Geschlecht auswählen,Válassz nemet
+male,Male,Männlich,Férfi
+female,Female,Weiblich,Nő
+other,Other,Andere,Egyéb
+preferNotToSay,Prefer not to say,Keine Angabe,Nem szeretném megadni
+residenceCity,Residence City,Wohnort,Lakóhely
+dateTimeSettings,Date and Time Settings,Datums- und Zeiteinstellungen,Dátum és idő beállítások
+dateFormat,Date Format,Datumsformat,Dátum formátum
+timeFormat,Time Format,Zeitformat,Idő formátum
+selectFormat,Select format,Format auswählen,Válassz formátumot
+format24h,24-hour format (e.g. 14:30),24-Stunden-Format (z.B. 14:30),24 órás (pl. 14:30)
+format12h,12-hour format (e.g. 2:30 PM),12-Stunden-Format (z.B. 2:30 PM),12 órás (pl. 2:30 PM)
+timezone,Timezone,Zeitzone,Időzóna
+selectTimezone,Select timezone,Zeitzone auswählen,Válassz időzónát
+budapestTimezone,Central European Time (Budapest),Mitteleuropäische Zeit (Budapest),Közép-európai idő (Budapest)
+londonTimezone,Greenwich Mean Time (London),Greenwich-Normalzeit (London),Greenwich-i középidő (London)
+newYorkTimezone,Eastern Time (New York),Ostküstenzeit (New York),Keleti parti idő (New York)
+losAngelesTimezone,Pacific Time (Los Angeles),Pazifikzeit (Los Angeles),Csendes-óceáni idő (Los Angeles)
+tokyoTimezone,Japan Time (Tokyo),Japanische Zeit (Tokio),Japán idő (Tokió)
+taskSettings,Task Settings,Aufgabeneinstellungen,Feladat beállítások
+taskSortOrder,Task Sort Order,Aufgaben-Sortierreihenfolge,Feladatok rendezése
+selectSortOrder,Select sort order,Sortierreihenfolge auswählen,Válassz rendezési sorrendet
+byDueDate,By due date,Nach Fälligkeitsdatum,Határidő szerint
+byPriority,By priority,Nach Priorität,Prioritás szerint
+byCreationDate,By creation date,Nach Erstellungsdatum,Létrehozás szerint
+byTitle,By title,Nach Titel,Cím szerint
+readOnlyInformation,Read-only Information,Schreibgeschützte Informationen,Csak olvasható információk
+created,Created,Erstellt,Létrehozva
+updated,Updated,Aktualisiert,Frissítve
+notSpecified,Not specified,Nicht angegeben,Nincs megadva
+profilePicture,Profile Picture,Profilbild,Profilkép
+changeProfilePicture,Change Profile Picture,Profilbild ändern,Profilkép módosítása
+selectFromGallery,Select from Gallery,Aus Galerie auswählen,Kiválasztás a galériából
+takePhoto,Take Photo,Foto aufnehmen,Fénykép készítése
+removePhoto,Remove Photo,Foto entfernen,Fénykép eltávolítása
+profilePictureUpdated,Profile picture updated successfully,Profilbild erfolgreich aktualisiert,Profilkép sikeresen frissítve
+profilePictureRemoved,Profile picture removed successfully,Profilbild erfolgreich entfernt,Profilkép sikeresen eltávolítva
+profilePictureUploadError,Error uploading profile picture,Fehler beim Hochladen des Profilbilds,Hiba a profilkép feltöltésekor
+dangerZone,Danger Zone,Gefahrenbereich,Veszélyes műveletek
+deleteAccount,Delete Account,Konto löschen,Fiók törlése
+deleteAccountButton,Delete Account,Konto löschen,Fiók törlése
+deleteAccountExplanation,Deleting your account will remove your profile and related data. If you are the only member in your family all data you created will be deleted. If there are other family members your private data will become shared with them.,Das Löschen deines Kontos entfernt dein Profil und zugehörige Daten. Wenn du das einzige Mitglied deiner Familie bist werden alle von dir erstellten Daten gelöscht. Wenn es andere Familienmitglieder gibt werden deine privaten Daten mit ihnen geteilt.,A fiók törlésével a profilod és az ahhoz kapcsolódó adatok törlődnek. Ha te vagy az egyetlen tag a családodban minden általad létrehozott adat törlődni fog. Ha vannak más családtagok is a privát adataid megosztottá válnak velük.
+delayedDeletion,30-day delayed deletion,30-Tage verzögerte Löschung,30 napos késleltetett törlés
+delayedDeletionDescription,Your account will be deleted after 30 days. You can cancel the deletion request within this period.,Dein Konto wird nach 30 Tagen gelöscht. Du kannst die Löschung innerhalb dieses Zeitraums zurückziehen.,A fiókod 30 nap múlva törlődik. Ezen időszakon belül visszavonhatod a törlési kérelmet.
+immediateDeletion,Immediate deletion,Sofortige Löschung,Azonnali törlés
+immediateDeletionDescription,Your account and all related data will be deleted immediately. This action cannot be undone!,Dein Konto und alle zugehörigen Daten werden sofort gelöscht. Diese Aktion kann nicht rückgängig gemacht werden!,A fiókod és minden kapcsolódó adat azonnal törlődik. Ez a művelet nem vonható vissza!
+confirmDeletion,I acknowledge that my profile and data will be deleted,Ich bestätige dass mein Profil und meine Daten gelöscht werden,Tudomásul veszem hogy a profilom és az adataim törlődni fognak
+confirmDeleteRequired,Please confirm the deletion by checking the acknowledgement box,Bitte bestätige die Löschung durch Aktivieren des Bestätigungskästchens,Kérlek erősítsd meg a fiók törlését a jelölőnégyzet bejelölésével
+immediateDeleteButton,Delete Account Immediately,Konto sofort löschen,Fiók azonnali törlése
+permanentDelete,Permanent Delete,Dauerhaft löschen,Végleges törlés
+immediateDeleteConfirmText,Are you sure you want to delete your account IMMEDIATELY? This action CANNOT BE UNDONE and all your data will be deleted immediately! If you are the only member in your family all data you created will be deleted. If there are other family members your private data will become shared with them.,Möchtest du dein Konto SOFORT löschen? Diese Aktion kann NICHT RÜCKGÄNGIG gemacht werden und alle deine Daten werden sofort gelöscht! Wenn du das einzige Mitglied deiner Familie bist werden alle von dir erstellten Daten gelöscht. Wenn es andere Familienmitglieder gibt werden deine privaten Daten mit ihnen geteilt.,Biztosan AZONNAL törölni szeretnéd a fiókodat? Ez a művelet NEM VISSZAVONHATÓ és az összes adatod azonnal törlődik! Ha te vagy az egyetlen tag a családodban minden általad létrehozott adat törlődni fog. Ha más családtagok is vannak a privát adataid megosztottá válnak velük.
+delayedDeleteConfirmText,Are you sure you want to delete your account? The deletion process will take 30 days during which you can cancel the deletion request. If you are the only member in your family all data you created will be deleted. If there are other family members your private data will become shared with them.,Möchtest du dein Konto löschen? Der Löschvorgang dauert 30 Tage während derer du die Löschung zurückziehen kannst. Wenn du das einzige Mitglied deiner Familie bist werden alle von dir erstellten Daten gelöscht. Wenn es andere Familienmitglieder gibt werden deine privaten Daten mit ihnen geteilt.,Biztosan törölni szeretnéd a fiókodat? A törlési folyamat 30 napig tart ez idő alatt visszavonhatod a törlési kérelmet. Ha te vagy az egyetlen tag a családodban minden általad létrehozott adat törlődni fog. Ha más családtagok is vannak a privát adataid megosztottá válnak velük.
+accountDeletedSuccess,Your account has been deleted.,Dein Konto wurde gelöscht.,Fiókod törölve lett.
+accountDeleteScheduledSuccess,Account deletion in progress. Your account will be permanently deleted after 30 days.,Kontolöschung in Bearbeitung. Dein Konto wird nach 30 Tagen dauerhaft gelöscht.,Fiók törlése folyamatban. Fiókod 30 nap múlva törlődik véglegesen.
+accountDeleteError,Error deleting account,Fehler beim Löschen des Kontos,Hiba a fiók törlése során
+accountScheduledForDeletion,Your account is scheduled for deletion,Dein Konto ist zur Löschung vorgemerkt,Fiókod törlésre vár
+accountDeletionExplanation,Your account is scheduled for deletion. If you don't cancel the deletion your account and data will be automatically deleted on the scheduled date.,Dein Konto ist zur Löschung vorgemerkt. Wenn du die Löschung nicht abbrichst werden dein Konto und deine Daten am geplanten Datum automatisch gelöscht.,Fiókod törlésre van ütemezve. Ha nem vonod vissza a törlést fiókod és adataid automatikusan törlésre kerülnek a megadott dátumkor.
+deletionRequested,Deletion requested,Löschung beantragt,Törlés kérve
+deletionScheduled,Deletion scheduled,Löschung geplant,Törlés végrehajtása
+daysRemaining,Days remaining,Verbleibende Tage,Hátralévő idő
+cancelDeletion,Cancel Deletion Request,Löschantrag zurückziehen,Törlési kérelem visszavonása
+deletionCancelled,Deletion request successfully cancelled,Löschantrag erfolgreich zurückgezogen,Törlési kérelem sikeresen visszavonva
+deletionCancelError,Error cancelling deletion request,Fehler beim Zurückziehen des Löschantrags,Hiba történt a törlési kérelem visszavonása közben
+deletionStatusError,Error checking deletion status,Fehler beim Prüfen des Löschstatus,Hiba történt a törlési állapot lekérdezésekor

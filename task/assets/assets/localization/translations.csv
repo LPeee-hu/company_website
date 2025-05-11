@@ -169,3 +169,10 @@ privateCategory,Private Category,Private Kategorie,Privát kategória
 publicCategory,Public Category,Öffentliche Kategorie,Nyilvános kategória
 privateTaskWarning,This task is public but belongs to a private category so it will not be visible to others,Diese Aufgabe ist öffentlich gehört aber zu einer privaten Kategorie und ist daher für andere nicht sichtbar,Ez a feladat nyilvános de privát kategóriához tartozik így mások számára nem lesz látható
 categoryVisibility,Category Visibility,Kategoriesichtbarkeit,Kategória láthatósága
+reminderTitle,Task Reminder,Aufgaben-Erinnerung,Feladat emlékeztető
+reminderForTask,Reminder for: {taskName},Erinnerung für: {taskName},Emlékeztető: {taskName}
+enableNotifications,Enable notifications,Benachrichtigungen aktivieren,Értesítések bekapcsolása
+disableNotifications,Disable notifications,Benachrichtigungen deaktivieren,Értesítések kikapcsolása
+notificationsEnabled,Notifications enabled,Benachrichtigungen aktiviert,Értesítések bekapcsolva
+notificationsDisabled,Notifications disabled,Benachrichtigungen deaktiviert,Értesítések kikapcsolva
+reminderSetFor,Reminder set for {dateTime},Erinnerung eingestellt für {dateTime},Emlékeztető beállítva: {dateTime}

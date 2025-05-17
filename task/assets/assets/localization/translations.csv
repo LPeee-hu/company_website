@@ -176,3 +176,30 @@ disableNotifications,Disable notifications,Benachrichtigungen deaktivieren,Érte
 notificationsEnabled,Notifications enabled,Benachrichtigungen aktiviert,Értesítések bekapcsolva
 notificationsDisabled,Notifications disabled,Benachrichtigungen deaktiviert,Értesítések kikapcsolva
 reminderSetFor,Reminder set for {dateTime},Erinnerung eingestellt für {dateTime},Emlékeztető beállítva: {dateTime}
+
+loginTitle,Login,Anmelden,Bejelentkezés
+email,Email,E-Mail,E-mail
+emailHint,Enter your email,Geben Sie Ihre E-Mail-Adresse ein,Add meg az e-mail címed
+password,Password,Passwort,Jelszó
+passwordHint,Enter your password,Geben Sie Ihr Passwort ein,Add meg a jelszavad
+login,Login,Anmelden,Bejelentkezés
+register,Register,Registrieren,Regisztráció
+noAccount,Don't have an account? Register,Kein Konto? Registrieren,Nincs még fiókod? Regisztrálj
+emailRequired,Email is required,E-Mail ist erforderlich,Az e-mail cím megadása kötelező
+emailInvalid,Please enter a valid email,Bitte geben Sie eine gültige E-Mail-Adresse ein,Kérjük, adj meg egy érvényes e-mail címet
+passwordRequired,Password is required,Passwort ist erforderlich,A jelszó megadása kötelező
+passwordTooShort,Password must be at least 6 characters,Das Passwort muss mindestens 6 Zeichen lang sein,A jelszónak legalább 6 karakterből kell állnia
+error,Error,Fehler,Hiba
+# Új kulcsok a jelszó visszaállításhoz
+loginFailed,Login Failed,Anmeldung fehlgeschlagen,Sikertelen bejelentkezés
+invalidCredentials,Invalid username or password. Please try again.,Ungültiger Benutzername oder Passwort. Bitte versuchen Sie es erneut.,Érvénytelen felhasználónév vagy jelszó. Kérjük, próbáld újra.
+forgotPassword,Forgot Password,Passwort vergessen,Elfelejtetted a jelszavad?
+forgotPasswordQuestion,Did you forget your password?,Haben Sie Ihr Passwort vergessen?,Elfelejtetted a jelszavadat?
+resetPassword,Reset Password,Passwort zurücksetzen,Jelszó visszaállítása
+resetPasswordDescription,Enter your email address and we will send you a link to reset your password.,Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.,Add meg az e-mail címed, és küldünk egy linket a jelszavad visszaállításához.
+sendResetLink,Send Reset Link,Link zum Zurücksetzen senden,Visszaállító link küldése
+resetLinkSent,Reset Link Sent,Link zum Zurücksetzen gesendet,Visszaállító link elküldve
+resetLinkSentDescription,We've sent a password reset link to {email}. Please check your inbox.,Wir haben einen Link zum Zurücksetzen des Passworts an {email} gesendet. Bitte überprüfen Sie Ihren Posteingang.,Elküldtünk egy jelszó-visszaállító linket a következő címre: {email}. Kérjük, ellenőrizd a beérkező üzeneteidet.
+resetPasswordFailed,Password Reset Failed,Passwort zurücksetzen fehlgeschlagen,Jelszó visszaállítása sikertelen
+cancel,Cancel,Abbrechen,Mégsem
+ok,OK,OK,Rendben

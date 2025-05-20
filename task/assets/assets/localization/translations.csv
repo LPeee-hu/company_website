@@ -203,3 +203,20 @@ resetLinkSentDescription,We've sent a password reset link to {email}. Please che
 resetPasswordFailed,Password Reset Failed,Passwort zurücksetzen fehlgeschlagen,Jelszó visszaállítása sikertelen
 cancel,Cancel,Abbrechen,Mégsem
 ok,OK,OK,Rendben
+
+mobilePermissions,Mobil engedélyek,Mobile Permissions
+notificationPermissions,Értesítési engedélyek,Notification Permissions
+permissionsCheck,Engedélyek ellenőrzése...,Checking Permissions...
+exactAlarms,Pontos riasztások,Exact Alarms
+enabled,Engedélyezve,Enabled
+notEnabled,Nincs engedélyezve,Not Enabled
+enablePermission,Engedélyezés,Enable
+allSettings,Összes beállítás,All Settings
+androidOnlyFeature,Ez a funkció csak Android platformon érhető el.,This feature is only available on Android platform.
+permissionsMissing,Értesítési engedélyek hiányoznak,Missing Notification Permissions
+permissionsDescription,Az értesítések és pontos riasztások engedélyezése szükséges az alkalmazás megfelelő működéséhez.,Notification and exact alarm permissions are necessary for the app to function properly.
+notificationSettings,Értesítési beállítások,Notification Settings
+exactAlarmSettings,Pontos riasztás beállítások,Exact Alarm Settings
+appSettings,App beállítások,App Settings
+cancel,Mégse,Cancel
+close,Bezárás,Close

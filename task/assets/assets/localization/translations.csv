@@ -165,7 +165,6 @@ cancelDeletion,Cancel Deletion Request,Löschantrag zurückziehen,Törlési kér
 deletionCancelled,Deletion request successfully cancelled,Löschantrag erfolgreich zurückgezogen,Törlési kérelem sikeresen visszavonva
 deletionCancelError,Error cancelling deletion request,Fehler beim Zurückziehen des Löschantrags,Hiba történt a törlési kérelem visszavonása közben
 deletionStatusError,Error checking deletion status,Fehler beim Prüfen des Löschstatus,Hiba történt a törlési állapot lekérdezésekor
-privateCategory,Private Category,Private Kategorie,Privát kategória
 publicCategory,Public Category,Öffentliche Kategorie,Nyilvános kategória
 privateTaskWarning,This task is public but belongs to a private category so it will not be visible to others,Diese Aufgabe ist öffentlich gehört aber zu einer privaten Kategorie und ist daher für andere nicht sichtbar,Ez a feladat nyilvános de privát kategóriához tartozik így mások számára nem lesz látható
 categoryVisibility,Category Visibility,Kategoriesichtbarkeit,Kategória láthatósága
@@ -176,24 +175,8 @@ disableNotifications,Disable notifications,Benachrichtigungen deaktivieren,Érte
 notificationsEnabled,Notifications enabled,Benachrichtigungen aktiviert,Értesítések bekapcsolva
 notificationsDisabled,Notifications disabled,Benachrichtigungen deaktiviert,Értesítések kikapcsolva
 reminderSetFor,Reminder set for {dateTime},Erinnerung eingestellt für {dateTime},Emlékeztető beállítva: {dateTime}
-
-loginTitle,Login,Anmelden,Bejelentkezés
-email,Email,E-Mail,E-mail
-emailHint,Enter your email,Geben Sie Ihre E-Mail-Adresse ein,Add meg az e-mail címed
-password,Password,Passwort,Jelszó
-passwordHint,Enter your password,Geben Sie Ihr Passwort ein,Add meg a jelszavad
-login,Login,Anmelden,Bejelentkezés
-register,Register,Registrieren,Regisztráció
-noAccount,Don't have an account? Register,Kein Konto? Registrieren,Nincs még fiókod? Regisztrálj
-emailRequired,Email is required,E-Mail ist erforderlich,Az e-mail cím megadása kötelező
-emailInvalid,Please enter a valid email,Bitte geben Sie eine gültige E-Mail-Adresse ein,Kérjük, adj meg egy érvényes e-mail címet
-passwordRequired,Password is required,Passwort ist erforderlich,A jelszó megadása kötelező
-passwordTooShort,Password must be at least 6 characters,Das Passwort muss mindestens 6 Zeichen lang sein,A jelszónak legalább 6 karakterből kell állnia
-error,Error,Fehler,Hiba
-# Új kulcsok a jelszó visszaállításhoz
 loginFailed,Login Failed,Anmeldung fehlgeschlagen,Sikertelen bejelentkezés
 invalidCredentials,Invalid username or password. Please try again.,Ungültiger Benutzername oder Passwort. Bitte versuchen Sie es erneut.,Érvénytelen felhasználónév vagy jelszó. Kérjük, próbáld újra.
-forgotPassword,Forgot Password,Passwort vergessen,Elfelejtetted a jelszavad?
 forgotPasswordQuestion,Did you forget your password?,Haben Sie Ihr Passwort vergessen?,Elfelejtetted a jelszavadat?
 resetPassword,Reset Password,Passwort zurücksetzen,Jelszó visszaállítása
 resetPasswordDescription,Enter your email address and we will send you a link to reset your password.,Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.,Add meg az e-mail címed, és küldünk egy linket a jelszavad visszaállításához.
@@ -201,25 +184,268 @@ sendResetLink,Send Reset Link,Link zum Zurücksetzen senden,Visszaállító link
 resetLinkSent,Reset Link Sent,Link zum Zurücksetzen gesendet,Visszaállító link elküldve
 resetLinkSentDescription,We've sent a password reset link to {email}. Please check your inbox.,Wir haben einen Link zum Zurücksetzen des Passworts an {email} gesendet. Bitte überprüfen Sie Ihren Posteingang.,Elküldtünk egy jelszó-visszaállító linket a következő címre: {email}. Kérjük, ellenőrizd a beérkező üzeneteidet.
 resetPasswordFailed,Password Reset Failed,Passwort zurücksetzen fehlgeschlagen,Jelszó visszaállítása sikertelen
-cancel,Cancel,Abbrechen,Mégsem
 ok,OK,OK,Rendben
+mobilePermissions,Mobile Permissions,Mobile Berechtigungen,Mobil engedélyek
+notificationPermissions,Notification Permissions,Benachrichtigungsberechtigung,Értesítési engedélyek
+permissionsCheck,Checking Permissions...,Berechtigungen überprüfen...,Engedélyek ellenőrzése...
+exactAlarms,Exact Alarms,Genaue Alarme,Pontos riasztások
+enabled,Enabled,Aktiviert,Engedélyezve
+notEnabled,Not Enabled,Nicht aktiviert,Nincs engedélyezve
+enablePermission,Enable,Aktivieren,Engedélyezés
+allSettings,All Settings,Alle Einstellungen,Összes beállítás
+androidOnlyFeature,This feature is only available on Android platform.,Diese Funktion ist nur auf der Android-Plattform verfügbar.,Ez a funkció csak Android platformon érhető el.
+permissionsMissing,Missing Notification Permissions,Fehlende Benachrichtigungsberechtigungen,Értesítési engedélyek hiányoznak
+permissionsDescription,Notification and exact alarm permissions are necessary for the app to function properly.,Benachrichtigungs- und genaue Alarmberechtigung sind für die ordnungsgemäße Funktion der App erforderlich.,Az értesítések és pontos riasztások engedélyezése szükséges az alkalmazás megfelelő működéséhez.
+notificationSettings,Notification Settings,Benachrichtigungseinstellungen,Értesítési beállítások
+exactAlarmSettings,Exact Alarm Settings,Einstellungen für genaue Alarme,Pontos riasztás beállítások
+appSettings,App Settings,App-Einstellungen,App beállítások
+close,Close,Schließen,Bezárás
+quickView,Quick View,Schnellansicht,Gyors betekintés
+detailedEdit,Detailed Edit,Detaillierte Bearbeitung,Részletes szerkesztés
+taskActions,Task Actions,Aufgabenaktionen,Feladat műveletek
+useDeviceSettings,Use device settings,Geräteeinstellungen verwenden,Eszköz beállítások használata
+customSettings,Custom settings,Benutzerdefinierte Einstellungen,Egyéni beállítások
+dateFormat_yyyyMMdd,YYYY.MM.DD,JJJJ.MM.TT,ÉÉÉÉ.HH.NN
+dateFormat_ddMMyyyy,DD.MM.YYYY,TT.MM.JJJJ,NN.HH.ÉÉÉÉ
+dateFormat_mmDdYyyy,MM.DD.YYYY,MM.TT.JJJJ,HH.NN.ÉÉÉÉ
+dateFormatExample,Format example,Format Beispiel,Formátum példa
+currentSetting,Current setting,Aktuelle Einstellung,Jelenlegi beállítás
+preview,Preview,Vorschau,Előnézet
+today,Today,Heute,Ma
+tomorrow,Tomorrow,Morgen,Holnap
+yesterday,Yesterday,Gestern,Tegnap
+formatSettings,Format Settings,Format-Einstellungen,Formátum beállítások
+chooseFormat,Choose format,Format wählen,Formátum választása
+selectDateFormat,Select date format,Datumsformat auswählen,Dátum formátum kiválasztása
+selectTimeFormat,Select time format,Zeitformat auswählen,Idő formátum kiválasztása
+invalidDateFormat,Invalid date format,Ungültiges Datumsformat,Érvénytelen dátum formátum
+dateParseError,Could not parse date,Datum konnte nicht analysiert werden,Nem sikerült a dátum értelmezése
+dateFormatHelp,Choose how dates should be displayed throughout the app,Wählen Sie aus wie Daten in der App angezeigt werden sollen,Válaszd ki hogy jelenjenek meg a dátumok az alkalmazásban
+timeFormatHelp,Choose between 12-hour and 24-hour time display,Wählen Sie zwischen 12-Stunden- und 24-Stunden-Zeitanzeige,Válassz a 12 órás és 24 órás időformátum között
+commandDateHelp,Use #MMDD or #DDMM for due dates,Verwende #MMTT oder #TTMM für Fälligkeitsdaten,Használj #HHNN vagy #NNHH határidőkhöz
+commandDateExample,Example: #0315 for March 15th,Beispiel: #0315 für 15. März,Példa: #0315 március 15-re
+auto_save_title,Auto-Save,Automatisches Speichern,Automatikus mentés
+auto_save_status,Auto-Save Status,Auto-Save Status,Auto-Save állapot
+auto_save_active,Active,Aktiv,Aktív
+auto_save_inactive,Inactive,Inaktiv,Inaktív
+auto_save_saving,Saving...,Speichern...,Mentés...
+auto_save_saved,Saved,Gespeichert,Mentve
+auto_save_error,Save Error,Speicherfehler,Mentési hiba
+auto_save_retry,Retrying...,Wiederholung...,Újrapróbálkozás...
+auto_save_force,Force Save,Sofort speichern,Azonnali mentés
+auto_save_last_save,Last saved,Zuletzt gespeichert,Utoljára mentve
+auto_save_never,Never,Nie,Soha
+auto_save_seconds_ago,{count}s ago,vor {count}s,{count}s ezelőtt
+auto_save_minutes_ago,{count}m ago,vor {count}m,{count}m ezelőtt
+auto_save_hours_ago,{count}h ago,vor {count}h,{count}h ezelőtt
+auto_save_success_rate,Success Rate,Erfolgsrate,Sikeres arány
+auto_save_total_attempts,Total Attempts,Versuche gesamt,Összes kísérlet
+auto_save_successful_saves,Successful Saves,Erfolgreiche Speicherungen,Sikeres mentések
+auto_save_failed_saves,Failed Saves,Fehlgeschlagene Speicherungen,Sikertelen mentések
+auto_save_stats,Save Statistics,Speicher-Statistiken,Mentési statisztikák
+auto_save_debounce_info,Changes are saved automatically after 500ms delay,Änderungen werden automatisch nach 500ms Verzögerung gespeichert,A változások 500ms késleltetés után automatikusan mentődnek
+auto_save_local_storage,Local Storage,Lokaler Speicher,Helyi tárolás
+auto_save_cloud_storage,Cloud Storage,Cloud-Speicher,Felhő tárolás
+auto_save_sync_success,Synced successfully,Erfolgreich synchronisiert,Sikeresen szinkronizálva
+auto_save_sync_failed,Sync failed,Synchronisation fehlgeschlagen,Szinkronizálás sikertelen
+auto_save_refresh_status,Refresh Status,Status aktualisieren,Állapot frissítése
+auto_save_debug_info,Debug Information,Debug-Informationen,Debug információk
+auto_save_test_rapid_changes,Test Rapid Changes,Test schnelle Änderungen,Gyors változások teszt
+auto_save_test_format_cycle,Test Format Cycle,Test Format-Zyklus,Formátum ciklus teszt
+auto_save_test_time_toggle,Test Time Toggle,Test Zeit-Umschaltung,Idő váltás teszt
+auto_save_manual_controls,Manual Controls,Manuelle Steuerung,Manuális vezérlés
+auto_save_quick_tests,Quick Tests,Schnelltests,Gyors tesztek
+auto_save_actions,Actions,Aktionen,Műveletek
+auto_save_current_settings,Current Settings,Aktuelle Einstellungen,Jelenlegi beállítások
+auto_save_change_counter,Changes made,Anzahl Änderungen,Változtatások száma
+auto_save_format_changed,Format changed! Auto-save in 500ms.,Format geändert! Auto-Save in 500ms.,Formátum váltva! Auto-save 500ms múlva.
+auto_save_rapid_test_started,Rapid changes test started...,Schnelle Änderungen Test gestartet...,Gyors változások teszt indítása...
+auto_save_rapid_test_finished,Rapid changes done! Only the last change will be saved.,Schnelle Änderungen fertig! Nur die letzte Änderung wird gespeichert.,Gyors változások kész! Csak az utolsó mentődik el.
+auto_save_welcome_title,Auto-Save System,Auto-Save System,Auto-Save rendszer
+auto_save_welcome_subtitle,Welcome to the Auto-Save test application!,Willkommen in der Auto-Save Testanwendung!,Üdvözlünk az Auto-Save teszt alkalmazásban!
+auto_save_feature_automatic,Automatic saving,Automatisches Speichern,Automatikus mentés
+auto_save_feature_debounce,Debounce logic,Debounce-Logik,Debounce logika
+auto_save_feature_retry,Retry mechanism,Wiederholungsmechanismus,Újrapróbálkozási mechanizmus
+auto_save_feature_hybrid,Hybrid storage,Hybride Speicherung,Hibrid tárolás
+auto_save_feature_monitoring,Real-time monitoring,Echtzeit-Überwachung,Valós idejű monitoring
+auto_save_instructions_title,Testing Instructions,Testanweisungen,Tesztelési útmutató
+auto_save_launch_test,LAUNCH TEST,TEST STARTEN,TESZT INDÍTÁSA
+auto_save_console_tip,Tip: Open the console to view debug messages,Tipp: Öffnen Sie die Konsole für Debug-Nachrichten,Tipp: Nyisd meg a konzolt a debug üzenetek megtekintéséhez
+commandParser_invalidDate,Invalid date format: #{0},Ungültiges Datumsformat: #{0},Érvénytelen dátum formátum: #{0}
+commandParser_dateParsingError,Date parsing error: #{0},Datum-Analysefehler: #{0},Dátum elemzési hiba: #{0}
+commandParser_ambiguousDate,Ambiguous date: #{0} {1},Mehrdeutiges Datum: #{0} {1},Kétértelmű dátum: #{0} {1}
+commandParser_invalidPriority,Invalid priority: {0} (must be 1-3),Ungültige Priorität: {0} (muss 1-3 sein),Érvénytelen prioritás: {0} (1-3 között kell lennie)
+commandParser_invalidPercentage,Invalid percentage: {0}% (must be 0-100),Ungültiger Prozentsatz: {0}% (muss 0-100 sein),Érvénytelen százalék: {0}% (0-100 között kell lennie)
+commandParser_unknownStatus,Unknown status: {0},Unbekannter Status: {0},Ismeretlen státusz: {0}
+commandParser_noCommands,No commands found,Keine Befehle gefunden,Nincsenek parancsok
+commandParser_typeTaskTitle,Type a task title...,Geben Sie einen Aufgabentitel ein...,Írj be egy feladat címet...
+commandParser_parsingPreview,Parsing preview,Parsing-Vorschau,Elemzési előnézet
+commandParser_commandsFound,{0} commands found,{0} Befehle gefunden,{0} parancs találva
+commandParser_warningsFound,{0} warnings found,{0} Warnungen gefunden,{0} figyelmeztetés találva
+commandParser_dateExample_christmas,December 25 (Christmas),25. Dezember (Weihnachten),December 25 (karácsony)
+commandParser_dateExample_newYear,January 1 (New Year),1. Januar (Neujahr),Január 1 (újév)
+commandParser_dateExample_marchFifteenth,March 15,15. März,Március 15
+commandParser_dateExample_dayMonth,day.month,Tag.Monat,nap.hónap
+commandParser_dateExample_monthDay,month.day,Monat.Tag,hónap.nap
+commandParser_priorityHigh,High priority,Hohe Priorität,Magas prioritás
+commandParser_priorityMedium,Medium priority,Mittlere Priorität,Közepes prioritás  
+commandParser_priorityLow,Low priority,Niedrige Priorität,Alacsony prioritás
+commandParser_statusActive,Active,Aktiv,Aktív
+commandParser_statusDraft,Draft,Entwurf,Vázlat
+commandParser_statusArchived,Archived,Archiviert,Archivált
+commandParser_statusCompleted,Completed,Abgeschlossen,Befejezett
+commandParser_parseLogic_yyyymmdd,YYYY.MM.DD → #0315 = March 15,JJJJ.MM.TT → #0315 = 15. März,ÉÉÉÉ.HH.NN → #0315 = március 15
+commandParser_parseLogic_ddmmyyyy,DD.MM.YYYY → #1503 = March 15 (day.month),TT.MM.JJJJ → #1503 = 15. März (Tag.Monat),NN.HH.ÉÉÉÉ → #1503 = március 15 (nap.hónap)
+commandParser_parseLogic_mmddyyyy,MM.DD.YYYY → #0315 = March 15 (month.day),MM.TT.JJJJ → #0315 = 15. März (Monat.Tag),HH.NN.ÉÉÉÉ → #0315 = március 15 (hónap.nap)
+commandParser_ambiguity_couldBe,Could be interpreted as,Könnte interpretiert werden als,Értelmezhető mint
+commandParser_ambiguity_currentFormat,Current format interprets as,Aktuelles Format interpretiert als,A jelenlegi formátum szerint
+commandParser_ambiguity_suggestion,Consider using full date format,Erwägen Sie die Verwendung des vollständigen Datumsformats,Fontold meg a teljes dátum formátum használatát
 
-mobilePermissions,Mobil engedélyek,Mobile Permissions
-notificationPermissions,Értesítési engedélyek,Notification Permissions
-permissionsCheck,Engedélyek ellenőrzése...,Checking Permissions...
-exactAlarms,Pontos riasztások,Exact Alarms
-enabled,Engedélyezve,Enabled
-notEnabled,Nincs engedélyezve,Not Enabled
-enablePermission,Engedélyezés,Enable
-allSettings,Összes beállítás,All Settings
-androidOnlyFeature,Ez a funkció csak Android platformon érhető el.,This feature is only available on Android platform.
-permissionsMissing,Értesítési engedélyek hiányoznak,Missing Notification Permissions
-permissionsDescription,Az értesítések és pontos riasztások engedélyezése szükséges az alkalmazás megfelelő működéséhez.,Notification and exact alarm permissions are necessary for the app to function properly.
-notificationSettings,Értesítési beállítások,Notification Settings
-exactAlarmSettings,Pontos riasztás beállítások,Exact Alarm Settings
-appSettings,App beállítások,App Settings
-cancel,Mégse,Cancel
-close,Bezárás,Close
-quickView,Gyors betekintés,Quick View
-detailedEdit,Részletes szerkesztés,Detailed Edit
-taskActions,Feladat műveletek,Task Actions
+# ✅ ÚJ KULCSOK - Cache és teljesítmény
+cache_performance,Cache Performance,Cache-Leistung,Cache Teljesítmény
+cache_metrics_loading,Loading cache metrics...,Lade Cache-Metriken...,Cache metrikák betöltése...
+cache_metrics_error,Error loading metrics,Fehler beim Laden der Metriken,Hiba a metrikák betöltése során
+retry,Retry,Wiederholen,Újrapróbálás
+refresh_metrics,Refresh Metrics,Metriken aktualisieren,Metrikák frissítése
+cache_info,Cache Information,Cache-Informationen,Cache információk
+hit_ratio,Hit Ratio,Trefferquote,Találati arány
+cache_size,Cache Size,Cache-Größe,Cache méret
+active_tables,Active Tables,Aktive Tabellen,Aktív táblák
+elements_short,elem,Elem,elem
+pieces,pcs,Stk,db
+detailed_hit_ratio,Detailed hit ratio,Detaillierte Trefferquote,Részletes találati arány
+excellent_cache_performance,Excellent cache performance,Ausgezeichnete Cache-Leistung,Kiváló cache teljesítmény
+good_cache_performance,Good cache performance,Gute Cache-Leistung,Jó cache teljesítmény
+average_cache_performance,Average cache performance,Durchschnittliche Cache-Leistung,Közepes cache teljesítmény
+poor_cache_performance,Poor cache performance,Schlechte Cache-Leistung,Gyenge cache teljesítmény
+very_poor_cache_performance,Very poor cache performance,Sehr schlechte Cache-Leistung,Nagyon gyenge cache teljesítmény
+detailed_metrics,Detailed Metrics,Detaillierte Metriken,Részletes Metrikák
+cache_hits,Cache hits,Cache-Treffer,Cache találatok
+cache_misses,Cache misses,Cache-Fehltreffer,Cache hibák
+expired_hits,Expired hits,Abgelaufene Treffer,Lejárt találatok
+inserts,Inserts,Einfügungen,Beszúrások
+updates,Updates,Aktualisierungen,Frissítések
+invalidations,Invalidations,Ungültigmachungen,Érvénytelenítések
+last_cleanup,Last cleanup,Letzte Bereinigung,Utolsó tisztítás
+cleanup,Cleanup,Bereinigung,Tisztítás
+clear_all,Clear All,Alle löschen,Teljes törlés
+cache_cleanup_successful,Cache cleanup successful,Cache-Bereinigung erfolgreich,Cache tisztítás sikeres
+cache_cleanup_error,Cache cleanup error,Cache-Bereinigungsfehler,Hiba a cache tisztítás során
+clear_entire_cache,Clear entire cache,Gesamten Cache löschen,Cache teljes törlése
+confirm_clear_cache_message,Are you sure you want to delete the entire cache? This will remove all stored data and subsequent queries will be slower.,Sind Sie sicher dass Sie den gesamten Cache löschen möchten? Dies entfernt alle gespeicherten Daten und nachfolgende Abfragen werden langsamer.,Biztos hogy törölni szeretnéd a teljes cache-t? Ez minden tárolt adatot eltávolít és a következő lekérdezések lassabbak lesznek.
+entire_cache_cleared,Entire cache cleared,Gesamter Cache gelöscht,Teljes cache törölve
+cache_delete_error,Cache delete error,Cache-Löschfehler,Hiba a cache törlése során
+cache_info_table_sizes,Table cache sizes,Tabellen-Cache-Größen,Táblák cache mérete
+no_cache_data,No cache data,Keine Cache-Daten,Nincs cache adat
+cacheCleanupCount,elements deleted,Elemente gelöscht,elem törölve
+
+# ✅ ÚJ KULCSOK - Szűrők
+filters,Filters,Filter,Szűrők
+activeFilters,Active filters,Aktive Filter,Aktív szűrők
+clearFilters,Clear filters,Filter löschen,Szűrők törlése
+basicFilters,Basic,Grundlegend,Alapvető
+dateFilters,Dates,Daten,Dátumok
+categoryFilters,Categories,Kategorien,Kategóriák
+advancedFilters,Advanced,Erweitert,Haladó
+applyFilters,Apply filters,Filter anwenden,Szűrők alkalmazása
+searchQuery,Search,Suche,Keresés
+searchTaskTitleDescription,Task title or description,Aufgabentitel oder Beschreibung,Feladat címe vagy leírása
+all,All,Alle,Minden
+completionStatus,Completion status,Fertigstellungsstatus,Befejezettségi állapot
+open,Open,Offen,Nyitott
+completionDate,Completion date,Fertigstellungsdatum,Befejezési dátum
+completedFrom,Completed from,Abgeschlossen von,Befejezve ettől
+completedUntil,Completed until,Abgeschlossen bis,Befejezve eddig
+notSet,Not set,Nicht festgelegt,Nincs beállítva
+selectDate,Select date,Datum auswählen,Dátum kiválasztása
+dueDate,Due date,Fälligkeitsdatum,Határidő
+dueDateFrom,Due date from,Fälligkeitsdatum von,Határidő ettől
+dueDateUntil,Due date until,Fälligkeitsdatum bis,Határidő eddig
+assignedTo,Assigned to,Zugewiesen an,Felelős
+selectAssignee,Select assignee,Beauftragten auswählen,Felelős kiválasztása
+unknownUser,Unknown user,Unbekannter Benutzer,Ismeretlen felhasználó
+taskType,Task type,Aufgabentyp,Feladat típus
+mainTasks,Main tasks,Hauptaufgaben,Fő feladatok
+subTasks,Sub tasks,Unteraufgaben,Alfeladatok
+parentTask,Parent task,Übergeordnete Aufgabe,Szülő feladat
+selectParentTask,Select parent task,Übergeordnete Aufgabe auswählen,Szülő feladat kiválasztása
+unknownTask,Unknown task,Unbekannte Aufgabe,Ismeretlen feladat
+noMainTasksAvailable,No main tasks available,Keine Hauptaufgaben verfügbar,Nincs elérhető fő feladat
+tags,Tags,Tags,Címkék
+tagsCommaSeparated,Tags (comma separated),Tags (durch Komma getrennt),Címkék (vesszővel elválasztva)
+tagsExample,e.g. urgent home project,z.B. dringend zuhause projekt,pl. sürgős otthon projekt
+quickFilter,Quick filter,Schnellfilter,Gyors szűrés
+detailedFilter,Detailed filter,Detaillierter Filter,Részletes szűrő
+
+# ✅ ÚJ KULCSOK - Offline és fallback
+offlineMode,Offline mode,Offline-Modus,Offline mód
+cachedDataDisplay,⚡ Cached data display,⚡ Zwischengespeicherte Datenanzeige,⚡ Cache-elt adatok megjelenítése
+connectionStatus,Connection status,Verbindungsstatus,Kapcsolódási állapot
+online,Online,Online,Online
+offline,Offline,Offline,Offline
+fromCache,From cache,Aus Cache,Cache-ből
+cannotCreateItemsOffline,New items cannot be created in offline mode,Im Offline-Modus können keine neuen Elemente erstellt werden,Offline módban nem lehet új elemeket létrehozni
+offlineDataWarning,Without network connection only cached data are available. Creating new items is not possible in offline mode.,Ohne Netzwerkverbindung sind nur zwischengespeicherte Daten verfügbar. Das Erstellen neuer Elemente ist im Offline-Modus nicht möglich.,Hálózati kapcsolat nélkül csak a cache-elt adatok érhetők el. Új elemek létrehozása offline módban nem lehetséges.
+toggleOfflineMode,Toggle offline mode,Offline-Modus umschalten,Offline mód ki/be
+
+# ✅ ÚJ KULCSOK - Debug és teszt
+currentState,Current state,Aktueller Zustand,Jelenlegi állapot
+source,Source,Quelle,Forrás
+cloudSynced,Cloud synced,Cloud synchronisiert,Felhő szinkronizálva
+on,ON,EIN,BE
+off,OFF,AUS,KI
+yes,YES,JA,IGEN
+no,NO,NEIN,NEM
+managerStatus,Manager status,Manager-Status,Manager állapot
+basicFallback,Basic fallback,Grundlegendes Fallback,Alapvető fallback
+offlineModeSimulation,Offline mode simulation,Offline-Modus-Simulation,Offline mód szimuláció
+onlineRestoration,Online restoration,Online-Wiederherstellung,Online visszaállítás
+defaultFallback,Default fallback,Standard-Fallback,Alapértelmezett fallback
+errorResistance,Error resistance,Fehlertoleranz,Hibatűrés
+runAllTests,Run all tests,Alle Tests ausführen,Összes teszt futtatása
+testResults,Test results,Testergebnisse,Teszt eredmények
+testInitialized,Test widget initialized,Test-Widget initialisiert,Test widget inicializálva
+readyForTesting,Ready for testing...,Bereit zum Testen...,Készen áll a tesztelésre...
+testsStarted,Tests starting...,Tests starten...,Tesztek indítása...
+basicFallbackTest,Basic fallback loading test,Grundlegender Fallback-Ladetest,Alapvető fallback betöltés teszt
+initialTestsCompleted,Initial tests completed,Anfangstests abgeschlossen,Kezdeti tesztek befejezve
+testCompleted,TEST {number} COMPLETED,TEST {number} ABGESCHLOSSEN,TESZT {number} BEFEJEZVE
+testError,TEST {number} ERROR: {error},TEST {number} FEHLER: {error},TESZT {number} HIBA: {error}
+allTestsCompleted,All tests completed,Alle Tests abgeschlossen,Összes teszt befejezve
+checkResultsAbove,Check the results above!,Überprüfen Sie die Ergebnisse oben!,Ellenőrizd a fenti eredményeket!
+resultsCleared,Test results cleared,Testergebnisse gelöscht,Teszt eredmények törölve
+readyForNewTesting,Ready for new testing...,Bereit für neue Tests...,Készen áll új tesztelésre...
+
+# ✅ ÚJ KULCSOK - Parancs előnézet és súgó
+commandsInTaskTitle,Commands in task title,Befehle im Aufgabentitel,Parancsok a feladat címében
+typeTaskTitleWithCommands,Type a task title with commands,Geben Sie einen Aufgabentitel mit Befehlen ein,Írj be egy feladat címet parancsokkal
+example_task_commands,Example: Task #0315 #p1 #50% #act,Beispiel: Projekt #0315 #p1 #%50 #act,Példa: Projekt #0315 #p1 #%50 #act
+liveParsingFeedback,Live parsing feedback,Live-Parsing-Feedback,Valós idejű parsing visszajelzés
+commandsRecognized,{count} commands recognized,{count} Befehle erkannt,{count} parancs felismerve
+warnings,Warnings,Warnungen,Figyelmeztetések
+noCommands,No commands,Keine Befehle,Nincs parancs
+cleanedTitle,Cleaned title,Bereinigter Titel,Tisztított cím
+recognizedCommands,Recognized commands,Erkannte Befehle,Felismert parancsok
+readiness,Readiness,Bereitschaft,Készültség
+examples,Examples,Beispiele,Példák
+combinedUsageExample,Combined usage example,Beispiel für kombinierte Verwendung,Kombinált használat példa
+parsedResult,Parsed result,Analysiertes Ergebnis,Elemzett eredmény
+currentDateFormat,Current date format,Aktuelles Datumsformat,Jelenlegi dátum formátum
+dateExamples,Date examples,Datumsbeispiele,Dátum példák
+quickTestCases,Quick test cases,Schnelle Testfälle,Gyors teszt esetek
+
+# ✅ ÚJ KULCSOK - Család
+join_family,Join family,Familie beitreten,Csatlakozás családhoz
+important_family_restriction,Important: A user can only be a member of one family at a time. If you are already a member of a family and join a new family you must first leave your current family.,Wichtig: Ein Benutzer kann nur Mitglied einer Familie gleichzeitig sein. Wenn Sie bereits Mitglied einer Familie sind und einer neuen Familie beitreten müssen Sie zuerst Ihre aktuelle Familie verlassen.,Fontos: Egy felhasználó egyszerre csak egy család tagja lehet. Ha már tagja vagy egy családnak és csatlakozol egy új családhoz előbb ki kell lépned a jelenlegi családodból.
+invite_code,Invite code,Einladungscode,Meghívó kód
+enter_invite_code,Enter the invite code,Geben Sie den Einladungscode ein,Add meg a meghívó kódot
+please_enter_invite_code,Please enter the invite code,Bitte geben Sie den Einladungscode ein,Kérlek add meg a meghívó kódot
+verification,Verification,Überprüfung,Ellenőrzés
+join,Join,Beitreten,Csatlakozás
+family_name,Family name,Familienname,Család neve
+expiry_date,Expiry date,Ablaufdatum,Lejárat
+invalid_invite_code,Invalid invite code,Ungültiger Einladungscode,Érvénytelen meghívó kód
+invite_expired,This invite code is no longer valid (expired or reached maximum usage),Dieser Einladungscode ist nicht mehr gültig (abgelaufen oder maximale Nutzung erreicht),Ez a meghívó kód már nem érvényes (lejárt vagy elérte a maximális felhasználást)
+successfully_joined_family,Successfully joined family {familyName}!,Erfolgreich der Familie {familyName} beigetreten!,Sikeresen csatlakoztál a(z) {familyName} családhoz!
+user_can_only_belong_to_one_family,A user can only belong to one family at a time. Please leave your current family first in the "Manage Family Members" menu.,Ein Benutzer kann nur einer Familie gleichzeitig angehören. Bitte verlassen Sie zuerst Ihre aktuelle Familie im Menü "Familienmitglieder verwalten".,Egy felhasználó egyszerre csak egy család tagja lehet. Előbb lépj ki a jelenlegi családodból a "Családtagok kezelése" menüpontban.
+unknown_error,Unknown error occurred: {error},Unbekannter Fehler ist aufgetreten: {error},Ismeretlen hiba történt: {error}

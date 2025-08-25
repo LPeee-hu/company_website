@@ -450,260 +450,262 @@ successfully_joined_family,Successfully joined family {familyName}!,Erfolgreich 
 user_can_only_belong_to_one_family,A user can only belong to one family at a time. Please leave your current family first in the "Manage Family Members" menu.,Ein Benutzer kann nur einer Familie gleichzeitig angehören. Bitte verlassen Sie zuerst Ihre aktuelle Familie im Menü "Familienmitglieder verwalten".,Egy felhasználó egyszerre csak egy család tagja lehet. Előbb lépj ki a jelenlegi családodból a "Családtagok kezelése" menüpontban.
 unknown_error,Unknown error occurred: {error},Unbekannter Fehler ist aufgetreten: {error},Ismeretlen hiba történt: {error}
 
-# Naptár funkció alapvető lokalizációs kulcsai
-# A meglévő translations.csv fájlhoz hozzáadandó sorok
 
-# Alapvető naptár szövegek
-calendar,naptár,calendar,Kalender
-calendar_view,naptár nézet,calendar view,Kalenderansicht
-events,események,events,Ereignisse
-no_events,nincsenek események,no events,Keine Ereignisse
-event_details,esemény részletei,event details,Ereignisdetails
+#naptár
 
-# Nézet típusok
-calendar_month_view,havi nézet,month view,Monatsansicht
-calendar_week_view,heti nézet,week view,Wochenansicht
-calendar_day_view,napi nézet,day view,Tagesansicht
-calendar_timeline_view,idővonalas nézet,timeline view,Timeline-Ansicht
-
-# Esemény szűrők
-calendar_filter_all,minden,all,alle
-calendar_filter_private,privát,private,privat
-calendar_filter_family,családi,family,Familie
-calendar_filter_completed,befejezett,completed,abgeschlossen
-calendar_filter_pending,függőben,pending,ausstehend
-calendar_filter_overdue,lejárt,overdue,überfällig
-calendar_filter_today,mai,today,heute
-
-# Esemény állapotok
-due_tasks,esedékes feladatok,due tasks,fällige Aufgaben
-overdue_tasks,lejárt feladatok,overdue tasks,überfällige Aufgaben
-completed_tasks,befejezett feladatok,completed tasks,abgeschlossene Aufgaben
-today_tasks,mai feladatok,today's tasks,heutige Aufgaben
-
-# Sync és offline
-sync_calendar,naptár szinkronizálása,sync calendar,Kalender synchronisieren
-calendar_offline,naptár offline,calendar offline,Kalender offline
-manual_refresh,manuális frissítés,manual refresh,manuelle Aktualisierung
-pull_to_refresh,húzza le a frissítéshez,pull to refresh,zum Aktualisieren ziehen
-syncing,szinkronizálás,syncing,synchronisiere
-last_synced,utolsó szinkronizálás,last synced,zuletzt synchronisiert
-
-# Cache állapotok
-calendar_cache_loading,naptár betöltése,loading calendar,Kalender wird geladen
-calendar_cache_offline,offline adatok,offline data,Offline-Daten
-calendar_cache_synced,szinkronizálva,synced,synchronisiert
-calendar_cache_error,betöltési hiba,loading error,Ladefehler
-
-# Navigáció
-previous_month,előző hónap,previous month,vorheriger Monat
-next_month,következő hónap,next month,nächster Monat
-today_button,ma,today,heute
-go_to_date,ugrás dátumra,go to date,zu Datum springen
-
-# Esemény részletek
-event_title,esemény címe,event title,Ereignistitel
-event_date,esemény dátuma,event date,Ereignisdatum
-event_time,esemény ideje,event time,Ereigniszeit
-event_priority,prioritás,priority,Priorität
-event_category,kategória,category,Kategorie
-event_assignee,felelős,assignee,Verantwortlicher
-event_status,állapot,status,Status
-event_description,leírás,description,Beschreibung
-
-# Prioritások
-priority_high,magas,high,hoch
-priority_medium,közepes,medium,mittel
-priority_low,alacsony,low,niedrig
-
-# Hibák és üzenetek
-calendar_error_load,hiba a naptár betöltésekor,error loading calendar,Fehler beim Laden des Kalenders
-calendar_error_sync,szinkronizálási hiba,sync error,Synchronisierungsfehler
-calendar_no_connection,nincs internetkapcsolat,no internet connection,keine Internetverbindung
-calendar_retry,újrapróbálkozás,retry,erneut versuchen
-
-# Időpontok
-morning,reggel,morning,Morgen
-afternoon,délután,afternoon,Nachmittag
-evening,este,evening,Abend
-night,éjjel,night,Nacht
-all_day,egész nap,all day,ganztägig
-
-# Csoportosítás
-group_by_category,csoportosítás kategória szerint,group by category,nach Kategorie gruppieren
-group_by_priority,csoportosítás prioritás szerint,group by priority,nach Priorität gruppieren
-group_by_assignee,csoportosítás felelős szerint,group by assignee,nach Verantwortlichem gruppieren
-group_by_status,csoportosítás állapot szerint,group by status,nach Status gruppieren
-no_grouping,nincs csoportosítás,no grouping,keine Gruppierung
-
-# Keresés
-search_events,események keresése,search events,Ereignisse suchen
-search_placeholder,keresés...,search...,suchen...
-search_results,keresési eredmények,search results,Suchergebnisse
-no_search_results,nincs találat,no results found,keine Ergebnisse gefunden
-
-# Beállítások
-calendar_settings,naptár beállítások,calendar settings,Kalender-Einstellungen
-show_weekends,hétvégék megjelenítése,show weekends,Wochenenden anzeigen
-week_starts_monday,hét hétfőn kezdődik,week starts on Monday,Woche beginnt am Montag
-show_completed,befejezett feladatok megjelenítése,show completed tasks,abgeschlossene Aufgaben anzeigen
-auto_sync,automatikus szinkronizálás,auto sync,automatische Synchronisation
-
-# SYNC MECHANIZMUSOK - TRANSLATIONS.CSV KIEGÉSZÍTÉS
-# Hozzáadandó sorok a meglévő translations.csv fájlhoz
-
-# Sync állapotok
-sync_status_idle,Idle,Üresjárat,Leerlauf
-sync_status_syncing,Syncing,Szinkronizálás,Synchronisierung
-sync_status_success,Success,Sikeres,Erfolgreich
-sync_status_error,Error,Hiba,Fehler
+calendar,calendar,Kalender,naptár
+calendar_view,calendar view,Kalenderansicht,naptár nézet
+events,events,Ereignisse,események
+no_events,no events,Keine Ereignisse,nincsenek események
+event_details,event details,Ereignisdetails,esemény részletei
+calendar_month_view,month view,Monatsansicht,havi nézet
+calendar_week_view,week view,Wochenansicht,heti nézet
+calendar_day_view,day view,Tagesansicht,napi nézet
+calendar_timeline_view,timeline view,Timeline-Ansicht,idővonalas nézet
+calendar_filter_all,all,alle,minden
+calendar_filter_private,private,privat,privát
+calendar_filter_family,family,Familie,családi
+calendar_filter_completed,completed,abgeschlossen,befejezett
+calendar_filter_pending,pending,ausstehend,függőben
+calendar_filter_overdue,overdue,überfällig,lejárt
+calendar_filter_today,today,heute,mai
+due_tasks,due tasks,fällige Aufgaben,esedékes feladatok
+overdue_tasks,overdue tasks,überfällige Aufgaben,lejárt feladatok
+completed_tasks,completed tasks,abgeschlossene Aufgaben,befejezett feladatok
+today_tasks,today's tasks,heutige Aufgaben,mai feladatok
+sync_calendar,sync calendar,Kalender synchronisieren,naptár szinkronizálása
+calendar_offline,calendar offline,Kalender offline,naptár offline
+manual_refresh,manual refresh,manuelle Aktualisierung,manuális frissítés
+pull_to_refresh,pull to refresh,zum Aktualisieren ziehen,húzza le a frissítéshez
+syncing,syncing,synchronisiere,szinkronizálás
+last_synced,last synced,zuletzt synchronisiert,utolsó szinkronizálás
+calendar_cache_loading,loading calendar,Kalender wird geladen,naptár betöltése
+calendar_cache_offline,offline data,Offline-Daten,offline adatok
+calendar_cache_synced,synced,synchronisiert,szinkronizálva
+calendar_cache_error,loading error,Ladefehler,betöltési hiba
+previous_month,previous month,vorheriger Monat,előző hónap
+next_month,next month,nächster Monat,következő hónap
+today_button,today,heute,ma
+go_to_date,go to date,zu Datum springen,ugrás dátumra
+event_title,event title,Ereignistitel,esemény címe
+event_date,event date,Ereignisdatum,esemény dátuma
+event_time,event time,Ereigniszeit,esemény ideje
+event_priority,priority,Priorität,prioritás
+event_category,category,Kategorie,kategória
+event_assignee,assignee,Verantwortlicher,felelős
+event_status,status,Status,állapot
+event_description,description,Beschreibung,leírás
+priority_high,high,hoch,magas
+priority_medium,medium,mittel,közepes
+priority_low,low,niedrig,alacsony
+calendar_error_load,error loading calendar,Fehler beim Laden des Kalenders,hiba a naptár betöltésekor
+calendar_error_sync,sync error,Synchronisierungsfehler,szinkronizálási hiba
+calendar_no_connection,no internet connection,keine Internetverbindung,nincs internetkapcsolat
+calendar_retry,retry,erneut versuchen,újrapróbálkozás
+morning,morning,Morgen,reggel
+afternoon,afternoon,Nachmittag,délután
+evening,evening,Abend,este
+night,night,Nacht,éjjel
+all_day,all day,ganztägig,egész nap
+group_by_category,group by category,nach Kategorie gruppieren,csoportosítás kategória szerint
+group_by_priority,group by priority,nach Priorität gruppieren,csoportosítás prioritás szerint
+group_by_assignee,group by assignee,nach Verantwortlichem gruppieren,csoportosítás felelős szerint
+group_by_status,group by status,nach Status gruppieren,csoportosítás állapot szerint
+no_grouping,no grouping,keine Gruppierung,nincs csoportosítás
+search_events,search events,Ereignisse suchen,események keresése
+search_placeholder,search...,suchen...,keresés...
+search_results,search results,Suchergebnisse,keresési eredmények
+no_search_results,no results found,keine Ergebnisse gefunden,nincs találat
+calendar_settings,calendar settings,Kalender-Einstellungen,naptár beállítások
+show_weekends,show weekends,Wochenenden anzeigen,hétvégék megjelenítése
+week_starts_monday,week starts on Monday,Woche beginnt am Montag,hét hétfőn kezdődik
+show_completed,show completed tasks,abgeschlossene Aufgaben anzeigen,befejezett feladatok megjelenítése
+auto_sync,auto sync,automatische Synchronisation,automatikus szinkronizálás
+sync_status_idle,Üresjárat,Leerlauf,Idle
+sync_status_syncing,Szinkronizálás,Synchronisierung,Syncing
+sync_status_success,Sikeres,Erfolgreich,Success
+sync_status_error,Hiba,Fehler,Error
 sync_status_offline,Offline,Offline,Offline
-
-# Sync állapot szövegek
-sync_synchronized,Synchronized,Szinkronizálva,Synchronisiert
-sync_syncing,Syncing...,Szinkronizálás...,Synchronisierung...
-sync_updated,Updated,Frissítve,Aktualisiert
-sync_error,Sync error,Szinkronizálási hiba,Synchronisierungsfehler
-sync_offline_mode,Offline mode,Offline mód,Offline-Modus
-
-# Refresh állapotok
-refresh_state_idle,Idle,Üresjárat,Leerlauf
-refresh_state_refreshing,Refreshing,Frissítés,Aktualisierung
-refresh_state_success,Success,Sikeres,Erfolgreich
-refresh_state_error,Error,Hiba,Fehler
-
-# Manual refresh
-manual_refresh,Manual refresh,Manuális frissítés,Manuelle Aktualisierung
-pull_to_refresh,Pull to refresh,Húzza le a frissítéshez,Zum Aktualisieren ziehen
-refresh_now,Refresh now,Frissítés most,Jetzt aktualisieren
-quick_refresh,Quick refresh,Gyors frissítés,Schnelle Aktualisierung
-full_refresh,Full refresh,Teljes frissítés,Vollständige Aktualisierung
-background_refresh,Background refresh,Háttér frissítés,Hintergrund-Aktualisierung
-
-# Sync időzítések
-last_sync,Last sync,Utolsó szinkronizálás,Letzte Synchronisation
-never_synced,Never,Soha,Nie
-just_now,Just now,Most,Gerade eben
-seconds_ago,{0}s ago,{0}s ezelőtt,vor {0}s
-minutes_ago,{0}m ago,{0}m ezelőtt,vor {0}m
-hours_ago,{0}h ago,{0}ó ezelőtt,vor {0}h
-days_ago,{0}d ago,{0}n ezelőtt,vor {0}d
-
-# Hálózat állapot
+sync_synchronized,Szinkronizálva,Synchronisiert,Synchronized
+sync_syncing,Szinkronizálás...,Synchronisierung...,Syncing...
+sync_updated,Frissítve,Aktualisiert,Updated
+sync_error,Szinkronizálási hiba,Synchronisierungsfehler,Sync error
+sync_offline_mode,Offline mód,Offline-Modus,Offline mode
+refresh_state_idle,Üresjárat,Leerlauf,Idle
+refresh_state_refreshing,Frissítés,Aktualisierung,Refreshing
+refresh_state_success,Sikeres,Erfolgreich,Success
+refresh_state_error,Hiba,Fehler,Error
+manual_refresh,Manuális frissítés,Manuelle Aktualisierung,Manual refresh
+pull_to_refresh,Húzza le a frissítéshez,Zum Aktualisieren ziehen,Pull to refresh
+refresh_now,Frissítés most,Jetzt aktualisieren,Refresh now
+quick_refresh,Gyors frissítés,Schnelle Aktualisierung,Quick refresh
+full_refresh,Teljes frissítés,Vollständige Aktualisierung,Full refresh
+background_refresh,Háttér frissítés,Hintergrund-Aktualisierung,Background refresh
+last_sync,Utolsó szinkronizálás,Letzte Synchronisation,Last sync
+never_synced,Soha,Nie,Never
+just_now,Most,Gerade eben,Just now
+seconds_ago,{0}s ezelőtt,vor {0}s,{0}s ago
+minutes_ago,{0}m ezelőtt,vor {0}m,{0}m ago
+hours_ago,{0}ó ezelőtt,vor {0}h,{0}h ago
+days_ago,{0}n ezelőtt,vor {0}d,{0}d ago
 network_online,Online,Online,Online
 network_offline,Offline,Offline,Offline
-no_internet_connection,No internet connection,Nincs internetkapcsolat,Keine Internetverbindung
-connection_restored,Connection restored,Kapcsolat helyreállt,Verbindung wiederhergestellt
-
-# Sync hibák és üzenetek
-sync_failed,Sync failed,Szinkronizálás sikertelen,Synchronisation fehlgeschlagen
-refresh_failed,Refresh failed,Frissítés sikertelen,Aktualisierung fehlgeschlagen
-cannot_sync_offline,Cannot sync in offline mode,Offline módban nem lehet szinkronizálni,Synchronisation im Offline-Modus nicht möglich
-retry_when_online,Retry when online,Újrapróbálás online módban,Bei Online-Verbindung wiederholen
-
-# Cache állapotok
-cache_loading,Loading from cache,Betöltés cache-ből,Laden aus Cache
-cache_offline_data,Offline data,Offline adatok,Offline-Daten
-cache_synced_data,Synced data,Szinkronizált adatok,Synchronisierte Daten
-cache_stale_data,Outdated data,Elavult adatok,Veraltete Daten
-
-# Függőben lévő változások
-pending_changes,Pending changes,Függőben lévő változások,Ausstehende Änderungen
-no_pending_changes,No pending changes,Nincs függőben lévő változás,Keine ausstehenden Änderungen
-changes_count,{0} changes,{0} változás,{0} Änderungen
-sync_pending_changes,Sync pending changes,Függőben lévő változások szinkronizálása,Ausstehende Änderungen synchronisieren
-
-# Invalidation események
-invalidation_sync_change,Sync status changed,Szinkronizálási állapot változott,Synchronisationsstatus geändert
-invalidation_manual_refresh,Manual refresh triggered,Manuális frissítés aktiválva,Manuelle Aktualisierung ausgelöst
-invalidation_date_change,Date changed,Dátum változott,Datum geändert
-invalidation_view_change,View type changed,Nézet típus változott,Ansichtstyp geändert
-invalidation_network_change,Network status changed,Hálózati állapot változott,Netzwerkstatus geändert
-invalidation_background_refresh,Background refresh,Háttér frissítés,Hintergrund-Aktualisierung
-
-# Sync indikátor üzenetek
-tap_to_refresh,Tap to refresh,Érintsd meg a frissítéshez,Zum Aktualisieren tippen
-sync_in_progress,Sync in progress,Szinkronizálás folyamatban,Synchronisation läuft
-sync_completed,Sync completed,Szinkronizálás befejezve,Synchronisation abgeschlossen
-offline_mode_active,Offline mode active,Offline mód aktív,Offline-Modus aktiv
-
-# Performance és debug
-sync_performance,Sync performance,Szinkronizálási teljesítmény,Synchronisationsleistung
-invalidation_events,Invalidation events,Invalidálási események,Invalidierungsereignisse
-cache_warming,Cache warming,Cache melegítés,Cache-Aufwärmung
-background_operations,Background operations,Háttér műveletek,Hintergrundoperationen
-
-# Gomb és akció szövegek
-force_sync,Force sync,Szinkronizálás kényszerítése,Synchronisation erzwingen
-simulate_offline,Simulate offline,Offline szimuláció,Offline simulieren
-restore_online,Restore online,Online visszaállítás,Online wiederherstellen
-clear_events,Clear events,Események törlése,Ereignisse löschen
-
-# Sync beállítások
-auto_sync,Auto sync,Automatikus szinkronizálás,Automatische Synchronisation
-sync_frequency,Sync frequency,Szinkronizálási gyakoriság,Synchronisationsfrequenz
-background_sync,Background sync,Háttér szinkronizálás,Hintergrund-Synchronisation
-sync_on_startup,Sync on startup,Induláskor szinkronizálás,Synchronisation beim Start
-
-
-event_details,Esemény részletei,Event details,Event-Details
-event_card_tap_to_view,Koppints a részletekért,Tap to view details,Tippen für Details
-event_card_offline_data,Offline adat,Offline data,Offline-Daten
-event_card_synced_data,Szinkronizált adat,Synced data,Synchronisierte Daten
-event_card_pending_sync,Szinkronizálásra vár,Pending sync,Synchronisation ausstehend
-completion_percentage,Befejezés százaléka,Completion percentage,Fertigstellungsgrad
-due_date,Határidő,Due date,Fälligkeitsdatum
-created_date,Létrehozva,Created,Erstellt
-completed_date,Befejezve,Completed,Abgeschlossen
-task_status,Feladat állapot,Task status,Aufgabenstatus
-task_overdue,Lejárt,Overdue,Überfällig
-task_due_today,Ma van a határideje,Due today,Heute fällig
-task_in_progress,Folyamatban,In progress,In Bearbeitung
-task_completed,Befejezett,Completed,Abgeschlossen
-task_private,Privát,Private,Privat
-task_family,Családi,Family,Familie
-edit_event,Esemény szerkesztése,Edit event,Ereignis bearbeiten
-close_modal,Bezárás,Close,Schließen
-view_task_details,Feladat részletei,View task details,Aufgabendetails anzeigen
-sync_info,Szinkronizációs információ,Sync information,Synchronisationsinformationen
-pending_changes_count,Függőben lévő változások,Pending changes,Ausstehende Änderungen
-last_sync_time,Utolsó szinkronizálás,Last sync,Letzte Synchronisation
-cache_status,Cache állapot,Cache status,Cache-Status
-network_status,Hálózati állapot,Network status,Netzwerkstatus
-offline_indicator,Offline jelző,Offline indicator,Offline-Anzeige
-priority_indicator,Prioritás jelző,Priority indicator,Prioritätsanzeige
-category_color,Kategória szín,Category color,Kategoriefarbe
-progress_indicator,Haladás jelző,Progress indicator,Fortschrittsanzeige
-today_short,Ma,Today,Heute
-tomorrow_short,Holnap,Tomorrow,Morgen
-yesterday_short,Tegnap,Yesterday,Gestern
-this_week,Ezen a héten,This week,Diese Woche
-next_week,Jövő héten,Next week,Nächste Woche
-last_week,Múlt héten,Last week,Letzte Woche
-monday_short,Hétfő,Monday,Montag
-tuesday_short,Kedd,Tuesday,Dienstag
-wednesday_short,Szerda,Wednesday,Mittwoch
-thursday_short,Csütörtök,Thursday,Donnerstag
-friday_short,Péntek,Friday,Freitag
-saturday_short,Szombat,Saturday,Samstag
-sunday_short,Vasárnap,Sunday,Sonntag
+no_internet_connection,Nincs internetkapcsolat,Keine Internetverbindung,No internet connection
+connection_restored,Kapcsolat helyreállt,Verbindung wiederhergestellt,Connection restored
+sync_failed,Szinkronizálás sikertelen,Synchronisation fehlgeschlagen,Sync failed
+refresh_failed,Frissítés sikertelen,Aktualisierung fehlgeschlagen,Refresh failed
+cannot_sync_offline,Offline módban nem lehet szinkronizálni,Synchronisation im Offline-Modus nicht möglich,Cannot sync in offline mode
+retry_when_online,Újrapróbálás online módban,Bei Online-Verbindung wiederholen,Retry when online
+cache_loading,Betöltés cache-ből,Laden aus Cache,Loading from cache
+cache_offline_data,Offline adatok,Offline-Daten,Offline data
+cache_synced_data,Szinkronizált adatok,Synchronisierte Daten,Synced data
+cache_stale_data,Elavult adatok,Veraltete Daten,Outdated data
+pending_changes,Függőben lévő változások,Ausstehende Änderungen,Pending changes
+no_pending_changes,Nincs függőben lévő változás,Keine ausstehenden Änderungen,No pending changes
+changes_count,{0} változás,{0} Änderungen,{0} changes
+sync_pending_changes,Függőben lévő változások szinkronizálása,Ausstehende Änderungen synchronisieren,Sync pending changes
+invalidation_sync_change,Szinkronizálási állapot változott,Synchronisationsstatus geändert,Sync status changed
+invalidation_manual_refresh,Manuális frissítés aktiválva,Manuelle Aktualisierung ausgelöst,Manual refresh triggered
+invalidation_date_change,Dátum változott,Datum geändert,Date changed
+invalidation_view_change,Nézet típus változott,Ansichtstyp geändert,View type changed
+invalidation_network_change,Hálózati állapot változott,Netzwerkstatus geändert,Network status changed
+invalidation_background_refresh,Háttér frissítés,Hintergrund-Aktualisierung,Background refresh
+tap_to_refresh,Érintsd meg a frissítéshez,Zum Aktualisieren tippen,Tap to refresh
+sync_in_progress,Szinkronizálás folyamatban,Synchronisation läuft,Sync in progress
+sync_completed,Szinkronizálás befejezve,Synchronisation abgeschlossen,Sync completed
+offline_mode_active,Offline mód aktív,Offline-Modus aktiv,Offline mode active
+sync_performance,Szinkronizálási teljesítmény,Synchronisationsleistung,Sync performance
+invalidation_events,Invalidálási események,Invalidierungsereignisse,Invalidation events
+cache_warming,Cache melegítés,Cache-Aufwärmung,Cache warming
+background_operations,Háttér műveletek,Hintergrundoperationen,Background operations
+force_sync,Szinkronizálás kényszerítése,Synchronisation erzwingen,Force sync
+simulate_offline,Offline szimuláció,Offline simulieren,Simulate offline
+restore_online,Online visszaállítás,Online wiederherstellen,Restore online
+clear_events,Események törlése,Ereignisse löschen,Clear events
+auto_sync,Automatikus szinkronizálás,Automatische Synchronisation,Auto sync
+sync_frequency,Szinkronizálási gyakoriság,Synchronisationsfrequenz,Sync frequency
+background_sync,Háttér szinkronizálás,Hintergrund-Synchronisation,Background sync
+sync_on_startup,Induláskor szinkronizálás,Synchronisation beim Start,Sync on startup
+event_details,Event details,Event-Details,Esemény részletei
+event_card_tap_to_view,Tap to view details,Tippen für Details,Koppints a részletekért
+event_card_offline_data,Offline data,Offline-Daten,Offline adat
+event_card_synced_data,Synced data,Synchronisierte Daten,Szinkronizált adat
+event_card_pending_sync,Pending sync,Synchronisation ausstehend,Szinkronizálásra vár
+completion_percentage,Completion percentage,Fertigstellungsgrad,Befejezés százaléka
+due_date,Due date,Fälligkeitsdatum,Határidő
+created_date,Created,Erstellt,Létrehozva
+completed_date,Completed,Abgeschlossen,Befejezve
+task_status,Task status,Aufgabenstatus,Feladat állapot
+task_overdue,Overdue,Überfällig,Lejárt
+task_due_today,Due today,Heute fällig,Ma van a határideje
+task_in_progress,In progress,In Bearbeitung,Folyamatban
+task_completed,Completed,Abgeschlossen,Befejezett
+task_private,Private,Privat,Privát
+task_family,Family,Familie,Családi
+edit_event,Edit event,Ereignis bearbeiten,Esemény szerkesztése
+close_modal,Close,Schließen,Bezárás
+view_task_details,View task details,Aufgabendetails anzeigen,Feladat részletei
+sync_info,Sync information,Synchronisationsinformationen,Szinkronizációs információ
+pending_changes_count,Pending changes,Ausstehende Änderungen,Függőben lévő változások
+last_sync_time,Last sync,Letzte Synchronisation,Utolsó szinkronizálás
+cache_status,Cache status,Cache-Status,Cache állapot
+network_status,Network status,Netzwerkstatus,Hálózati állapot
+offline_indicator,Offline indicator,Offline-Anzeige,Offline jelző
+priority_indicator,Priority indicator,Prioritätsanzeige,Prioritás jelző
+category_color,Category color,Kategoriefarbe,Kategória szín
+progress_indicator,Progress indicator,Fortschrittsanzeige,Haladás jelző
+today_short,Today,Heute,Ma
+tomorrow_short,Tomorrow,Morgen,Holnap
+yesterday_short,Yesterday,Gestern,Tegnap
+this_week,This week,Diese Woche,Ezen a héten
+next_week,Next week,Nächste Woche,Jövő héten
+last_week,Last week,Letzte Woche,Múlt héten
+monday_short,Monday,Montag,Hétfő
+tuesday_short,Tuesday,Dienstag,Kedd
+wednesday_short,Wednesday,Mittwoch,Szerda
+thursday_short,Thursday,Donnerstag,Csütörtök
+friday_short,Friday,Freitag,Péntek
+saturday_short,Saturday,Samstag,Szombat
+sunday_short,Sunday,Sonntag,Vasárnap
 jan_short,Jan,Jan,Jan
 feb_short,Feb,Feb,Feb
-mar_short,Már,Mar,Mär
-apr_short,Ápr,Apr,Apr
-may_short,Máj,May,Mai
-jun_short,Jún,Jun,Jun
-jul_short,Júl,Jul,Jul
+mar_short,Mar,Mär,Már
+apr_short,Apr,Apr,Ápr
+may_short,May,Mai,Máj
+jun_short,Jun,Jun,Jún
+jul_short,Jul,Jul,Júl
 aug_short,Aug,Aug,Aug
-sep_short,Sze,Sep,Sep
-oct_short,Okt,Oct,Okt
+sep_short,Sep,Sep,Sze
+oct_short,Oct,Okt,Okt
 nov_short,Nov,Nov,Nov
-dec_short,Dec,Dec,Dez
-event_tags,Címkék,Tags,Tags
-no_description,Nincs leírás,No description,Keine Beschreibung
-no_category,Kategória nélkül,No category,Keine Kategorie
-no_assignee,Nincs felelős,No assignee,Kein Verantwortlicher
-no_tags,Nincs címke,No tags,Keine Tags
-loading_event_details,Esemény részletek betöltése,Loading event details,Lade Event-Details
-error_loading_event,Hiba az esemény betöltésekor,Error loading event,Fehler beim Laden des Events
-retry_load_event,Újrapróbálás,Retry loading,Erneut versuchen
+dec_short,Dec,Dez,Dec
+event_tags,Tags,Tags,Címkék
+no_description,No description,Keine Beschreibung,Nincs leírás
+no_category,No category,Keine Kategorie,Kategória nélkül
+no_assignee,No assignee,Kein Verantwortlicher,Nincs felelős
+no_tags,No tags,Keine Tags,Nincs címke
+loading_event_details,Loading event details,Lade Event-Details,Esemény részletek betöltése
+error_loading_event,Error loading event,Fehler beim Laden des Events,Hiba az esemény betöltésekor
+retry_load_event,Retry loading,Erneut versuchen,Újrapróbálás
+calendar_month_view,Month,Monat,Hónap
+calendar_week_view,Week,Woche ,Hét
+calendar_day_view,Day,Tag,Nap
+calendar_timeline_view,Timeline,Zeitlinie,Idősor
+calendar_today_button,Today,Heute,Ma
+calendar_refresh,Refresh,Aktualisieren,Frissítés
+calendar_settings,Settings,Einstellungen,Beállítások
+create_new_event,New event,Neues Ereignis,Új esemény
+export,Export,Exportieren,Exportálás
+switching_to_month_view,Switching to month view,Wechsel zur Monatsansicht,Váltás havi nézetre
+switching_to_week_view,Switching to week view,Wechsel zur Wochenansicht,Váltás heti nézetre
+switching_to_day_view,Switching to day view,Wechsel zur Tagesansicht,Váltás napi nézetre
+switching_to_timeline_view,Switching to timeline view,Wechsel zur Zeitlinienansicht,Váltás idővonal nézetre
+navigating_to_today,Going to today,Zum heutigen Tag springen,Ugrás a mai napra
+calendar_navigation_previous,Previous,Vorherige,Előző
+calendar_navigation_next,Next,Nächste,Következő
+monthly_summary,Monthly Summary,Monatliche Zusammenfassung,Havi Összesítő
+weekly_summary,Weekly Summary,Wöchentliche Zusammenfassung,Heti Összesítő
+daily_summary,Daily Summary,Tägliche Zusammenfassung,Napi Összesítő
+timeline_summary,Timeline Summary,Zeitlinien Zusammenfassung,Idővonalas Összesítő
+events_completed,Completed,Abgeschlossen,Befejezett
+events_in_progress,In Progress,In Bearbeitung,Folyamatban
+events_high_priority,High Priority,Hohe Priorität,Magas prioritás
+events_total,Total Events,Gesamt Ereignisse,Összes esemény
+quick_action_new_task,New task,Neue Aufgabe,Új feladat
+quick_action_go_today,Go to today,Zu heute gehen,Mai napra
+quick_action_filter,Filter,Filtern,Szűrés
+morning,Morning,Morgen,Reggel
+afternoon,Afternoon,Nachmittag,Délután
+evening,Evening,Abend,Este
+night,Night,Nacht,Éjszaka
+no_events_today,No events today,Keine Ereignisse heute,Nincs esemény ma
+no_events_this_week,No events this week,Keine Ereignisse diese Woche,Nincs esemény ezen a héten
+no_events_this_month,No events this month,Keine Ereignisse diesen Monat,Nincs esemény ebben a hónapban
+no_events_timeline,No events on timeline,Keine Ereignisse auf der Zeitlinie,Nincs esemény az idővonalon
+loading_calendar,Loading calendar,Kalender wird geladen,Naptár betöltése
+loading_events,Loading events,Ereignisse werden geladen,Események betöltése
+loading_view,Loading view,Ansicht wird geladen,Nézet betöltése
+calendar_load_error,Error loading calendar,Fehler beim Laden des Kalenders,Hiba a naptár betöltésekor
+calendar_sync_error,Sync error,Synchronisierungsfehler,Szinkronizálási hiba
+calendar_network_error,Network error,Netzwerkfehler,Hálózati hiba
+month_view_description,Display full month,Ganzen Monat anzeigen,Teljes hónap megjelenítése
+week_view_description,Display one week,Eine Woche anzeigen,Egy hét megjelenítése
+day_view_description,Display detailed day,Detaillierten Tag anzeigen,Egy nap részletes megjelenítése
+timeline_view_description,Events in chronological order,Ereignisse in chronologischer Reihenfolge,Események kronológiai sorrendben
+today_label,Today,Heute,Ma
+tomorrow_label,Tomorrow,Morgen,Holnap
+yesterday_label,Yesterday,Gestern,Tegnap
+this_week,This week,Diese Woche,Ezen a héten
+next_week,Next week,Nächste Woche,Jövő héten
+last_week,Last week,Letzte Woche,Múlt héten
+calendar_go_previous,Previous period,Vorheriger Zeitraum,Előző időszak
+calendar_go_next,Next period,Nächster Zeitraum,Következő időszak
+calendar_select_date,Select date,Datum auswählen,Dátum kiválasztása
+view_event_details,View event details,Ereignisdetails anzeigen,Esemény részletei
+edit_event,Edit event,Ereignis bearbeiten,Esemény szerkesztése
+delete_event,Delete event,Ereignis löschen,Esemény törlése
+mark_completed,Mark completed,Als abgeschlossen markieren,Befejezettnek jelölés
+calendar_accessibility_month,Monthly calendar view,Monatliche Kalenderansicht,Havi naptár nézet
+calendar_accessibility_week,Weekly calendar view,Wöchentliche Kalenderansicht,Heti naptár nézet
+calendar_accessibility_day,Daily calendar view,Tägliche Kalenderansicht,Napi naptár nézet
+calendar_accessibility_timeline,Timeline calendar view,Zeitlinien Kalenderansicht,Idővonalas naptár nézet

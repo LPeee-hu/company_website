@@ -709,3 +709,8 @@ calendar_accessibility_month,Monthly calendar view,Monatliche Kalenderansicht,Ha
 calendar_accessibility_week,Weekly calendar view,Wöchentliche Kalenderansicht,Heti naptár nézet
 calendar_accessibility_day,Daily calendar view,Tägliche Kalenderansicht,Napi naptár nézet
 calendar_accessibility_timeline,Timeline calendar view,Zeitlinien Kalenderansicht,Idővonalas naptár nézet
+category_created_by,Created by: {name},Erstellt von: {name},Létrehozta: {name}
+category_edit_no_permission,Only the creator or family administrator can edit this category,Nur der Ersteller oder Familienadministrator kann diese Kategorie bearbeiten,Csak a létrehozó vagy családi adminisztrátor szerkesztheti ezt a kategóriát
+category_delete_no_permission,Only the creator or family administrator can delete this category,Nur der Ersteller oder Familienadministrator kann diese Kategorie löschen,Csak a létrehozó vagy családi adminisztrátor törölheti ezt a kategóriát
+category_permission_denied,Permission denied,Berechtigung verweigert,Nincs jogosultság
+category_admin_or_creator_only,Only parent or creator can modify,Nur Elternteil oder Ersteller kann ändern,Csak szülő vagy létrehozó módosíthatja

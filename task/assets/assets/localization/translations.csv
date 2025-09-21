@@ -714,3 +714,14 @@ category_edit_no_permission,Only the creator or family administrator can edit th
 category_delete_no_permission,Only the creator or family administrator can delete this category,Nur der Ersteller oder Familienadministrator kann diese Kategorie löschen,Csak a létrehozó vagy családi adminisztrátor törölheti ezt a kategóriát
 category_permission_denied,Permission denied,Berechtigung verweigert,Nincs jogosultság
 category_admin_or_creator_only,Only parent or creator can modify,Nur Elternteil oder Ersteller kann ändern,Csak szülő vagy létrehozó módosíthatja
+
+databaseUnavailable,The server is currently unavailable. Please try again later.,Der Server ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.,A szerver jelenleg nem elérhető. Kérjük próbálja meg később.
+networkOfflineError,No internet connection. Please check your network settings.,Keine Internetverbindung. Bitte überprüfen Sie Ihre Netzwerkeinstellungen.,Nincs internetkapcsolat. Ellenőrizze a hálózati beállításokat.
+authenticationError,Authentication error. Please check your credentials.,Authentifizierungsfehler. Bitte überprüfen Sie Ihre Anmeldedaten.,Bejelentkezési hiba. Ellenőrizze az adatokat.
+connectionTimeout,Connection timed out. Please try again.,Verbindung unterbrochen. Bitte versuchen Sie es erneut.,A kapcsolat időtúllépés miatt megszakadt. Próbálja újra.
+loginGeneralError,An error occurred during login. Please try again.,Ein Fehler ist bei der Anmeldung aufgetreten. Bitte versuchen Sie es erneut.,Hiba történt a bejelentkezés során. Próbálja újra.
+errorDetails,Error Details,Fehlerdetails,Hiba részletei
+errorCategory,Category,Kategorie,Kategória
+debugInfo,Debug,Debug,Debug
+originalErrorLabel,Original error,Ursprünglicher Fehler,Eredeti hiba
+closeDialog,Close,Schließen,Bezárás

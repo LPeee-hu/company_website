@@ -20,7 +20,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.0'  # <-- JAVÃTVA: 3.16.0-rÃ³l 3.27.0-ra
+          flutter-version: '3.27.0' 
           channel: 'stable'
       
       - name: Check Flutter version

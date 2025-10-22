@@ -87,7 +87,7 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
             end: Alignment.bottomRight,
             colors: [
               theme.colorScheme.primary,
-              theme.colorScheme.primary.withOpacity(0.7),
+              theme.colorScheme.primary.withValues(alpha: 0.7),
               theme.colorScheme.primaryContainer,
             ],
           ),
@@ -147,7 +147,8 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
                                   borderRadius: BorderRadius.circular(20),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
+                                      color:
+                                          Colors.black.withValues(alpha: 0.1),
                                       blurRadius: 30,
                                       offset: const Offset(0, 10),
                                     ),
@@ -186,7 +187,7 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
                               Text(
                                 'Fejlesztés alatt',
                                 style: theme.textTheme.headlineMedium?.copyWith(
-                                  color: Colors.white.withOpacity(0.9),
+                                  color: Colors.white.withValues(alpha: 0.9),
                                   fontWeight: FontWeight.w500,
                                   fontSize: isMobile ? 24 : 32,
                                 ),
@@ -205,7 +206,7 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
                                   'Hamarosan modern, reszponzív megjelenéssel '
                                   'és számos funkcióval várjuk Önt!',
                                   style: theme.textTheme.bodyLarge?.copyWith(
-                                    color: Colors.white.withOpacity(0.85),
+                                    color: Colors.white.withValues(alpha: 0.85),
                                     fontSize: isMobile ? 16 : 18,
                                     height: 1.6,
                                   ),
@@ -227,10 +228,10 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
                                 ),
                                 padding: const EdgeInsets.all(24),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.15),
+                                  color: Colors.white.withValues(alpha: 0.15),
                                   borderRadius: BorderRadius.circular(16),
                                   border: Border.all(
-                                    color: Colors.white.withOpacity(0.3),
+                                    color: Colors.white.withValues(alpha: 0.3),
                                     width: 1,
                                   ),
                                 ),
@@ -253,10 +254,11 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
                                     ),
                                     const SizedBox(height: 8),
                                     SelectableText(
-                                      'info@mobilfejleszto.hu',
+                                      'lpeee.reg@gmail.com',
                                       style:
                                           theme.textTheme.bodyLarge?.copyWith(
-                                        color: Colors.white.withOpacity(0.9),
+                                        color:
+                                            Colors.white.withValues(alpha: 0.9),
                                         fontSize: isMobile ? 16 : 18,
                                       ),
                                       textAlign: TextAlign.center,
@@ -282,7 +284,7 @@ class _UnderConstructionPageState extends State<UnderConstructionPage>
               child: Text(
                 '© 2025 Mobil Fejlesztő Cég. Minden jog fenntartva.',
                 style: theme.textTheme.bodySmall?.copyWith(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withValues(alpha: 0.7),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -344,7 +346,7 @@ class _DecorativeCircleState extends State<_DecorativeCircle>
             height: widget.size,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white.withOpacity(widget.opacity),
+              color: Colors.white.withValues(alpha: widget.opacity),
             ),
           ),
         );
@@ -397,7 +399,7 @@ class _AnimatedProgressIndicatorState extends State<_AnimatedProgressIndicator>
             builder: (context, child) {
               return LinearProgressIndicator(
                 value: _progressAnimation.value,
-                backgroundColor: Colors.white.withOpacity(0.3),
+                backgroundColor: Colors.white.withValues(alpha: 0.3),
                 valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                 minHeight: 4,
               );
@@ -408,7 +410,7 @@ class _AnimatedProgressIndicatorState extends State<_AnimatedProgressIndicator>
         Text(
           'A weboldal hamarosan elérhető...',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
               ),
         ),
       ],

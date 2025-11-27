@@ -1,2 +1,0 @@
-- name: Create .nojekyll file
-  run: touch ./build/web/.nojekyll

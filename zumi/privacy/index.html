@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- zumi/privacy/index.html - Zumi Privacy Policy -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Zumi: Family Manager</title>
+    <meta name="description" content="Privacy Policy for Zumi: Family Manager app by LP Wave.">
+    <meta name="robots" content="noindex">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-primary: #FFD166;
+            --color-secondary: #4D4C7D;
+            --color-accent: #EF476F;
+            --color-bg: #F8F9FA;
+            --color-text: #2D3142;
+            --font-heading: 'Nunito', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-bg);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--color-primary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(77, 76, 125, 0.08);
+        }
+
+        /* Typography */
+        .main-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .last-updated span {
+            background: rgba(77, 76, 125, 0.1);
+            color: var(--color-secondary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--color-secondary);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--color-primary);
+            display: inline-block;
+        }
+
+        .section p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .subsection-title {
+            font-weight: 700;
+            color: var(--color-text);
+            margin: 24px 0 12px;
+        }
+
+        /* Lists */
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: #555;
+        }
+
+        .bullet-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            border-radius: 50%;
+        }
+
+        .bullet-list li strong {
+            color: var(--color-text);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(77, 76, 125, 0.05) 0%, rgba(77, 76, 125, 0.1) 100%);
+            border-left: 4px solid var(--color-secondary);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .highlight-box i {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--color-secondary);
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #3b3a63 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .contact-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-card {
+                padding: 30px 20px;
+            }
+
+            .main-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/zumi" class="back-btn" title="Back to Zumi">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <a href="/zumi" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <span>Zumi</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <div class="content-card">
+            <h1 class="main-title">Privacy Policy</h1>
+            <p class="subtitle">Zumi: Family Manager</p>
+            <div class="last-updated">
+                <span>Last updated: November 27, 2025</span>
+            </div>
+
+            <!-- 1. Introduction -->
+            <section class="section">
+                <h2 class="section-title">1. Introduction</h2>
+                <p>
+                    <strong>LP Wave</strong> ("we," "our," or "us") is committed to protecting your privacy. 
+                    This Privacy Policy explains how your personal information is collected, used, and 
+                    disclosed by <strong>Zumi: Family Manager</strong> ("App").
+                </p>
+                <p>
+                    By accessing or using our App, you signify that you have read, understood, and agree 
+                    to our collection, storage, use, and disclosure of your personal information as 
+                    described in this Privacy Policy and our Terms of Service.
+                </p>
+            </section>
+
+            <!-- 2. Information We Collect -->
+            <section class="section">
+                <h2 class="section-title">2. Information We Collect</h2>
+                <p>
+                    To provide the features of Zumi (finance tracking, task management, contact syncing), 
+                    we may collect the following types of information:
+                </p>
+
+                <h3 class="subsection-title">A. Personal Information You Provide:</h3>
+                <ul class="bullet-list">
+                    <li><strong>Account Data:</strong> Name, email address, and password when you register.</li>
+                    <li><strong>Family Profile Data:</strong> Names or nicknames of family members (including children) added to the family group.</li>
+                    <li><strong>Financial Data:</strong> Information about budget, expenses, allowances, and savings goals that you manually input. <em>Note: We do not store credit card numbers or bank login credentials directly.</em></li>
+                    <li><strong>Task Data:</strong> Details of chores and tasks you create.</li>
+                </ul>
+
+                <h3 class="subsection-title">B. Information We Access on Your Device (Permissions):</h3>
+                <ul class="bullet-list">
+                    <li><strong>Contacts (READ_CONTACTS):</strong> We request access to your contact list only if you choose to share specific contacts (e.g., emergency numbers, doctors) with your family group. We do not upload your entire address book to our servers for marketing purposes.</li>
+                    <li><strong>Notifications:</strong> To send reminders about tasks and bill payments.</li>
+                </ul>
+
+                <h3 class="subsection-title">C. Automatically Collected Information:</h3>
+                <ul class="bullet-list">
+                    <li><strong>Usage Data:</strong> Information about how you use the App (e.g., features used, time spent).</li>
+                    <li><strong>Device Data:</strong> IP address, device model, operating system version (used for analytics and troubleshooting).</li>
+                </ul>
+            </section>
+
+            <!-- 3. How We Use Your Information -->
+            <section class="section">
+                <h2 class="section-title">3. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul class="bullet-list">
+                    <li>To provide and maintain the App's functionality (e.g., syncing data between family members' devices).</li>
+                    <li>To manage your account and family group.</li>
+                    <li>To generate financial reports and summaries for your personal use.</li>
+                    <li>To improve the App and fix bugs.</li>
+                    <li>To communicate with you regarding updates or customer support.</li>
+                </ul>
+            </section>
+
+            <!-- 4. Data Sharing -->
+            <section class="section">
+                <h2 class="section-title">4. Data Sharing and Third Parties</h2>
+                
+                <div class="highlight-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>We do NOT sell your personal data to third parties.</p>
+                </div>
+
+                <p>We may share data with trusted third-party service providers solely to operate the App:</p>
+                <ul class="bullet-list">
+                    <li><strong>Cloud Storage & Backend:</strong> We use secure cloud services (e.g., Google Firebase, AWS) to store your data so it syncs across devices.</li>
+                    <li><strong>Analytics:</strong> We may use services like Google Analytics for Firebase to understand App usage trends (anonymized data).</li>
+                </ul>
+            </section>
+
+            <!-- 5. Children's Privacy -->
+            <section class="section">
+                <h2 class="section-title">5. Children's Privacy</h2>
+                <p>
+                    Zumi is designed for families. However, <strong>we do not knowingly collect personal 
+                    information directly from children under the age of 13</strong> without parental consent.
+                </p>
+                <ul class="bullet-list">
+                    <li>The App is intended to be managed by a parent or guardian ("Family Manager").</li>
+                    <li>Parents create profiles for their children within the App.</li>
+                    <li>If you believe we have inadvertently collected data from a child without parental consent, please contact us, and we will delete it.</li>
+                </ul>
+            </section>
+
+            <!-- 6. Data Security -->
+            <section class="section">
+                <h2 class="section-title">6. Data Security</h2>
+                <p>
+                    We implement industry-standard security measures (such as encryption) to protect your 
+                    personal and financial information. However, no method of transmission over the Internet 
+                    is 100% secure, and we cannot guarantee absolute security.
+                </p>
+            </section>
+
+            <!-- 7. Your Rights -->
+            <section class="section">
+                <h2 class="section-title">7. Your Rights (GDPR & CCPA)</h2>
+                <p>Depending on your location, you may have the following rights:</p>
+                <ul class="bullet-list">
+                    <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+                    <li><strong>Deletion:</strong> Request that we delete your account and all associated data. You can do this directly within the App settings or by contacting us.</li>
+                    <li><strong>Correction:</strong> Update incorrect information via the App settings.</li>
+                </ul>
+            </section>
+
+            <!-- 8. Changes -->
+            <section class="section">
+                <h2 class="section-title">8. Changes to This Privacy Policy</h2>
+                <p>
+                    We may update our Privacy Policy from time to time. We will notify you of any changes 
+                    by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                </p>
+            </section>
+
+            <!-- 9. Contact Us -->
+            <section class="section">
+                <h2 class="section-title">9. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                
+                <div class="contact-card">
+                    <h4>LP Wave</h4>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:lpeee84@gmail.com">lpeee84@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <a href="https://lpwave.hu">https://lpwave.hu</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 <a href="/">LP Wave</a>. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

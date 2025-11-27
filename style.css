@@ -1,0 +1,372 @@
+/* style.css - LP Wave Corporate Theme */
+:root {
+    /* Dark Theme Palette */
+    --bg-dark: #0F172A;       /* Mély sötétkék (Slate 900) */
+    --bg-card: #1E293B;       /* Kicsit világosabb kártyákhoz */
+    --text-main: #F8FAFC;     /* Törtfehér */
+    --text-muted: #94A3B8;    /* Szürkés szöveg */
+    
+    /* Brand Accent (Electric Cyan/Blue) - A "Wave" színe */
+    --accent: #38BDF8;
+    --accent-glow: rgba(56, 189, 248, 0.4);
+
+    /* Zumi Brand Colors (csak a kártyához) */
+    --zumi-yellow: #FFD166;
+    --zumi-indigo: #4D4C7D;
+
+    --font-main: 'Manrope', sans-serif;
+}
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+/* --- NAVBAR --- */
+.navbar {
+    padding: 24px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+
+.brand:hover {
+    opacity: 0.9;
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+    color: var(--accent);
+}
+
+.link-hover {
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+.link-hover:hover { opacity: 1; color: var(--accent); }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #38BDF8, #818CF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+/* Glow Effects (Háttér fények) */
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+    opacity: 0.5;
+}
+.glow-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-glow);
+    top: -100px;
+    right: -100px;
+    animation: float 10s infinite ease-in-out;
+}
+.glow-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(129, 140, 248, 0.3);
+    bottom: 100px;
+    left: -50px;
+    animation: float 8s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 50px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* --- PORTFOLIO --- */
+.portfolio {
+    padding: 80px 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.section-header h2 { font-size: 1.5rem; font-weight: 600; }
+.divider { flex-grow: 1; height: 1px; background: rgba(255,255,255,0.1); }
+
+/* Product Card - Zumi Theme */
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--zumi-yellow);
+}
+
+.card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card-content p { color: var(--text-muted); margin-bottom: 30px; }
+
+.specs {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.btn-product {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+.btn-product:hover { color: var(--accent); gap: 15px; }
+
+/* Product Visual (Mockup) */
+.card-visual {
+    background: linear-gradient(135deg, #2D3142 0%, #1e1e2e 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui-mockup {
+    width: 280px;
+    height: 380px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    position: relative;
+    transform: rotate(-5deg) translateY(20px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+.product-card:hover .ui-mockup {
+    transform: rotate(0deg) translateY(0px) scale(1.05);
+}
+
+.mockup-header { display: flex; gap: 8px; margin-bottom: 20px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+
+.mockup-row { height: 12px; background: rgba(255,255,255,0.1); border-radius: 6px; margin-bottom: 10px; }
+.short { width: 50%; }
+.long { width: 80%; margin-bottom: 30px; }
+
+.mockup-card { height: 60px; background: var(--zumi-yellow); border-radius: 12px; margin-bottom: 10px; opacity: 0.9; }
+.secondary { background: var(--zumi-indigo); }
+
+.floating-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
+    background: white;
+    color: var(--zumi-indigo);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: float 6s infinite ease-in-out;
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+/* --- VISION --- */
+.vision {
+    padding: 60px 0 100px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.vision-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+.vision-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-center a {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.footer-center a:hover {
+    color: var(--accent);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-visual {
+        height: 300px;
+        order: -1;
+    }
+    
+    .card-content { padding: 40px 24px; }
+    
+    .footer-content { 
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* --- ANIMATIONS --- */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

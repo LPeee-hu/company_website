@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- 404.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | LP Wave</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            min-height: 100vh;
+            background: #0F172A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #F8FAFC;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 150px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+            color: #94A3B8;
+            margin-bottom: 40px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background: #38BDF8;
+            color: #0F172A;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Glow effects */
+        .glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .glow-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(56, 189, 248, 0.4);
+            top: -100px;
+            right: -100px;
+        }
+
+        .glow-2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(129, 140, 248, 0.3);
+            bottom: -50px;
+            left: -50px;
+        }
+
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 100px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p>The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="home-btn">Back to Home</a>
+    </div>
+</body>
+</html>

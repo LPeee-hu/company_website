@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- zumi/index.html - Zumi Landing Page -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zumi: Family Manager - Sync Your Home</title>
+    <meta name="description" content="Organize chores, track finance & sync contacts. The all-in-one app for modern families.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zumi: Family Manager">
+    <meta property="og:description" content="The all-in-one app for modern families.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lpwave.hu/zumi">
+    
+    <!-- Betűtípusok betöltése -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ikonkészlet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGÁCIÓ -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/zumi" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="logo-text">Zumi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="/zumi/privacy">Privacy</a></li>
+                <li><a href="#download" class="btn btn-primary">Download App</a></li>
+            </ul>
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SZEKCIÓ -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">New: Allowance Manager 🚀</span>
+                <h1>Your family life.<br><span class="highlight">Done.</span></h1>
+                <p>Track budget, assign chores, and sync schedules. Zumi turns household chaos into harmony. Simple, safe, and fun.</p>
+                
+                <div class="cta-group">
+                    <a href="#" class="store-badge">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="store-badge google-play">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>Get it on</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <!-- CSS Telefon Mockup -->
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <div class="avatar-group">
+                                <div class="avatar" style="background: #EF476F;">A</div>
+                                <div class="avatar" style="background: #FFD166;">B</div>
+                            </div>
+                        </div>
+                        <div class="card card-finance">
+                            <small>Family Budget</small>
+                            <h3>$1,250 left</h3>
+                            <div class="progress-bar"><div class="fill"></div></div>
+                        </div>
+                        <div class="card card-task">
+                            <div class="check"><i class="fa-solid fa-check"></i></div>
+                            <span>Take out trash</span>
+                        </div>
+                        <div class="card card-task">
+                            <div class="check"><i class="fa-solid fa-check"></i></div>
+                            <span>Homework done</span>
+                        </div>
+                        <div class="floating-fab">+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FUNKCIÓK (Features) -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why families love Zumi</h2>
+                <p>One app to replace them all. Designed for parents, loved by kids.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: #E0E7FF; color: #4D4C7D;">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h3>Smart Finance</h3>
+                    <p>Track shared expenses and manage kids' allowances digitally. No more "where did the money go?" moments.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: #FFF4D6; color: #FFAA00;">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3>Gamified Chores</h3>
+                    <p>Assign tasks and reward your kids when they're done. Zumi makes cleaning up feel like a game.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: #FFE6EB; color: #EF476F;">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+                    <h3>Family Sync</h3>
+                    <p>Shared contacts and calendar. Ensure everyone has grandma's number and knows when soccer practice starts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CTA -->
+    <section id="download" class="download-section">
+        <div class="container download-container">
+            <h2>Ready to sync your home?</h2>
+            <p>Join thousands of happy families using Zumi today.</p>
+            <a href="#" class="btn btn-primary btn-large">Get Zumi Free</a>
+        </div>
+    </section>
+
+    <!-- LÁBLÉC (Footer) -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-text">Zumi</span>
+                <p>Product of <a href="/"><strong>LP Wave</strong></a>.</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:lpeee84@gmail.com">Support</a>
+                <a href="/zumi/privacy">Privacy Policy</a>
+                <a href="/zumi/privacy">Terms</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 LP Wave. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- zumi/delete-account/index.html - Account Deletion Request -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Zumi</title>
+    <meta name="description" content="Request deletion of your Zumi account and associated data.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-primary: #FFD166;
+            --color-secondary: #4D4C7D;
+            --color-accent: #EF476F;
+            --color-bg: #F8F9FA;
+            --color-text: #2D3142;
+            --color-text-muted: #6B7280;
+            --color-white: #FFFFFF;
+            --color-danger: #DC2626;
+            --color-danger-light: #FEE2E2;
+            --font-heading: 'Nunito', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --border-radius: 16px;
+            --shadow: 0 10px 40px rgba(77, 76, 125, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-white);
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-secondary);
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--color-primary);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--color-secondary);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--color-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        /* Warning Card */
+        .warning-card {
+            background: var(--color-danger-light);
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            border-radius: var(--border-radius);
+            padding: 20px 24px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .warning-card i {
+            color: var(--color-danger);
+            font-size: 1.4rem;
+            margin-top: 2px;
+        }
+
+        .warning-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-danger);
+            margin-bottom: 6px;
+        }
+
+        .warning-card p {
+            font-size: 0.95rem;
+            color: #991B1B;
+        }
+
+        /* Main Card */
+        .main-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .main-card h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-secondary);
+            margin-bottom: 12px;
+        }
+
+        .main-card > p {
+            color: var(--color-text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Data List */
+        .data-section {
+            background: var(--color-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .data-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--color-secondary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .data-section h3 i {
+            color: var(--color-accent);
+        }
+
+        .data-list {
+            list-style: none;
+        }
+
+        .data-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .data-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .data-list li i {
+            color: var(--color-danger);
+            font-size: 0.8rem;
+            width: 20px;
+        }
+
+        /* Process Section */
+        .process-section {
+            margin-bottom: 30px;
+        }
+
+        .process-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--color-secondary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .process-section h3 i {
+            color: var(--color-primary);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            background: var(--color-secondary);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            padding-top: 3px;
+        }
+
+        .step-text strong {
+            color: var(--color-text);
+        }
+
+        /* CTA Button */
+        .cta-section {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .delete-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--color-danger);
+            color: var(--color-white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        .delete-btn:hover {
+            background: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .delete-btn i {
+            font-size: 1.1rem;
+        }
+
+        .cta-note {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Alternative Contact */
+        .alt-contact {
+            margin-top: 30px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .alt-contact p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .alt-contact a {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        .alt-contact a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--color-secondary);
+        }
+
+        .footer a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .main-card {
+                padding: 28px 20px;
+            }
+
+            .main-card h1 {
+                font-size: 1.5rem;
+            }
+
+            .warning-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/zumi" class="back-btn" title="Back to Zumi">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <a href="/zumi" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <span>Zumi</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        
+        <!-- Warning -->
+        <div class="warning-card">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div>
+                <h2>This action is permanent</h2>
+                <p>Once your account is deleted, all your data will be permanently removed and cannot be recovered.</p>
+            </div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="main-card">
+            <h1>Delete Your Account</h1>
+            <p>We're sorry to see you go. Please review the information below before requesting account deletion.</p>
+
+            <!-- Data that will be deleted -->
+            <div class="data-section">
+                <h3><i class="fa-solid fa-trash-can"></i> Data that will be deleted</h3>
+                <ul class="data-list">
+                    <li><i class="fa-solid fa-xmark"></i> Your profile and account information</li>
+                    <li><i class="fa-solid fa-xmark"></i> All tasks and chore history</li>
+                    <li><i class="fa-solid fa-xmark"></i> Calendar events and schedules</li>
+                    <li><i class="fa-solid fa-xmark"></i> Financial records and budgets</li>
+                    <li><i class="fa-solid fa-xmark"></i> Family connections and shared data</li>
+                    <li><i class="fa-solid fa-xmark"></i> All app settings and preferences</li>
+                </ul>
+            </div>
+
+            <!-- Process -->
+            <div class="process-section">
+                <h3><i class="fa-solid fa-list-check"></i> Deletion process</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Click the button below to send a deletion request via email</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Include your <strong>registered email address</strong> in the request</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">We'll verify your identity and process your request within <strong>30 days</strong></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">You'll receive a confirmation email once deletion is complete</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <a href="mailto:lpeee84@gmail.com?subject=Zumi%20Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Zumi%20account.%0A%0AMy%20registered%20email%20address%3A%20%5BPlease%20enter%20your%20email%5D%0A%0AI%20understand%20that%20this%20action%20is%20permanent%20and%20all%20my%20data%20will%20be%20deleted.%0A%0AThank%20you." class="delete-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    Request Account Deletion
+                </a>
+                <p class="cta-note">This will open your email app with a pre-filled message</p>
+            </div>
+
+            <!-- Alternative -->
+            <div class="alt-contact">
+                <p>You can also delete your account directly in the Zumi app:<br>
+                <strong>Settings → Account → Delete Account</strong></p>
+                <p style="margin-top: 12px;">Questions? Contact us at <a href="mailto:lpeee84@gmail.com">lpeee84@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><a href="/zumi">Zumi</a> is a product of <a href="/"><strong>LP Wave</strong></a></p>
+        <p style="margin-top: 8px;">&copy; 2025 LP Wave. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

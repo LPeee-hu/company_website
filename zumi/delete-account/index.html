@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- zumi/delete-account/index.html - Account Deletion Request e-mail -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +6,9 @@
     <title>Delete Account - Zumi</title>
     <meta name="description" content="Request deletion of your Zumi account and associated data.">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -32,11 +28,7 @@
             --shadow: 0 10px 40px rgba(77, 76, 125, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-body);
@@ -46,13 +38,8 @@
             min-height: 100vh;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-        /* Header */
         .header {
             background: var(--color-white);
             padding: 16px 0;
@@ -84,9 +71,7 @@
             transition: 0.3s;
         }
 
-        .back-btn:hover {
-            background: var(--color-primary);
-        }
+        .back-btn:hover { background: var(--color-primary); }
 
         .logo {
             display: flex;
@@ -109,14 +94,12 @@
             font-size: 1rem;
         }
 
-        /* Main Content */
         .content {
             max-width: 600px;
             margin: 0 auto;
             padding: 40px 20px 60px;
         }
 
-        /* Warning Card */
         .warning-card {
             background: var(--color-danger-light);
             border: 1px solid rgba(220, 38, 38, 0.2);
@@ -146,7 +129,6 @@
             color: #991B1B;
         }
 
-        /* Main Card */
         .main-card {
             background: var(--color-white);
             border-radius: var(--border-radius);
@@ -167,7 +149,6 @@
             margin-bottom: 30px;
         }
 
-        /* Data List */
         .data-section {
             background: var(--color-bg);
             border-radius: 12px;
@@ -185,13 +166,9 @@
             gap: 10px;
         }
 
-        .data-section h3 i {
-            color: var(--color-accent);
-        }
+        .data-section h3 i { color: var(--color-accent); }
 
-        .data-list {
-            list-style: none;
-        }
+        .data-list { list-style: none; }
 
         .data-list li {
             padding: 10px 0;
@@ -214,10 +191,7 @@
             width: 20px;
         }
 
-        /* Process Section */
-        .process-section {
-            margin-bottom: 30px;
-        }
+        .process-section { margin-bottom: 30px; }
 
         .process-section h3 {
             font-family: var(--font-heading);
@@ -229,9 +203,7 @@
             gap: 10px;
         }
 
-        .process-section h3 i {
-            color: var(--color-primary);
-        }
+        .process-section h3 i { color: var(--color-primary); }
 
         .process-steps {
             display: flex;
@@ -265,11 +237,8 @@
             padding-top: 3px;
         }
 
-        .step-text strong {
-            color: var(--color-text);
-        }
+        .step-text strong { color: var(--color-text); }
 
-        /* CTA Button */
         .cta-section {
             text-align: center;
             padding-top: 10px;
@@ -297,9 +266,7 @@
             box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
         }
 
-        .delete-btn i {
-            font-size: 1.1rem;
-        }
+        .delete-btn i { font-size: 1.1rem; }
 
         .cta-note {
             margin-top: 16px;
@@ -307,7 +274,6 @@
             color: var(--color-text-muted);
         }
 
-        /* Alternative Contact */
         .alt-contact {
             margin-top: 30px;
             padding-top: 24px;
@@ -325,11 +291,8 @@
             font-weight: 600;
         }
 
-        .alt-contact a:hover {
-            color: var(--color-accent);
-        }
+        .alt-contact a:hover { color: var(--color-accent); }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -337,34 +300,18 @@
             font-size: 0.85rem;
         }
 
-        .footer a {
-            color: var(--color-secondary);
-        }
+        .footer a { color: var(--color-secondary); }
+        .footer a:hover { color: var(--color-accent); }
 
-        .footer a:hover {
-            color: var(--color-accent);
-        }
-
-        /* Responsive */
         @media (max-width: 600px) {
-            .main-card {
-                padding: 28px 20px;
-            }
-
-            .main-card h1 {
-                font-size: 1.5rem;
-            }
-
-            .warning-card {
-                flex-direction: column;
-                gap: 12px;
-            }
+            .main-card { padding: 28px 20px; }
+            .main-card h1 { font-size: 1.5rem; }
+            .warning-card { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="/zumi" class="back-btn" title="Back to Zumi">
@@ -379,10 +326,8 @@
         </div>
     </header>
 
-    <!-- Content -->
     <main class="content">
         
-        <!-- Warning -->
         <div class="warning-card">
             <i class="fa-solid fa-triangle-exclamation"></i>
             <div>
@@ -391,12 +336,10 @@
             </div>
         </div>
 
-        <!-- Main Card -->
         <div class="main-card">
             <h1>Delete Your Account</h1>
             <p>We're sorry to see you go. Please review the information below before requesting account deletion.</p>
 
-            <!-- Data that will be deleted -->
             <div class="data-section">
                 <h3><i class="fa-solid fa-trash-can"></i> Data that will be deleted</h3>
                 <ul class="data-list">
@@ -409,7 +352,6 @@
                 </ul>
             </div>
 
-            <!-- Process -->
             <div class="process-section">
                 <h3><i class="fa-solid fa-list-check"></i> Deletion process</h3>
                 <div class="process-steps">
@@ -432,25 +374,22 @@
                 </div>
             </div>
 
-            <!-- CTA -->
             <div class="cta-section">
-                <a href="mailto:lpeee84@gmail.com?subject=Zumi%20Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Zumi%20account.%0A%0AMy%20registered%20email%20address%3A%20%5BPlease%20enter%20your%20email%5D%0A%0AI%20understand%20that%20this%20action%20is%20permanent%20and%20all%20my%20data%20will%20be%20deleted.%0A%0AThank%20you." class="delete-btn">
+                <a href="mailto:lpeee84@gmail.com?subject=Zumi%20Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Zumi%20account.%0A%0AMy%20registered%20email%20address%3A%20%0A%0AI%20understand%20that%20this%20action%20is%20permanent%20and%20all%20my%20data%20will%20be%20deleted.%0A%0AThank%20you." class="delete-btn">
                     <i class="fa-solid fa-envelope"></i>
                     Request Account Deletion
                 </a>
                 <p class="cta-note">This will open your email app with a pre-filled message</p>
             </div>
 
-            <!-- Alternative -->
             <div class="alt-contact">
                 <p>You can also delete your account directly in the Zumi app:<br>
-                <strong>Settings → Account → Delete Account</strong></p>
+                <strong>Settings - Account - Delete Account</strong></p>
                 <p style="margin-top: 12px;">Questions? Contact us at <a href="mailto:lpeee84@gmail.com">lpeee84@gmail.com</a></p>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <p><a href="/zumi">Zumi</a> is a product of <a href="/"><strong>LP Wave</strong></a></p>
         <p style="margin-top: 8px;">&copy; 2025 LP Wave. All rights reserved.</p>

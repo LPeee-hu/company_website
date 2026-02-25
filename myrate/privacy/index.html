@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- myrate/privacy/index.html - MyRate Privacy Policy -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MyRate</title>
+    <meta name="description" content="Privacy Policy for MyRate: Currency Exchange app by LP Wave.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --color-primary: #0ACF97;
+            --color-secondary: #1E2A3A;
+            --color-accent: #FF6B6B;
+            --color-bg: #F4F7F5;
+            --color-text: #1E2A3A;
+            --color-text-muted: #6B7280;
+            --color-white: #FFFFFF;
+            --font-heading: 'Nunito', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --border-radius: 16px;
+            --shadow: 0 10px 40px rgba(10, 207, 151, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-white);
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .back-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-secondary);
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--color-secondary);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #0ACF97, #08b887);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .content-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 50px;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        /* Typography */
+        .main-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--color-secondary);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--color-text-muted);
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .last-updated span {
+            background: rgba(10, 207, 151, 0.12);
+            color: #07a87a;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--color-primary);
+        }
+
+        .section p {
+            color: var(--color-text-muted);
+            margin-bottom: 12px;
+        }
+
+        /* Lists */
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            padding: 8px 0 8px 24px;
+            position: relative;
+            color: var(--color-text-muted);
+        }
+
+        .bullet-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: var(--color-primary);
+            border-radius: 50%;
+        }
+
+        .bullet-list li strong {
+            color: var(--color-text);
+        }
+
+        .bullet-list li a {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        .bullet-list li a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(10, 207, 151, 0.08);
+            border: 1px solid rgba(10, 207, 151, 0.2);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .highlight-box i {
+            font-size: 1.3rem;
+            color: var(--color-primary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--color-bg);
+            border: 1px solid rgba(0,0,0,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        .contact-card h4 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--color-secondary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: var(--color-primary);
+            width: 18px;
+        }
+
+        .contact-item a {
+            color: var(--color-text-muted);
+        }
+
+        .contact-item a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .content-card {
+                padding: 30px 20px;
+            }
+
+            .main-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/myrate" class="back-btn" title="Back to MyRate">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <a href="/myrate" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <span>MyRate</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <div class="content-card">
+            <h1 class="main-title">Privacy Policy</h1>
+            <p class="subtitle">MyRate: Currency Exchange</p>
+            <div class="last-updated">
+                <span>Last updated: February 25, 2026</span>
+            </div>
+
+            <!-- 1. Introduction -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> 1. Introduction</h2>
+                <p>
+                    <strong>LP Wave</strong> ("we," "our," or "us") operates MyRate: Currency Exchange.
+                    This Privacy Policy explains how your information is collected, used, and protected
+                    when you use our application.
+                </p>
+                <p>
+                    By using MyRate, you agree to the practices described in this policy.
+                </p>
+            </section>
+
+            <!-- 2. Information We Collect -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-database"></i> 2. Information We Collect</h2>
+
+                <p><strong>Information you provide:</strong></p>
+                <ul class="bullet-list">
+                    <li><strong>Preferences:</strong> Your favorite currency pairs and default currencies</li>
+                    <li><strong>Rate Alerts:</strong> Target exchange rates and notification preferences you configure</li>
+                </ul>
+
+                <p><strong>Automatically collected:</strong></p>
+                <ul class="bullet-list">
+                    <li><strong>Device Information:</strong> Device type and operating system version</li>
+                    <li><strong>Usage Data:</strong> App interactions and feature usage (anonymized)</li>
+                    <li><strong>Location (optional):</strong> Country-level location to suggest a default currency, only if you grant permission</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <i class="fa-solid fa-user-slash"></i>
+                    <p>MyRate does not require you to create an account. No email or password is collected.</p>
+                </div>
+            </section>
+
+            <!-- 3. How We Use Your Information -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-gears"></i> 3. How We Use Your Information</h2>
+                <ul class="bullet-list">
+                    <li>To provide and maintain the MyRate service</li>
+                    <li>To deliver rate alert notifications you have set</li>
+                    <li>To remember your preferred currencies across sessions</li>
+                    <li>To improve and optimize the app experience</li>
+                    <li>To respond to your support requests</li>
+                </ul>
+            </section>
+
+            <!-- 4. Data Sharing -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-share-nodes"></i> 4. Data Sharing</h2>
+
+                <div class="highlight-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <p>We do NOT sell your personal data to third parties.</p>
+                </div>
+
+                <p>We may share data only with:</p>
+                <ul class="bullet-list">
+                    <li><strong>Exchange Rate Providers:</strong> We fetch live rate data from third-party APIs. These services do not receive your personal information.</li>
+                    <li><strong>Push Notification Service:</strong> To deliver rate alerts to your device (e.g., Apple APNs / Google FCM)</li>
+                    <li><strong>Legal Requirements:</strong> When required by applicable law</li>
+                </ul>
+            </section>
+
+            <!-- 5. Data Security -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-shield"></i> 5. Data Security</h2>
+                <p>
+                    All data is stored locally on your device or transmitted over encrypted (HTTPS/TLS) connections.
+                    We do not maintain a central user database for MyRate. Your preferences stay on your device.
+                </p>
+            </section>
+
+            <!-- 6. Your Rights -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-user-check"></i> 6. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul class="bullet-list">
+                    <li><strong>Access:</strong> All your preferences are visible and editable directly in the app</li>
+                    <li><strong>Delete:</strong> Clear all app data by uninstalling the app or clearing app storage in your device settings</li>
+                    <li><strong>Opt out of notifications:</strong> Disable alerts at any time in the app or in your device notification settings</li>
+                    <li><strong>Revoke location permission:</strong> Deny or revoke location access at any time in your device settings</li>
+                </ul>
+            </section>
+
+            <!-- 7. Children's Privacy -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-child"></i> 7. Children's Privacy</h2>
+                <p>
+                    MyRate is a general-purpose utility app suitable for all ages. We do not knowingly collect
+                    personal information from children under 13. Since no account registration is required,
+                    no personal data is collected during normal use.
+                </p>
+            </section>
+
+            <!-- 8. Changes -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-rotate"></i> 8. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. We will notify you of significant
+                    changes through the app or by updating the "Last updated" date above.
+                </p>
+            </section>
+
+            <!-- 9. Contact -->
+            <section class="section">
+                <h2 class="section-title"><i class="fa-solid fa-envelope"></i> 9. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy:</p>
+
+                <div class="contact-card">
+                    <h4>LP Wave</h4>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:lpeee84@gmail.com">lpeee84@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <a href="https://lpwave.hu">https://lpwave.hu</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Budapest, Hungary</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><a href="/myrate">MyRate</a> is a product of <a href="/"><strong>LP Wave</strong></a></p>
+        <p style="margin-top: 8px;">&copy; 2026 LP Wave. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

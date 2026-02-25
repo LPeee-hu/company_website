@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- myrate/index.html - MyRate Landing Page -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyRate - Currency Exchange at a Glance</title>
+    <meta name="description" content="Live exchange rates, multi-currency converter and smart rate alerts. The cleanest currency app you'll ever use.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MyRate - Currency Exchange">
+    <meta property="og:description" content="Live exchange rates, multi-currency converter and smart rate alerts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lpwave.hu/myrate">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/myrate" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <span class="logo-text">MyRate</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="/myrate/privacy">Privacy</a></li>
+                <li><a href="#download" class="btn btn-primary">Download App</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Live rates from 150+ currencies ✦</span>
+                <h1>Exchange rates.<br><span class="highlight">Crystal clear.</span></h1>
+                <p>Stop guessing. MyRate gives you live exchange rates, instant conversions, and smart alerts — so you always know the right moment to exchange.</p>
+
+                <div class="cta-group">
+                    <a href="#" class="store-badge">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="store-badge">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>Get it on</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <!-- CSS Phone Mockup -->
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <span class="app-header-title">MyRate</span>
+                            <span class="rate-badge">● LIVE</span>
+                        </div>
+
+                        <!-- Exchange Card -->
+                        <div class="card card-exchange">
+                            <div class="currency-row">
+                                <div class="currency-flag">
+                                    <div class="flag">🇺🇸</div>
+                                    USD
+                                </div>
+                                <span class="currency-amount">1 000.00</span>
+                            </div>
+                            <div class="exchange-divider">
+                                <div class="divider-line"></div>
+                                <div class="exchange-icon">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </div>
+                                <div class="divider-line"></div>
+                            </div>
+                            <div class="currency-row">
+                                <div class="currency-flag">
+                                    <div class="flag">🇭🇺</div>
+                                    HUF
+                                </div>
+                                <span class="currency-amount" style="color: var(--color-primary);">364 200</span>
+                            </div>
+                        </div>
+
+                        <!-- Rate Card -->
+                        <div class="card card-rate">
+                            <small>Current Rate</small>
+                            <div class="card-rate-value">364.20</div>
+                            <div class="card-rate-pair">USD / HUF · Updated just now</div>
+                        </div>
+
+                        <!-- Alerts Card -->
+                        <div class="card card-alerts">
+                            <div class="alert-item">
+                                <div class="alert-dot" style="background: var(--color-primary);"></div>
+                                EUR/HUF reached 395 ✓
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-dot" style="background: #f0b429;"></div>
+                                GBP/HUF alert at 460
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-dot" style="background: #ddd;"></div>
+                                CHF/HUF alert at 420
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why traders choose MyRate</h2>
+                <p>Everything you need to stay ahead of the market. Nothing you don't.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: rgba(10, 207, 151, 0.12); color: #07a87a;">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Live Rates</h3>
+                    <p>Real-time exchange rates for 150+ currencies, refreshed automatically. Always know exactly what your money is worth.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: rgba(30, 42, 58, 0.08); color: #1E2A3A;">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                    <h3>Instant Converter</h3>
+                    <p>Convert any amount between any two currencies in a single tap. Clean, fast, and accurate every time.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="icon-box" style="background-color: rgba(255, 107, 107, 0.12); color: #e05555;">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h3>Rate Alerts</h3>
+                    <p>Set your target rate and let MyRate notify you the moment it's reached. Never miss the perfect exchange window again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CTA -->
+    <section id="download" class="download-section">
+        <div class="container download-container">
+            <h2>Ready to exchange smarter?</h2>
+            <p>Join thousands of users who never overpay on exchange rates.</p>
+            <a href="#" class="btn btn-primary btn-large">Get MyRate Free</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-text" style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: #1E2A3A;">MyRate</span>
+                <p>Product of <a href="/"><strong>LP Wave</strong></a>.</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:lpeee84@gmail.com">Support</a>
+                <a href="/myrate/privacy">Privacy Policy</a>
+                <a href="/myrate/privacy">Terms</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 LP Wave. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -14,6 +14,10 @@
     --zumi-yellow: #FFD166;
     --zumi-indigo: #4D4C7D;
 
+    /* MyRate Brand Colors (csak a kártyához) */
+    --myrate-emerald: #0ACF97;
+    --myrate-navy: #1E2A3A;
+
     --font-main: 'Manrope', sans-serif;
 }
 
@@ -284,6 +288,14 @@ h1 {
     gap: 8px;
     animation: float 6s infinite ease-in-out;
 }
+
+/* MyRate theme overrides */
+.myrate-theme .product-logo { color: var(--myrate-emerald); }
+.myrate-theme .mockup-card { background: var(--myrate-emerald); }
+.myrate-theme .mockup-card.secondary { background: var(--myrate-navy); }
+.myrate-theme .card-visual { background: linear-gradient(135deg, #0d2418 0%, #081510 100%); }
+.myrate-theme .floating-badge { color: var(--myrate-navy); }
+.myrate-theme .btn-product { border-bottom-color: var(--myrate-emerald); }
 
 .coming-soon {
     text-align: center;

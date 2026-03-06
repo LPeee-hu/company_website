@@ -30,11 +30,7 @@
             --shadow: 0 10px 40px rgba(10, 207, 151, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-body);
@@ -44,13 +40,8 @@
             min-height: 100vh;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-        /* Header */
         .header {
             background: var(--color-white);
             padding: 16px 0;
@@ -69,6 +60,10 @@
             gap: 16px;
         }
 
+        .header-right {
+            margin-left: auto;
+        }
+
         .back-btn {
             width: 40px;
             height: 40px;
@@ -82,10 +77,7 @@
             transition: 0.3s;
         }
 
-        .back-btn:hover {
-            background: var(--color-primary);
-            color: white;
-        }
+        .back-btn:hover { background: var(--color-primary); color: white; }
 
         .logo {
             display: flex;
@@ -109,7 +101,6 @@
             color: white;
         }
 
-        /* Main Content */
         .content {
             max-width: 800px;
             margin: 0 auto;
@@ -124,7 +115,6 @@
             border: 1px solid rgba(0,0,0,0.03);
         }
 
-        /* Typography */
         .main-title {
             font-family: var(--font-heading);
             font-size: 2.2rem;
@@ -133,16 +123,9 @@
             margin-bottom: 8px;
         }
 
-        .subtitle {
-            text-align: center;
-            color: var(--color-text-muted);
-            margin-bottom: 12px;
-        }
+        .subtitle { text-align: center; color: var(--color-text-muted); margin-bottom: 12px; }
 
-        .last-updated {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        .last-updated { text-align: center; margin-bottom: 40px; }
 
         .last-updated span {
             background: rgba(10, 207, 151, 0.12);
@@ -153,9 +136,7 @@
             font-weight: 600;
         }
 
-        .section {
-            margin-bottom: 35px;
-        }
+        .section { margin-bottom: 35px; }
 
         .section-title {
             font-family: var(--font-heading);
@@ -167,20 +148,11 @@
             gap: 10px;
         }
 
-        .section-title i {
-            color: var(--color-primary);
-        }
+        .section-title i { color: var(--color-primary); }
 
-        .section p {
-            color: var(--color-text-muted);
-            margin-bottom: 12px;
-        }
+        .section p { color: var(--color-text-muted); margin-bottom: 12px; }
 
-        /* Lists */
-        .bullet-list {
-            list-style: none;
-            padding-left: 0;
-        }
+        .bullet-list { list-style: none; padding-left: 0; }
 
         .bullet-list li {
             padding: 8px 0 8px 24px;
@@ -199,20 +171,8 @@
             border-radius: 50%;
         }
 
-        .bullet-list li strong {
-            color: var(--color-text);
-        }
+        .bullet-list li strong { color: var(--color-text); }
 
-        .bullet-list li a {
-            color: var(--color-secondary);
-            font-weight: 600;
-        }
-
-        .bullet-list li a:hover {
-            color: var(--color-accent);
-        }
-
-        /* Highlight Box */
         .highlight-box {
             background: rgba(10, 207, 151, 0.08);
             border: 1px solid rgba(10, 207, 151, 0.2);
@@ -224,18 +184,10 @@
             gap: 14px;
         }
 
-        .highlight-box i {
-            font-size: 1.3rem;
-            color: var(--color-primary);
-        }
+        .highlight-box i { font-size: 1.3rem; color: var(--color-primary); }
 
-        .highlight-box p {
-            margin: 0;
-            font-weight: 600;
-            color: var(--color-text);
-        }
+        .highlight-box p { margin: 0; font-weight: 600; color: var(--color-text); }
 
-        /* Contact Card */
         .contact-card {
             background: var(--color-bg);
             border: 1px solid rgba(0,0,0,0.05);
@@ -260,20 +212,10 @@
             font-size: 0.95rem;
         }
 
-        .contact-item i {
-            color: var(--color-primary);
-            width: 18px;
-        }
+        .contact-item i { color: var(--color-primary); width: 18px; }
+        .contact-item a { color: var(--color-text-muted); }
+        .contact-item a:hover { color: var(--color-secondary); }
 
-        .contact-item a {
-            color: var(--color-text-muted);
-        }
-
-        .contact-item a:hover {
-            color: var(--color-secondary);
-        }
-
-        /* Footer */
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -281,24 +223,38 @@
             font-size: 0.85rem;
         }
 
-        .footer a {
-            color: var(--color-primary);
-            font-weight: 600;
+        .footer a { color: var(--color-primary); font-weight: 600; }
+        .footer a:hover { color: var(--color-secondary); }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            gap: 2px;
+            background: rgba(0, 0, 0, 0.07);
+            border-radius: 20px;
+            padding: 3px;
         }
 
-        .footer a:hover {
-            color: var(--color-secondary);
+        .lang-toggle button {
+            border: none;
+            background: transparent;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--color-text-muted);
+            font-family: var(--font-body);
+            letter-spacing: 0.04em;
+            transition: 0.2s;
         }
 
-        /* Responsive */
+        .lang-toggle button.active { background: var(--color-primary); color: white; }
+        .lang-toggle button:not(.active):hover { color: var(--color-text); }
+
         @media (max-width: 600px) {
-            .content-card {
-                padding: 30px 20px;
-            }
-
-            .main-title {
-                font-size: 1.8rem;
-            }
+            .content-card { padding: 30px 20px; }
+            .main-title { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -307,7 +263,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <a href="/myrate" class="back-btn" title="Back to MyRate">
+            <a href="/myrate" class="back-btn" data-i18n-attr="title:header.back.title" title="Back to MyRate">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
             <a href="/myrate" class="logo">
@@ -316,139 +272,123 @@
                 </div>
                 <span>MyRate</span>
             </a>
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button data-lang-btn="en" onclick="I18n.set('en')">EN</button>
+                    <button data-lang-btn="hu" onclick="I18n.set('hu')">HU</button>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Content -->
     <main class="content">
         <div class="content-card">
-            <h1 class="main-title">Privacy Policy</h1>
-            <p class="subtitle">MyRate: Travel Currency Converter &amp; Expense Tracker</p>
+            <h1 class="main-title" data-i18n="main.title">Privacy Policy</h1>
+            <p class="subtitle" data-i18n="main.subtitle">MyRate: Travel Currency Converter &amp; Expense Tracker</p>
             <div class="last-updated">
-                <span>Last updated: March 6, 2026</span>
+                <span data-i18n="main.updated">Last updated: March 6, 2026</span>
             </div>
 
             <!-- 1. Introduction -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> 1. Introduction</h2>
-                <p>
-                    <strong>LP Wave</strong> operates MyRate, a travel currency converter and expense tracker app.
-                    This Privacy Policy explains what data the app stores, how, and why.
-                </p>
+                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="s1.title">1. Introduction</span></h2>
+                <p data-i18n="s1.p1">LP Wave operates MyRate, a travel currency converter and expense tracker app. This Privacy Policy explains what data the app stores, how, and why.</p>
                 <div class="highlight-box">
                     <i class="fa-solid fa-lock"></i>
-                    <p>All your data is stored exclusively on your device. We do not collect, store on a server, or share any personal data with third parties.</p>
+                    <p data-i18n="s1.highlight">All your data is stored exclusively on your device. We do not collect, store on a server, or share any personal data with third parties.</p>
                 </div>
             </section>
 
             <!-- 2. What Data the App Stores -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-database"></i> 2. What Data the App Stores</h2>
-
-                <p><strong>Data you enter — stored locally on your device:</strong></p>
+                <h2 class="section-title"><i class="fa-solid fa-database"></i> <span data-i18n="s2.title">2. What Data the App Stores</span></h2>
+                <p data-i18n="s2.you">Data you enter — stored locally on your device:</p>
                 <ul class="bullet-list">
-                    <li><strong>Exchange rates:</strong> Saved currency pairs and their values, with an optional note (e.g. "Bangkok Airport")</li>
-                    <li><strong>Expense entries:</strong> Amount, currency code, date, category, optional note</li>
-                    <li><strong>Trips:</strong> Trip name, destination, dates, planned budget</li>
-                    <li><strong>Settings:</strong> Home currency, app language, display preferences</li>
+                    <li data-i18n-html="s2.li1"><strong>Exchange rates:</strong> Saved currency pairs and their values, with an optional note (e.g. "Bangkok Airport")</li>
+                    <li data-i18n-html="s2.li2"><strong>Expense entries:</strong> Amount, currency code, date, category, optional note</li>
+                    <li data-i18n-html="s2.li3"><strong>Trips:</strong> Trip name, destination, dates, planned budget</li>
+                    <li data-i18n-html="s2.li4"><strong>Settings:</strong> Home currency, app language, display preferences</li>
                 </ul>
-
-                <p><strong>Data collected optionally — only with your explicit permission:</strong></p>
+                <p data-i18n="s2.optional">Data collected optionally — only with your explicit permission:</p>
                 <ul class="bullet-list">
-                    <li><strong>GPS location:</strong> Only if enabled in settings, and only at the moment an expense is saved. The app does not track your location continuously.</li>
-                    <li><strong>Photos:</strong> You may optionally attach a photo to an expense. Photos stay on your device.</li>
+                    <li data-i18n-html="s2.li5"><strong>GPS location:</strong> Only if enabled in settings, and only at the moment an expense is saved. The app does not track your location continuously.</li>
+                    <li data-i18n-html="s2.li6"><strong>Photos:</strong> You may optionally attach a photo to an expense. Photos stay on your device.</li>
                 </ul>
-
                 <div class="highlight-box">
                     <i class="fa-solid fa-user-slash"></i>
-                    <p>No account or registration required. No email or password is collected.</p>
+                    <p data-i18n="s2.highlight">No account or registration required. No email or password is collected.</p>
                 </div>
             </section>
 
             <!-- 3. What the App Does NOT Do -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-ban"></i> 3. What the App Does NOT Do</h2>
+                <h2 class="section-title"><i class="fa-solid fa-ban"></i> <span data-i18n="s3.title">3. What the App Does NOT Do</span></h2>
                 <ul class="bullet-list">
-                    <li>Does not collect analytics data (no Firebase, Crashlytics, or similar SDKs)</li>
-                    <li>Does not display ads or share data with advertising networks</li>
-                    <li>Does not track your behavior or usage patterns</li>
-                    <li>Does not send any personal data to a server</li>
-                    <li>Does not require an account</li>
+                    <li data-i18n="s3.li1">Does not collect analytics data (no Firebase, Crashlytics, or similar SDKs)</li>
+                    <li data-i18n="s3.li2">Does not display ads or share data with advertising networks</li>
+                    <li data-i18n="s3.li3">Does not track your behavior or usage patterns</li>
+                    <li data-i18n="s3.li4">Does not send any personal data to a server</li>
+                    <li data-i18n="s3.li5">Does not require an account</li>
                 </ul>
             </section>
 
             <!-- 4. Internet Connection -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-wifi"></i> 4. Internet Connection — When and Why</h2>
-                <p>
-                    The app connects to the internet exclusively to fetch currency exchange rates.
-                    In these requests, only currency codes are sent (e.g. <code>EUR</code>, <code>HUF</code>) — nothing else.
-                </p>
-                <p>The app uses three public, free rate providers in sequence (if one is unavailable, the next is tried):</p>
+                <h2 class="section-title"><i class="fa-solid fa-wifi"></i> <span data-i18n="s4.title">4. Internet Connection — When and Why</span></h2>
+                <p data-i18n="s4.p1">The app connects to the internet exclusively to fetch currency exchange rates. In these requests, only currency codes are sent (e.g. EUR, HUF) — nothing else.</p>
+                <p data-i18n="s4.p2">The app uses three public, free rate providers in sequence (if one is unavailable, the next is tried):</p>
                 <ul class="bullet-list">
-                    <li>FreeCurrencyAPI (freecurrencyapi.com)</li>
-                    <li>Frankfurter (frankfurter.app)</li>
-                    <li>Open Exchange Rates (open.er-api.com)</li>
+                    <li data-i18n="s4.li1">FreeCurrencyAPI (freecurrencyapi.com)</li>
+                    <li data-i18n="s4.li2">Frankfurter (frankfurter.app)</li>
+                    <li data-i18n="s4.li3">Open Exchange Rates (open.er-api.com)</li>
                 </ul>
-                <p>Fetched rates are cached locally for 24 hours to avoid unnecessary requests.</p>
+                <p data-i18n="s4.p3">Fetched rates are cached locally for 24 hours to avoid unnecessary requests.</p>
             </section>
 
             <!-- 5. Pro Purchase -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-star"></i> 5. Pro Version Purchase</h2>
-                <p>
-                    The Pro version is purchased through the Apple App Store or Google Play.
-                    The payment process and purchase data are handled entirely by Apple or Google — their own privacy policies apply.
-                    The app only stores a single local flag indicating whether the purchase was completed.
-                </p>
+                <h2 class="section-title"><i class="fa-solid fa-star"></i> <span data-i18n="s5.title">5. Pro Version Purchase</span></h2>
+                <p data-i18n="s5.p1">The Pro version is purchased through the Apple App Store or Google Play. The payment process and purchase data are handled entirely by Apple or Google — their own privacy policies apply. The app only stores a single local flag indicating whether the purchase was completed.</p>
             </section>
 
             <!-- 6. Home Screen Widget -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-table-cells-large"></i> 6. Home Screen Widget</h2>
-                <p>
-                    To display the widget, the app syncs active exchange rates and the last conversion result
-                    to the device's widget system (iOS: App Group, Android: SharedPreferences).
-                    This data does not leave your device.
-                </p>
+                <h2 class="section-title"><i class="fa-solid fa-table-cells-large"></i> <span data-i18n="s6.title">6. Home Screen Widget</span></h2>
+                <p data-i18n="s6.p1">To display the widget, the app syncs active exchange rates and the last conversion result to the device's widget system (iOS: App Group, Android: SharedPreferences). This data does not leave your device.</p>
             </section>
 
             <!-- 7. Your Rights -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-user-check"></i> 7. Your Rights</h2>
-                <p>Since all data is stored exclusively on your device, you have full control:</p>
+                <h2 class="section-title"><i class="fa-solid fa-user-check"></i> <span data-i18n="s7.title">7. Your Rights</span></h2>
+                <p data-i18n="s7.intro">Since all data is stored exclusively on your device, you have full control:</p>
                 <ul class="bullet-list">
-                    <li><strong>View:</strong> All data is visible within the app</li>
-                    <li><strong>Export:</strong> The expense log can be exported as CSV</li>
-                    <li><strong>Edit:</strong> Any entry can be edited in the app</li>
-                    <li><strong>Delete:</strong> Individual entries, the entire log, or all data can be deleted; GPS and photo permissions can be revoked in your device settings</li>
-                    <li><strong>Full deletion:</strong> Uninstalling the app removes all local data</li>
+                    <li data-i18n-html="s7.li1"><strong>View:</strong> All data is visible within the app</li>
+                    <li data-i18n-html="s7.li2"><strong>Export:</strong> The expense log can be exported as CSV</li>
+                    <li data-i18n-html="s7.li3"><strong>Edit:</strong> Any entry can be edited in the app</li>
+                    <li data-i18n-html="s7.li4"><strong>Delete:</strong> Individual entries, the entire log, or all data can be deleted; GPS and photo permissions can be revoked in your device settings</li>
+                    <li data-i18n-html="s7.li5"><strong>Full deletion:</strong> Uninstalling the app removes all local data</li>
                 </ul>
             </section>
 
             <!-- 8. Children's Privacy -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-child"></i> 8. Children's Privacy</h2>
-                <p>
-                    MyRate is not directed at children under 16 and does not knowingly collect data from children.
-                </p>
+                <h2 class="section-title"><i class="fa-solid fa-child"></i> <span data-i18n="s8.title">8. Children's Privacy</span></h2>
+                <p data-i18n="s8.p1">MyRate is not directed at children under 16 and does not knowingly collect data from children.</p>
             </section>
 
             <!-- 9. Changes -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-rotate"></i> 9. Changes to This Policy</h2>
-                <p>
-                    If the app's data practices change, this policy will be updated and the effective date at the top will reflect the new version.
-                </p>
+                <h2 class="section-title"><i class="fa-solid fa-rotate"></i> <span data-i18n="s9.title">9. Changes to This Policy</span></h2>
+                <p data-i18n="s9.p1">If the app's data practices change, this policy will be updated and the effective date at the top will reflect the new version.</p>
             </section>
 
             <!-- 10. Contact -->
             <section class="section">
-                <h2 class="section-title"><i class="fa-solid fa-envelope"></i> 10. Contact</h2>
-                <p>For any privacy-related questions:</p>
-
+                <h2 class="section-title"><i class="fa-solid fa-envelope"></i> <span data-i18n="s10.title">10. Contact</span></h2>
+                <p data-i18n="s10.intro">For any privacy-related questions:</p>
                 <div class="contact-card">
-                    <h4>LP Wave</h4>
+                    <h4 data-i18n="s10.contact.title">LP Wave</h4>
                     <div class="contact-item">
                         <i class="fa-solid fa-globe"></i>
                         <a href="https://lpwave.hu/myrate/">https://lpwave.hu/myrate/</a>
@@ -460,9 +400,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p><a href="/myrate">MyRate</a> is a product of <a href="/"><strong>LP Wave</strong></a></p>
-        <p style="margin-top: 8px;">&copy; 2026 LP Wave. All rights reserved.</p>
+        <p><a href="/myrate">MyRate</a> — <span data-i18n="footer.product">MyRate is a product of</span> <a href="/"><strong>LP Wave</strong></a></p>
+        <p style="margin-top: 8px;" data-i18n="footer.rights">© 2026 LP Wave. All rights reserved.</p>
     </footer>
+
+    <script src="/assets/i18n.js"></script>
+    <script src="/assets/i18n/myrate-privacy.js"></script>
 
 </body>
 </html>

@@ -382,3 +382,35 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- LANGUAGE TOGGLE --- */
+.lang-toggle {
+    display: flex;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.lang-toggle button {
+    border: none;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-family: var(--font-main);
+    letter-spacing: 0.04em;
+    transition: 0.2s;
+}
+
+.lang-toggle button.active {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+.lang-toggle button:not(.active):hover {
+    color: var(--text-main);
+}

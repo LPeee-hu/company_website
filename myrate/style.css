@@ -512,3 +512,35 @@ footer {
 
     .footer-links a { margin: 0 10px; }
 }
+
+/* --- LANGUAGE TOGGLE --- */
+.lang-toggle {
+    display: flex;
+    gap: 2px;
+    background: rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.lang-toggle button {
+    border: none;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    letter-spacing: 0.04em;
+    transition: 0.2s;
+}
+
+.lang-toggle button.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.lang-toggle button:not(.active):hover {
+    color: var(--color-text);
+}

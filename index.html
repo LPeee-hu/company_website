@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LP Wave | Building Digital Flow</title>
     <meta name="description" content="LP Wave creates intuitive digital solutions for modern life. Makers of Zumi and MyRate.">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="LP Wave | Building Digital Flow">
     <meta property="og:description" content="We build cross-platform applications that simplify life management.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lpwave.hu">
-    
+
     <!-- Betűtípus: Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Ikonok -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,7 +30,6 @@
         <div class="container nav-container">
             <a href="/" class="brand">
                 <div class="brand-logo">
-                    <!-- Absztrakt hullám ikon -->
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 12C2 12 5 5 12 5C19 5 22 12 22 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                         <path d="M2 17C2 17 5 10 12 10C19 10 22 17 22 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.5"/>
@@ -38,8 +37,12 @@
                 </div>
                 <span>LP Wave</span>
             </a>
-            <div class="nav-contact">
-                <a href="mailto:lpeee84@gmail.com" class="link-hover">Get in touch</a>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="mailto:lpeee84@gmail.com" class="link-hover" data-i18n="nav.contact">Get in touch</a>
+                <div class="lang-toggle">
+                    <button data-lang-btn="en" onclick="I18n.set('en')">EN</button>
+                    <button data-lang-btn="hu" onclick="I18n.set('hu')">HU</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -48,13 +51,12 @@
     <header class="hero">
         <div class="container">
             <div class="hero-text fade-in-up">
-                <span class="label">Software & Ventures</span>
-                <h1>Crafting digital flow<br>for <span class="gradient-text">everyday chaos.</span></h1>
-                <p>We build cross-platform applications that simplify life management, finance, and family coordination.</p>
+                <span class="label" data-i18n="hero.label">Software & Ventures</span>
+                <h1 data-i18n-html="hero.h1">Crafting digital flow<br>for <span class="gradient-text">everyday chaos.</span></h1>
+                <p data-i18n="hero.p">We build cross-platform applications that simplify life management, finance, and family coordination.</p>
             </div>
         </div>
-        
-        <!-- Háttér dekoráció (Fények) -->
+
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
     </header>
@@ -63,7 +65,7 @@
     <section class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2>Our Portfolio</h2>
+                <h2 data-i18n="portfolio.title">Our Portfolio</h2>
                 <div class="divider"></div>
             </div>
 
@@ -73,19 +75,18 @@
                     <div class="product-logo">
                         <i class="fa-solid fa-check"></i> <span>Zumi</span>
                     </div>
-                    <h3>The operating system for modern families.</h3>
-                    <p>Zumi unifies chores, finances, and schedules into one simple, playful interface.</p>
+                    <h3 data-i18n="zumi.tagline">The operating system for modern families.</h3>
+                    <p data-i18n="zumi.desc">Zumi unifies chores, finances, and schedules into one simple, playful interface.</p>
                     <ul class="specs">
-                        <li><i class="fa-brands fa-apple"></i> iOS</li>
-                        <li><i class="fa-brands fa-android"></i> Android</li>
-                        <li><i class="fa-solid fa-globe"></i> Global</li>
+                        <li><i class="fa-brands fa-apple"></i> <span data-i18n="zumi.ios">iOS</span></li>
+                        <li><i class="fa-brands fa-android"></i> <span data-i18n="zumi.android">Android</span></li>
+                        <li><i class="fa-solid fa-globe"></i> <span data-i18n="zumi.global">Global</span></li>
                     </ul>
                     <a href="/zumi" class="btn-product">
-                        Learn More <i class="fa-solid fa-arrow-right"></i>
+                        <span data-i18n="btn.learnmore">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="card-visual">
-                    <!-- Absztrakt Zumi UI reprezentáció -->
                     <div class="ui-mockup">
                         <div class="mockup-header">
                             <div class="dot"></div>
@@ -110,15 +111,15 @@
                     <div class="product-logo">
                         <i class="fa-solid fa-arrow-right-arrow-left"></i> <span>MyRate</span>
                     </div>
-                    <h3>Exchange rates, crystal clear.</h3>
-                    <p>Live currency converter with 150+ currencies, instant conversions, and smart rate alerts for the perfect moment to exchange.</p>
+                    <h3 data-i18n="myrate.tagline">Your travel finance companion.</h3>
+                    <p data-i18n="myrate.desc">Instant currency conversion, expense logging with GPS & photos, trip budget tracking, and a rate calculator to see what you actually got at the exchange office.</p>
                     <ul class="specs">
                         <li><i class="fa-brands fa-apple"></i> iOS</li>
                         <li><i class="fa-brands fa-android"></i> Android</li>
-                        <li><i class="fa-solid fa-globe"></i> Global</li>
+                        <li><i class="fa-solid fa-globe"></i> <span data-i18n="zumi.global">Global</span></li>
                     </ul>
                     <a href="/myrate" class="btn-product">
-                        Learn More <i class="fa-solid fa-arrow-right"></i>
+                        <span data-i18n="btn.learnmore">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="card-visual">
@@ -134,7 +135,7 @@
                             <div class="mockup-card secondary"></div>
                         </div>
                         <div class="floating-badge">
-                            <i class="fa-solid fa-arrow-right-arrow-left"></i> Live
+                            <i class="fa-solid fa-receipt"></i> Logged
                         </div>
                     </div>
                 </div>
@@ -148,16 +149,16 @@
         <div class="container">
             <div class="vision-grid">
                 <div class="vision-item">
-                    <h4>Simplicity First</h4>
-                    <p>We believe technology should be invisible. It should work so well you forget it's there.</p>
+                    <h4 data-i18n="vision.simplicity.title">Simplicity First</h4>
+                    <p data-i18n="vision.simplicity.desc">We believe technology should be invisible. It should work so well you forget it's there.</p>
                 </div>
                 <div class="vision-item">
-                    <h4>Data Privacy</h4>
-                    <p>Your data is yours. We build with privacy-first architecture from day one.</p>
+                    <h4 data-i18n="vision.privacy.title">Data Privacy</h4>
+                    <p data-i18n="vision.privacy.desc">Your data is yours. We build with privacy-first architecture from day one.</p>
                 </div>
                 <div class="vision-item">
-                    <h4>Cross Platform</h4>
-                    <p>Seamless experience on any device. Your life syncs everywhere you go.</p>
+                    <h4 data-i18n="vision.cross.title">Cross Platform</h4>
+                    <p data-i18n="vision.cross.desc">Seamless experience on any device. Your life syncs everywhere you go.</p>
                 </div>
             </div>
         </div>
@@ -171,13 +172,16 @@
                 <p>Budapest • Global</p>
             </div>
             <div class="footer-center">
-                <a href="/privacy">Privacy Policy</a>
+                <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
             </div>
             <div class="footer-right">
-                <p>&copy; 2025 LP Wave. All rights reserved.</p>
+                <p data-i18n="footer.rights">© 2025 LP Wave. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="/assets/i18n.js"></script>
+    <script src="/assets/i18n/home.js"></script>
 
 </body>
 </html>

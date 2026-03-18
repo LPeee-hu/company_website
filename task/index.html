@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/company_website/task/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="zumi">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Zumi</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- JavaScript Notification Helper -->
+  <script>
+  window.notificationHelper = {
+    // Ellenőrzi hogy támogatottak-e a notificationök
+    isSupported: function() {
+      return "Notification" in window;
+    },
+
+    // Permission állapot lekérése
+    getPermission: function() {
+      if (!this.isSupported()) {
+        return "unsupported";
+      }
+      return Notification.permission;
+    },
+
+    // Permission kérése
+    requestPermission: function() {
+      if (!this.isSupported()) {
+        return Promise.resolve("unsupported");
+      }
+
+      // Safari compatibility - callback alapú vs promise alapú
+      if (typeof Notification.requestPermission === 'function') {
+        const result = Notification.requestPermission();
+        
+        // Ha promise-t ad vissza (modern böngészők)
+        if (result && typeof result.then === 'function') {
+          return result;
+        }
+        
+        // Ha callback alapú (Safari)
+        return new Promise(function(resolve) {
+          Notification.requestPermission(function(permission) {
+            resolve(permission);
+          });
+        });
+      }
+      
+      return Promise.resolve("denied");
+    },
+
+    // Egyszerű notification megjelenítése
+    showNotification: function(title, body, icon, tag) {
+      try {
+        if (!this.isSupported()) {
+          console.log("Notifications not supported");
+          return false;
+        }
+
+        if (this.getPermission() !== "granted") {
+          console.log("No permission for notifications");
+          return false;
+        }
+
+        const options = {
+          body: body || "",
+          icon: icon || "/favicon.ico"
+        };
+
+        if (tag) {
+          options.tag = tag;
+        }
+
+        const notification = new Notification(title, options);
+        
+        // Auto close after 5 seconds
+        setTimeout(function() {
+          try {
+            notification.close();
+          } catch (e) {
+            console.log("Error closing notification:", e);
+          }
+        }, 5000);
+
+        console.log("Notification created successfully:", title);
+        return true;
+
+      } catch (error) {
+        console.error("Error creating notification:", error);
+        return false;
+      }
+    },
+
+    // Notification callback-kel (click handler)
+    showNotificationWithCallback: function(title, body, icon, tag, clickCallback) {
+      try {
+        if (!this.isSupported()) {
+          console.log("Notifications not supported");
+          return false;
+        }
+
+        if (this.getPermission() !== "granted") {
+          console.log("No permission for notifications");
+          return false;
+        }
+
+        const options = {
+          body: body || "",
+          icon: icon || "/favicon.ico",
+          requireInteraction: true  // Keep open until clicked
+        };
+
+        if (tag) {
+          options.tag = tag;
+        }
+
+        const notification = new Notification(title, options);
+        
+        // Click handler
+        if (clickCallback && typeof clickCallback === 'function') {
+          notification.onclick = function() {
+            console.log("Notification clicked");
+            
+            // Focus window
+            if (window.focus) {
+              window.focus();
+            }
+            
+            // Call the callback
+            try {
+              clickCallback();
+            } catch (e) {
+              console.error("Error in notification click callback:", e);
+            }
+            
+            // Close notification
+            try {
+              notification.close();
+            } catch (e) {
+              console.log("Error closing notification:", e);
+            }
+          };
+        }
+
+        // Auto close after 15 seconds if not clicked
+        setTimeout(function() {
+          try {
+            notification.close();
+          } catch (e) {
+            console.log("Error auto-closing notification:", e);
+          }
+        }, 15000);
+
+        console.log("Notification with callback created successfully:", title);
+        return true;
+
+      } catch (error) {
+        console.error("Error creating notification with callback:", error);
+        return false;
+      }
+    },
+
+    // Debug információk
+    getDebugInfo: function() {
+      return {
+        supported: this.isSupported(),
+        permission: this.getPermission(),
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString()
+      };
+    }
+  };
+
+  // Dart kommunikációhoz - PostMessage handler (jövőbeli használathoz)
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type && event.data.type.startsWith('notif_')) {
+      console.log('Received message from Dart:', event.data);
+      // Itt lehetne kezelni a PostMessage kommunikációt
+    }
+  });
+
+  // Inicializálás után log
+  console.log("Notification helper initialized:", window.notificationHelper.getDebugInfo());
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- s/index.html – zumi nyilvános megosztási link (task_2: docs/MEGOSZTASI_LINK.md) -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <title>Zumi – shared countdown</title>
+    <meta name="description" content="Someone shared a countdown with you on Zumi.">
+
+    <!-- Open Graph: statikus kártya (A változat – GitHub Pages, JS nélkül olvassák) -->
+    <meta property="og:title" content="⏳ A countdown was shared with you">
+    <meta property="og:description" content="See how much time is left – shared with Zumi, the family organizer.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zumi">
+    <meta property="og:image" content="https://lpwave.hu/s/og-image.png">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" href="zumi-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="share.css">
+</head>
+<body>
+    <header class="top">
+        <a class="brand" href="https://lpwave.hu/zumi">
+            <img src="zumi-logo.png" alt="" width="36" height="36">
+            <span>zumi</span>
+        </a>
+    </header>
+
+    <main id="main">
+        <!-- Töltés -->
+        <section id="loading" class="card state" aria-live="polite">
+            <div class="spinner" aria-hidden="true"></div>
+            <p data-t="loading"></p>
+        </section>
+
+        <!-- Megosztott számláló -->
+        <section id="share" class="card" hidden>
+            <p id="sharedBy" class="eyebrow" hidden></p>
+            <h1 id="title"></h1>
+            <p id="targetDate" class="muted"></p>
+
+            <div id="counter" class="counter" aria-live="off">
+                <div class="unit"><span id="cDays">0</span><small data-t="days"></small></div>
+                <div class="unit"><span id="cHours">00</span><small data-t="hours"></small></div>
+                <div class="unit"><span id="cMinutes">00</span><small data-t="minutes"></small></div>
+                <div class="unit"><span id="cSeconds">00</span><small data-t="seconds"></small></div>
+            </div>
+            <p id="counterLabel" class="counter-label"></p>
+            <p id="done" class="done" hidden></p>
+
+            <div id="contactBox" class="info" hidden>
+                <span class="info-label" data-t="contact"></span>
+                <span id="contactName"></span>
+            </div>
+            <blockquote id="message" class="message" hidden></blockquote>
+
+            <div class="actions">
+                <a id="icsBtn" class="btn btn-primary" href="#" download="zumi.ics" data-t="addToCalendar"></a>
+                <a id="googleBtn" class="btn" href="#" target="_blank" rel="noopener noreferrer" data-t="googleCalendar"></a>
+            </div>
+        </section>
+
+        <!-- Nem elérhető -->
+        <section id="unavailable" class="card state" hidden>
+            <h1 data-t="unavailableTitle"></h1>
+            <p id="unavailableText" class="muted"></p>
+        </section>
+
+        <!-- Reklám / letöltés -->
+        <section class="card promo">
+            <h2 data-t="promoTitle"></h2>
+            <p class="muted" data-t="promoText"></p>
+            <div class="actions">
+                <a class="btn btn-primary" href="https://lpwave.hu/zumi" data-t="promoMore"></a>
+                <a class="btn" href="https://lpwave.hu/app/" data-t="promoWeb"></a>
+            </div>
+        </section>
+
+        <details id="reportBox" class="report" hidden>
+            <summary data-t="report"></summary>
+            <form id="reportForm">
+                <label for="reportReason" data-t="reportLabel"></label>
+                <textarea id="reportReason" maxlength="500" rows="3"></textarea>
+                <button type="submit" class="btn" data-t="reportSend"></button>
+                <p id="reportThanks" class="muted" hidden data-t="reportThanks"></p>
+            </form>
+        </details>
+    </main>
+
+    <footer class="foot">
+        <a href="https://lpwave.hu/zumi">lpwave.hu/zumi</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://lpwave.hu/zumi/privacy/" data-t="privacy"></a>
+    </footer>
+
+    <script src="share.js"></script>
+</body>
+</html>

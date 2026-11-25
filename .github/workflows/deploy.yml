@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24   # npm 11 – a package-lock.json ezzel készült; npm 10-zel az npm ci elbukik
+          node-version: 24   # ugyanaz, mint helyben (npm 11)
           cache: npm
 
       - name: Install

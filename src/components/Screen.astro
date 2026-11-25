@@ -1,0 +1,14 @@
+---
+// src/components/Screen.astro – valódi screenshot, vagy ha nincs, placeholder
+import PhoneFrame from './PhoneFrame.astro';
+import DevicePlaceholder from './DevicePlaceholder.astro';
+import { shot } from '../lib/shots';
+import { productsUi } from '../data/products';
+import type { Locale } from '../i18n/ui';
+interface Props { id: string; locale: Locale; n: number; alt: string; loading?: 'lazy' | 'eager' }
+const { id, locale, n, alt, loading } = Astro.props;
+const src = shot(id, locale, n);
+---
+{src
+  ? <PhoneFrame src={src} alt={alt} loading={loading} />
+  : <DevicePlaceholder kind="phone" label={productsUi[locale].placeholder} />}

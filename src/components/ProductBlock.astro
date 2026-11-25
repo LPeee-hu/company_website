@@ -1,0 +1,58 @@
+---
+// src/components/ProductBlock.astro
+import PhoneFrame from './PhoneFrame.astro';
+import { productsUi, type Product } from '../data/products';
+import { href, type Locale } from '../i18n/ui';
+interface Props { product: Product; locale: Locale; flip?: boolean }
+const { product, locale, flip = false } = Astro.props;
+
+const all = import.meta.glob<{ default: ImageMetadata }>('../assets/*/*/*.webp', { eager: true });
+const shot = (n: number) => all[`../assets/${product.id}/${locale}/${String(n).padStart(2, '0')}.webp`]?.default;
+---
+<article class:list={['block', { flip }]} style={`--p:${product.accent}`}>
+  <div class="text reveal">
+    <span class="label"><i class="dot"></i>{product.name}</span>
+    <h3>{product.tagline[locale]}</h3>
+    <p>{product.desc[locale]}</p>
+    <ul>{product.platforms.map((p) => <li>{p}</li>)}</ul>
+    {product.detail && <a class="more" href={href(locale, `${product.id}/`)}>{productsUi[locale].explore} <span aria-hidden="true">→</span></a>}
+    {product.web && <a class="more" href={product.web}>{productsUi[locale].web} <span aria-hidden="true">→</span></a>}
+  </div>
+  <div class="visual reveal">
+    {product.visual === 'screenshots' && product.shots && (
+      <div class="phones">
+        {product.shots.map((n, i) => shot(n) && (
+          <div class={`ph ph${i}`}><PhoneFrame src={shot(n)} alt={`${product.name} – ${n}`} /></div>
+        ))}
+      </div>
+    )}
+    {product.visual === 'wordmark' && (
+      <div class="wordmark" aria-hidden="true"><span>{product.name.toLowerCase()}</span><i></i></div>
+    )}
+  </div>
+</article>
+<style>
+  .block { display: grid; grid-template-columns: 1fr 1.25fr; gap: var(--space-5); align-items: center; padding-block: var(--space-5); }
+  .block.flip .text { order: 2; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--p); margin-right: 0.6rem; }
+  h3 { font-size: var(--fs-h2); font-weight: 800; margin: var(--space-2) 0; }
+  p { color: var(--text-2); max-width: 46ch; }
+  ul { list-style: none; display: flex; gap: 0.5rem; padding: 0; margin: var(--space-3) 0 0; flex-wrap: wrap; }
+  .more { display:inline-block; margin: var(--space-3) var(--space-3) 0 0; font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--p); padding-bottom:2px; }
+  .more span { display:inline-block; transition: transform 300ms var(--ease); }
+  .more:hover span { transform: translateX(4px); }
+  li { border: 1px solid var(--border); border-radius: 999px; padding: 0.2rem 0.8rem; font-size: 0.85rem; background: var(--surface); }
+
+  .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); align-items: center; }
+  .ph1 { transform: translateY(-1.5rem) scale(1.06); }
+  .ph0, .ph2 { transform: translateY(1rem); }
+  .wordmark { position: relative; display: grid; place-items: center; aspect-ratio: 5 / 3.6; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden; }
+  .wordmark span { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.05em; font-size: clamp(4rem, 13vw, 10rem); line-height: 1; color: var(--text); position: relative; z-index: 1; }
+  .wordmark i { position: absolute; width: 55%; aspect-ratio: 1; border-radius: 50%; background: var(--p); opacity: 0.22; filter: blur(60px); right: -10%; bottom: -20%; }
+
+  @media (max-width: 860px) {
+    .block { grid-template-columns: 1fr; gap: var(--space-4); padding-block: var(--space-4); }
+    .block.flip .text { order: 0; }
+    .ph1, .ph0, .ph2 { transform: none; }
+  }
+</style>

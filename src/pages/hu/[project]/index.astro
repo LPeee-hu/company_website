@@ -1,0 +1,8 @@
+---
+// src/pages/hu/[project]/index.astro
+import ProjectPage from '../../../components/project/ProjectPage.astro';
+import { projects } from '../../../data/projects';
+export const getStaticPaths = () => Object.keys(projects).map((project) => ({ params: { project }, props: { data: projects[project] } }));
+const { data } = Astro.props;
+---
+<ProjectPage project={data} locale="hu" />

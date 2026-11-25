@@ -1,0 +1,8 @@
+---
+// src/pages/[...legal].astro – jogi oldalak: /privacy/, /myrate/privacy/, ...
+import LegalPage from '../components/LegalPage.astro';
+import { legalPairs, legalPath } from '../lib/legal';
+export const getStaticPaths = () => legalPairs.map(({ scope, doc }) => ({ params: { legal: legalPath(scope, doc).replace(/\/$/, '') }, props: { scope, doc } }));
+const { scope, doc } = Astro.props;
+---
+<LegalPage scope={scope} doc={doc} locale="en" />

@@ -1,0 +1,39 @@
+---
+// src/layouts/Base.astro
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import { t, href, type Locale } from '../i18n/ui';
+interface Props { locale: Locale; title?: string; description?: string; altPath?: string; noindex?: boolean }
+const { locale, title, description, altPath = '', noindex = false } = Astro.props;
+const tr = t(locale);
+const pageTitle = title ?? tr('meta.title');
+const pageDesc = description ?? tr('meta.desc');
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={new URL(href('en', altPath), Astro.site)} />
+    <link rel="alternate" hreflang="hu" href={new URL(href('hu', altPath), Astro.site)} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      const io = new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

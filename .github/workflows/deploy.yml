@@ -1,4 +1,7 @@
 # .github/workflows/deploy.yml
+# Az lpwave.hu (Astro) buildje és kitétele GitHub Pages-re.
+# A public/zumi/app/ és public/zumi/lpadmin/ mappát a LPeee-hu/task_2
+# deploy_web.yml workflow-ja írja; az Astro ezeket változatlanul másolja a dist/-be.
 name: Deploy to GitHub Pages
 
 on:
@@ -21,19 +24,31 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-      
+          path: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

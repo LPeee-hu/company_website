@@ -1,0 +1,41 @@
+---
+// src/components/LegalPage.astro – jogi dokumentum oldal (privacy, terms, ...)
+import Base from '../layouts/Base.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { findLegal, legalPath } from '../lib/legal';
+import { products } from '../data/products';
+import { href, type Locale } from '../i18n/ui';
+interface Props { scope: string; doc: string; locale: Locale }
+const { scope, doc, locale } = Astro.props;
+const found = findLegal(scope, doc, locale)!;
+const { Content, frontmatter } = found.mod;
+const product = products.find((p) => p.id === scope);
+const note = { en: '', hu: 'Ez a dokumentum jelenleg csak angolul érhető el.' }[locale];
+const backHref = product ? href(locale, product.detail ? `${product.id}/` : '#products') : href(locale);
+---
+<Base locale={locale} title={frontmatter.title} description={frontmatter.title} altPath={legalPath(scope, doc)} noindex={found.fallback}>
+  <Nav locale={locale} altPath={legalPath(scope, doc)} />
+  <main class="container doc">
+    <a class="back label" href={backHref}>← {product?.name ?? 'LP Wave'}</a>
+    <h1>{frontmatter.title}</h1>
+    {frontmatter.updated && <p class="upd">{frontmatter.updated}</p>}
+    {found.fallback && note && <p class="note">{note}</p>}
+    <div class="prose" lang={found.locale}><Content /></div>
+  </main>
+  <Footer locale={locale} scope={product?.id} scopeName={product?.name} />
+</Base>
+<style>
+  .doc { max-width: 760px; padding-block: var(--space-4) var(--space-5); }
+  h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin: var(--space-2) 0 var(--space-1); }
+  .upd { color: var(--text-2); font-size: .95rem; margin: 0 0 var(--space-3); }
+  .note { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: .8rem 1rem; }
+  .back { text-decoration: none; }
+  .prose :global(h2) { font-size: 1.35rem; font-weight: 800; margin: var(--space-4) 0 var(--space-1); }
+  .prose :global(p), .prose :global(li) { color: var(--text); }
+  .prose :global(ul), .prose :global(ol) { padding-left: 1.25rem; }
+  .prose :global(li) { margin: .3rem 0; }
+  .prose :global(blockquote) { margin: var(--space-2) 0; padding: .8rem 1.1rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 12px 12px 0; }
+  .prose :global(blockquote p) { margin: 0; }
+  .prose :global(a) { color: var(--accent); }
+</style>

@@ -1,0 +1,59 @@
+---
+// src/components/Home.astro – főoldal (jelenleg csak nav + hero)
+import Base from '../layouts/Base.astro';
+import Nav from './Nav.astro';
+import Wave from './Wave.astro';
+import Footer from './Footer.astro';
+import ProductBlock from './ProductBlock.astro';
+import { products, productsUi } from '../data/products';
+import { t, href, type Locale } from '../i18n/ui';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const tr = t(locale);
+const email = 'info@lpwave.hu';
+---
+<Base locale={locale}>
+  <Nav locale={locale} />
+  <main>
+    <section class="hero container">
+      <h1 class="reveal">
+        {tr('hero.line1')}<br />{tr('hero.line2')}<br /><span class="accent">{tr('hero.line3')}</span>
+      </h1>
+      <p class="sub reveal">{tr('hero.sub')}</p>
+      <a class="cta reveal" href={href(locale, '#products')}>{tr('hero.cta')} <span aria-hidden="true">→</span></a>
+    </section>
+    <Wave />
+    <section id="products" class="container">
+      <div class="head reveal">
+        <span class="label">{productsUi[locale].title}</span>
+        <h2>{productsUi[locale].sub}</h2>
+      </div>
+      {products.map((p, i) => <ProductBlock product={p} locale={locale} flip={i % 2 === 1} />)}
+    </section>
+    <section id="contact" class="container contact">
+      <span class="label reveal">{tr('contact.label')}</span>
+      <h2 class="reveal">{tr('contact.title')}</h2>
+      <p class="reveal">{tr('contact.text')}</p>
+      <a class="mail reveal" href={`mailto:${email}`}>{email} <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <Footer locale={locale} />
+</Base>
+<style>
+  .head { padding-top: var(--space-5); }
+  h2 { font-size: var(--fs-h2); font-weight: 800; max-width: 18ch; margin-top: var(--space-2); }
+  .hero { padding-block: clamp(4rem, 12vw, 9rem) var(--space-4); }
+  h1 { font-size: var(--fs-display); font-weight: 800; }
+  .accent { color: var(--accent); }
+  .sub { font-size: 1.35rem; color: var(--text-2); max-width: 32ch; margin: var(--space-4) 0 var(--space-3); transition-delay: 120ms; }
+  .cta { display: inline-flex; gap: 0.6rem; align-items: center; background: var(--text); color: var(--bg); text-decoration: none; font-weight: 600; padding: 0.9rem 1.5rem; border-radius: 999px; transition: transform 300ms var(--ease), background 200ms; transition-delay: 0s; }
+  .cta:hover { background: var(--accent); transform: translateY(-2px); }
+  .contact { padding-block: var(--space-6) var(--space-4); border-top: 1px solid var(--border); }
+  .contact p { color: var(--text-2); font-size: 1.2rem; max-width: 40ch; margin: var(--space-2) 0 var(--space-4); }
+  .mail { display: inline-flex; gap: 0.6rem; align-items: center; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 5vw, 3rem); letter-spacing: -0.02em; text-decoration: none; color: var(--text); border-bottom: 3px solid var(--accent); padding-bottom: 0.2rem; transition: color 200ms; overflow-wrap: anywhere; }
+  .mail:hover { color: var(--accent); }
+  .mail span { transition: transform 300ms var(--ease); }
+  .mail:hover span { transform: translateX(6px); }
+  .cta span { transition: transform 300ms var(--ease); }
+  .cta:hover span { transform: translateX(4px); }
+</style>

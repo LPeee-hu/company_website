@@ -1,0 +1,33 @@
+/* src/styles/tokens.css – LP Wave design tokenek (Premium Minimal alap) */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #111318;
+  --text-2: #656b76;
+  --border: #e4e7ec;
+  --accent: #3867ff;
+  --accent-2: #7b61ff;
+  --dark: #0b0d10;
+  --dark-text: #f7f8fa;
+
+  --font-display: 'Manrope Variable', system-ui, sans-serif;
+  --font-body: 'Inter Variable', system-ui, sans-serif;
+
+  --fs-display: clamp(3rem, 9vw, 8rem);
+  --fs-h2: clamp(2rem, 4.5vw, 3.5rem);
+  --fs-body: 1.0625rem;
+  --fs-label: 0.8125rem;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 8rem;
+  --radius: 20px;
+  --maxw: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 700ms;
+}

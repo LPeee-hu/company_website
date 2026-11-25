@@ -1,0 +1,13 @@
+---
+// src/components/PhoneFrame.astro – telefon keret valódi képpel
+import { Image } from 'astro:assets';
+interface Props { src: ImageMetadata; alt: string; loading?: 'lazy' | 'eager' }
+const { src, alt, loading = 'lazy' } = Astro.props;
+---
+<div class="phone">
+  <Image src={src} alt={alt} widths={[320, 480, 640]} sizes="(max-width: 700px) 40vw, 260px" loading={loading} />
+</div>
+<style>
+  .phone { border-radius: 2rem; padding: 6px; background: #14161b; box-shadow: 0 30px 60px -20px rgb(17 19 24 / 0.35), 0 0 0 1px rgb(255 255 255 / 0.06) inset; }
+  .phone :global(img) { display: block; width: 100%; height: auto; border-radius: 1.6rem; }
+</style>

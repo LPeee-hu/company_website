@@ -1,0 +1,15 @@
+---
+// src/components/DevicePlaceholder.astro
+// TODO(mock): ideiglenes eszközkeretek a Zumi-hoz, amíg nincsenek valódi screenshotok
+interface Props { kind: 'phone' | 'tablet' | 'desktop'; label: string }
+const { kind, label } = Astro.props;
+---
+<div class={`dev ${kind}`} role="img" aria-label={label}>
+  <span>{label}</span>
+</div>
+<style>
+  .dev { display: grid; place-items: center; text-align: center; padding: 1rem; background: repeating-linear-gradient(135deg, var(--surface) 0 14px, var(--bg) 14px 28px); border: 1.5px dashed var(--border); color: var(--text-2); font-size: 0.8rem; }
+  .phone { aspect-ratio: 9 / 19; border-radius: 1.8rem; }
+  .tablet { aspect-ratio: 4 / 3; border-radius: 1.2rem; }
+  .desktop { aspect-ratio: 16 / 10; border-radius: 0.8rem; }
+</style>

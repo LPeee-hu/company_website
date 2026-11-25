@@ -1,0 +1,153 @@
+---
+// src/components/project/ProjectPage.astro – általános projektoldal sablon
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Wave from '../Wave.astro';
+import Footer from '../Footer.astro';
+import Screen from '../Screen.astro';
+import { products } from '../../data/products';
+import { projectUi, type ProjectData } from '../../data/project';
+import { href, type Locale } from '../../i18n/ui';
+interface Props { project: ProjectData; locale: Locale }
+const { project: p, locale } = Astro.props;
+const u = projectUi[locale];
+const idx = products.findIndex((x) => x.id === p.id);
+const nextP = products[(idx + 1) % products.length];
+const nextHref = nextP.detail ? href(locale, `${nextP.id}/`) : href(locale, '#products');
+const seo = { title: `${p.name} – ${p.tagline[locale]}`, desc: p.intro[locale] };
+---
+<Base locale={locale} title={seo.title} description={seo.desc} altPath={`${p.id}/`}>
+  <Nav locale={locale} altPath={`${p.id}/`} />
+  <main style={`--p:${p.accent}`}>
+    <section class="container hero">
+      <a class="back label" href={href(locale, '#products')}>← {u.back}</a>
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="label"><i class="dot"></i>{p.name}</span>
+          <h1>{p.tagline[locale]}</h1>
+          <p class="lead">{p.intro[locale]}</p>
+          <ul class="chips">{p.platforms.map((x) => <li>{x}</li>)}</ul>
+        </div>
+        <div class="hero-phones reveal">
+          {p.heroShots.map((n, i) => <div class={`hp hp${i}`}><Screen id={p.id} locale={locale} n={n} alt={`${p.name} ${n}`} loading="eager" /></div>)}
+        </div>
+      </div>
+    </section>
+
+    <Wave />
+
+    <section class="container story">
+      {[['idea', p.idea], ['problem', p.problem], ['solution', p.solution]].map(([k, text], i) => (
+        <div class="story-item reveal">
+          <span class="num">0{i + 1}</span>
+          <h2>{u[k as 'idea']}</h2>
+          <p>{(text as any)[locale]}</p>
+        </div>
+      ))}
+    </section>
+
+    <section class="container features">
+      <h2 class="section reveal">{u.features}</h2>
+      {p.features.map((f, i) => (
+        <article class:list={['feat', { flip: i % 2 === 1 }]}>
+          <div class="reveal">
+            <span class="num">0{i + 1}</span>
+            <h3>{f.title[locale]}</h3>
+            <p>{f.desc[locale]}</p>
+          </div>
+          <div class="fphone reveal"><Screen id={p.id} locale={locale} n={f.shot} alt={f.title[locale]} /></div>
+        </article>
+      ))}
+      <p class="also reveal"><span class="label">{u.also}</span> {p.extras[locale].join(' · ')}</p>
+    </section>
+
+    <section class="container how">
+      <h2 class="section reveal">{u.how}</h2>
+      <ol class="steps">
+        {p.steps.map((s, i) => (
+          <li class="reveal"><span class="num">0{i + 1}</span><h3>{s[locale][0]}</h3><p>{s[locale][1]}</p></li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="gallery">
+      <div class="container"><h2 class="section reveal">{u.screens}</h2></div>
+      <div class="strip" tabindex="0" role="region" aria-label={u.screens}>
+        {Array.from({ length: p.shotCount }, (_, i) => i + 1).map((n) => <div class="g"><Screen id={p.id} locale={locale} n={n} alt={`${p.name} ${n}`} /></div>)}
+      </div>
+    </section>
+
+    <section class="container avail">
+      <h2 class="section reveal">{u.available}</h2>
+      {p.plans && <p class="plans-note reveal">{u.plansNote}</p>}
+      {p.plans && <table class="plans reveal">
+        <thead><tr><th></th><th>{u.free}</th><th>{u.pro}</th></tr></thead>
+        <tbody>{p.plans.rows.map((r) => <tr><td>{r.label[locale]}</td><td>{r.free[locale]}</td><td>{r.pro[locale]}</td></tr>)}</tbody>
+      </table>}
+      <div class="cta-row reveal">
+        <span class="soon">{u.soon}</span>
+        <span class="built"><span class="label">{u.built}</span> {p.tech.join(' · ')}</span>
+      </div>
+    </section>
+
+    <section class="container next reveal">
+      <span class="label">{u.next}</span>
+      <a href={nextHref}>{nextP.name} →</a>
+    </section>
+  </main>
+  <Footer locale={locale} scope={p.id} scopeName={p.name} />
+</Base>
+<style>
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--p); margin-right:.6rem; }
+  .hero { padding-top: var(--space-4); }
+  .back { text-decoration:none; }
+  .hero-grid { display:grid; grid-template-columns: 1fr 1.1fr; gap: var(--space-5); align-items:center; padding-block: var(--space-4) var(--space-5); }
+  h1 { font-size: clamp(2.6rem, 6.5vw, 5.5rem); font-weight:800; margin: var(--space-2) 0; }
+  .lead { color: var(--text-2); font-size:1.2rem; max-width:44ch; }
+  .chips { list-style:none; display:flex; gap:.5rem; padding:0; margin: var(--space-3) 0 0; }
+  .chips li { border:1px solid var(--border); background:var(--surface); border-radius:999px; padding:.2rem .8rem; font-size:.85rem; }
+  .hero-phones { display:grid; grid-template-columns:repeat(3,1fr); gap: var(--space-2); }
+  .hp1 { transform: translateY(-1.5rem) scale(1.06); } .hp0,.hp2 { transform: translateY(1rem); }
+
+  .story { display:grid; grid-template-columns:repeat(3,1fr); gap: var(--space-4); padding-block: var(--space-5); }
+  .num { font-family: var(--font-display); font-weight:800; color: var(--p); font-size:.95rem; letter-spacing:.08em; }
+  .story h2 { font-size:1.6rem; font-weight:800; margin:.4rem 0 var(--space-1); }
+  .story p, .feat p, .steps p { color: var(--text-2); }
+  .section { font-size: var(--fs-h2); font-weight:800; margin-bottom: var(--space-4); }
+
+  .features { padding-block: var(--space-4); }
+  .feat { display:grid; grid-template-columns:1fr 1fr; gap: var(--space-5); align-items:center; padding-block: var(--space-4); }
+  .feat.flip > :first-child { order:2; }
+  .feat h3 { font-size:2rem; font-weight:800; margin:.4rem 0 var(--space-1); }
+  .feat p { max-width:42ch; }
+  .fphone { width:min(100%, 280px); margin-inline:auto; }
+  .also { margin-top: var(--space-4); color: var(--text-2); }
+
+  .how { padding-block: var(--space-5); }
+  .steps { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap: var(--space-4); }
+  .steps h3 { font-size:1.5rem; font-weight:800; margin:.4rem 0; }
+
+  .gallery { padding-block: var(--space-4); }
+  .strip { display:flex; gap: var(--space-2); overflow-x:auto; scroll-snap-type:x mandatory; padding: var(--space-2) var(--gutter) var(--space-3); }
+  .g { flex:0 0 clamp(200px, 22vw, 260px); scroll-snap-align:center; }
+
+  .avail { padding-block: var(--space-5); }
+  .plans-note { color: var(--text-2); }
+  .plans { width:100%; max-width:640px; border-collapse:collapse; margin: var(--space-3) 0; }
+  .plans th, .plans td { text-align:left; padding:.8rem 0; border-bottom:1px solid var(--border); }
+  .plans th { font-size: var(--fs-label); letter-spacing:.1em; text-transform:uppercase; color: var(--text-2); }
+  .cta-row { display:flex; gap: var(--space-4); align-items:center; flex-wrap:wrap; margin-top: var(--space-4); }
+  .soon { display:inline-block; border:1.5px dashed var(--border); border-radius:999px; padding:.7rem 1.4rem; color: var(--text-2); }
+  .built { color: var(--text-2); }
+
+  .next { padding-block: var(--space-5) var(--space-6); border-top:1px solid var(--border); }
+  .next a { display:block; font-family: var(--font-display); font-weight:800; font-size: var(--fs-h2); text-decoration:none; letter-spacing:-.03em; margin-top: var(--space-1); transition: color 200ms; }
+  .next a:hover { color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .hero-grid, .feat, .story, .steps { grid-template-columns:1fr; gap: var(--space-3); }
+    .feat.flip > :first-child { order:0; }
+    .hp1, .hp0, .hp2 { transform:none; }
+    .hero-phones { grid-template-columns:repeat(3,1fr); }
+  }
+</style>

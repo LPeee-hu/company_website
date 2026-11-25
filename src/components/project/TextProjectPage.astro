@@ -1,0 +1,113 @@
+---
+// src/components/project/TextProjectPage.astro – projektoldal képernyőképek nélkül (pl. Zumi)
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Wave from '../Wave.astro';
+import Footer from '../Footer.astro';
+import { products } from '../../data/products';
+import { projectUi } from '../../data/project';
+import type { TextProject } from '../../data/zumi';
+import { href, type Locale } from '../../i18n/ui';
+interface Props { project: TextProject; locale: Locale }
+const { project: p, locale } = Astro.props;
+const u = projectUi[locale];
+const ui = {
+  en: { modules: 'What’s inside', pricing: 'Pricing', web: 'Try it on the web' },
+  hu: { modules: 'Mi van benne', pricing: 'Árazás', web: 'Kipróbálom a weben' },
+}[locale];
+const idx = products.findIndex((x) => x.id === p.id);
+const nextP = products[(idx + 1) % products.length];
+const nextHref = nextP.detail ? href(locale, `${nextP.id}/`) : href(locale, '#products');
+---
+<Base locale={locale} title={`${p.name} – ${p.tagline[locale]}`} description={p.intro[locale]} altPath={`${p.id}/`}>
+  <Nav locale={locale} altPath={`${p.id}/`} />
+  <main style={`--p:${p.accent}`}>
+    <section class="container hero">
+      <a class="back label" href={href(locale, '#products')}>← {u.back}</a>
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="label"><i class="dot"></i>{p.name}</span>
+          <h1>{p.tagline[locale]}</h1>
+          <p class="lead">{p.intro[locale]}</p>
+          <ul class="chips">{p.platforms.map((x) => <li>{x}</li>)}</ul>
+          <a class="cta" href={p.web}>{ui.web} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wordmark reveal" aria-hidden="true"><span>{p.name.toLowerCase()}</span><i></i></div>
+      </div>
+    </section>
+
+    <Wave />
+
+    <section class="container modules">
+      <h2 class="section reveal">{ui.modules}</h2>
+      <div class="grid">
+        {p.modules.map((m, i) => (
+          <article class="reveal">
+            <span class="num">0{i + 1}</span>
+            <h3>{m.title[locale]}</h3>
+            <p>{m.desc[locale]}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="container avail">
+      <h2 class="section reveal">{ui.pricing}</h2>
+      <div class="pricing">
+        {p.pricing.map((x) => (
+          <div class="price reveal"><h3>{x.title[locale]}</h3><p>{x.desc[locale]}</p></div>
+        ))}
+      </div>
+      <div class="cta-row reveal">
+        <a class="cta" href={p.web}>{ui.web} <span aria-hidden="true">→</span></a>
+        <span class="soon">{u.soon}</span>
+      </div>
+    </section>
+
+    <section class="container next reveal">
+      <span class="label">{u.next}</span>
+      <a href={nextHref}>{nextP.name} →</a>
+    </section>
+  </main>
+  <Footer locale={locale} scope={p.id} scopeName={p.name} />
+</Base>
+<style>
+  .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--p); margin-right:.6rem; }
+  .hero { padding-top: var(--space-4); }
+  .back { text-decoration:none; }
+  .hero-grid { display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items:center; padding-block: var(--space-4) var(--space-5); }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); font-weight:800; margin: var(--space-2) 0; }
+  .lead { color: var(--text-2); font-size:1.2rem; max-width:44ch; }
+  .chips { list-style:none; display:flex; gap:.5rem; padding:0; margin: var(--space-3) 0; }
+  .chips li { border:1px solid var(--border); background:var(--surface); border-radius:999px; padding:.2rem .8rem; font-size:.85rem; }
+  .cta { display:inline-flex; gap:.6rem; align-items:center; background: var(--text); color: var(--bg); text-decoration:none; font-weight:600; padding:.9rem 1.5rem; border-radius:999px; transition: transform 300ms var(--ease), background 200ms; }
+  .cta:hover { background: var(--p); transform: translateY(-2px); }
+  .cta span { transition: transform 300ms var(--ease); }
+  .cta:hover span { transform: translateX(4px); }
+
+  .wordmark { position: relative; display: grid; place-items: center; aspect-ratio: 5 / 3.6; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden; }
+  .wordmark span { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.05em; font-size: clamp(4rem, 12vw, 9rem); line-height: 1; position: relative; z-index: 1; }
+  .wordmark i { position: absolute; width: 55%; aspect-ratio: 1; border-radius: 50%; background: var(--p); opacity: 0.22; filter: blur(60px); right: -10%; bottom: -20%; }
+
+  .section { font-size: var(--fs-h2); font-weight:800; margin-bottom: var(--space-4); }
+  .num { font-family: var(--font-display); font-weight:800; color: var(--p); font-size:.95rem; letter-spacing:.08em; }
+  .modules { padding-block: var(--space-5); }
+  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+  .grid h3, .price h3 { font-size:1.5rem; font-weight:800; margin:.4rem 0 var(--space-1); }
+  .grid p, .price p { color: var(--text-2); }
+
+  .avail { padding-block: var(--space-5); }
+  .pricing { display:grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); max-width: 760px; }
+  .price { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); padding: var(--space-3); }
+  .price h3 { margin-top: 0; }
+  .cta-row { display:flex; gap: var(--space-3); align-items:center; flex-wrap:wrap; margin-top: var(--space-4); }
+  .soon { display:inline-block; border:1.5px dashed var(--border); border-radius:999px; padding:.7rem 1.4rem; color: var(--text-2); }
+
+  .next { padding-block: var(--space-5) var(--space-6); border-top:1px solid var(--border); }
+  .next a { display:block; font-family: var(--font-display); font-weight:800; font-size: var(--fs-h2); text-decoration:none; letter-spacing:-.03em; margin-top: var(--space-1); transition: color 200ms; }
+  .next a:hover { color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .hero-grid, .grid, .pricing { grid-template-columns: 1fr; gap: var(--space-3); }
+  }
+</style>

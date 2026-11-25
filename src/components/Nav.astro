@@ -1,0 +1,28 @@
+---
+// src/components/Nav.astro
+import { t, href, type Locale } from '../i18n/ui';
+interface Props { locale: Locale; altPath?: string }
+const { locale, altPath = '' } = Astro.props;
+const tr = t(locale);
+const other: Locale = locale === 'en' ? 'hu' : 'en';
+---
+<header class="nav">
+  <div class="container row">
+    <a class="brand" href={href(locale)}>LP Wave</a>
+    <nav aria-label="Main">
+      <a href={href(locale, '#products')}>{tr('nav.products')}</a>
+      <a href={href(locale, '#contact')}>{tr('nav.contact')}</a>
+      <a class="lang" href={href(other, altPath)} hreflang={other} lang={other}>{other.toUpperCase()}</a>
+    </nav>
+  </div>
+</header>
+<style>
+  .nav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--bg) 78%, transparent); border-bottom: 1px solid transparent; }
+  .row { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.02em; text-decoration: none; font-size: 1.15rem; }
+  nav { display: flex; gap: var(--space-3); align-items: center; font-size: 0.95rem; }
+  nav a { text-decoration: none; color: var(--text-2); padding: 0.5rem 0; transition: color 200ms; }
+  nav a:hover { color: var(--text); }
+  .lang { font-weight: 600; color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 0.25rem 0.7rem !important; }
+  @media (max-width: 640px) { nav { gap: 1rem; font-size: 0.85rem; } }
+</style>

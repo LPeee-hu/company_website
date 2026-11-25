@@ -1,0 +1,32 @@
+---
+// src/components/Footer.astro – lábléc jogi linkekkel; a scope projekt-id esetén a termék dokumentumait is mutatja
+import { docsOf, docLabel, legalPath } from '../lib/legal';
+import { href, type Locale } from '../i18n/ui';
+interface Props { locale: Locale; scope?: string; scopeName?: string }
+const { locale, scope, scopeName } = Astro.props;
+const studio = docsOf('studio');
+const product = scope ? docsOf(scope) : [];
+---
+<footer class="foot">
+  <div class="container cols">
+    <div><strong>LP Wave</strong><p>© {new Date().getFullYear()}</p></div>
+    {product.length > 0 && (
+      <nav aria-label={scopeName}>
+        <span class="label">{scopeName}</span>
+        {product.map((d) => <a href={href(locale, legalPath(scope!, d))}>{docLabel[locale][d]}</a>)}
+      </nav>
+    )}
+    <nav aria-label="LP Wave">
+      <span class="label">LP Wave</span>
+      {studio.map((d) => <a href={href(locale, legalPath('studio', d))}>{docLabel[locale][d]}</a>)}
+    </nav>
+  </div>
+</footer>
+<style>
+  .foot { border-top: 1px solid var(--border); margin-top: var(--space-5); padding-block: var(--space-4); font-size: .95rem; }
+  .cols { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-5); justify-content: space-between; }
+  p { margin: .25rem 0 0; color: var(--text-2); }
+  nav { display: flex; flex-direction: column; gap: .35rem; }
+  nav a { text-decoration: none; color: var(--text-2); width: fit-content; }
+  nav a:hover { color: var(--text); }
+</style>
